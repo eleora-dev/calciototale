@@ -1,0 +1,55 @@
+CalcioTotale — Proprietary License and Terms of Use
+
+Copyright (c) 2026 Gerardo Perilli / Eleòra. All rights reserved.
+Effective date: 11 July 2026.
+
+1. Scope
+--------
+This license applies to the original CalcioTotale source code, documentation,
+artwork and other original project materials, unless an individual file states
+otherwise.
+
+The source code is private and confidential. Access to a private repository,
+development copy or source archive does not grant any ownership or license
+except where Gerardo Perilli / Eleòra has provided express written permission.
+
+2. Official executable builds
+-----------------------------
+An official executable build made available by Gerardo Perilli / Eleòra may be
+downloaded, installed and used for personal, non-commercial purposes.
+
+No permission is granted to copy or redistribute an executable build, publish
+it on another service, sell it, sublicense it, modify it, create derivative
+works from it, or use it commercially without prior written authorization.
+
+3. Restrictions
+---------------
+Except to the extent that applicable law expressly permits otherwise, you may
+not reproduce, disclose, publish, distribute, sublicense, sell, modify, adapt,
+translate, reverse engineer, decompile, disassemble or otherwise attempt to
+derive the source code of CalcioTotale.
+
+The CalcioTotale and Eleòra names and original branding may not be used to
+identify or promote another product without prior written authorization.
+
+4. Third-party materials
+------------------------
+This license does not apply to third-party dependencies, fonts, icons, data,
+football club or competition names, badges, logos, trademarks or other
+materials not owned by Gerardo Perilli / Eleòra. Those materials remain subject
+to their respective licenses, terms and rights. See THIRD_PARTY_NOTICES.md and
+the licenses directory.
+
+Nothing in this license restricts rights granted directly by a third-party
+license for the relevant third-party material.
+
+5. Disclaimer
+-------------
+CALCIOTOTALE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NON-INFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY LAW, GERARDO
+PERILLI / ELEÒRA SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGE OR OTHER LIABILITY
+ARISING FROM THE SOFTWARE OR ITS USE.
+
+For source access, redistribution or commercial licensing requests, contact
+Gerardo Perilli / Eleòra through an official Eleòra communication channel.
