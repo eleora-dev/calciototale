@@ -16,7 +16,7 @@ CalcioTotale is a local, single-player football management game centred on Itali
 
 ## Current game
 
-- **Two career modes** — *Solo la Maglia* keeps the player at one club, while *Sogni di Gloria* follows a director's career from lower divisions through offers, evaluations and possible dismissals.
+- **Two career modes** — *Solo la Maglia* keeps the player at one club, while *Sentieri di Gloria* follows a director's career from lower divisions through offers, evaluations and possible dismissals.
 - **Five playable leagues** — Serie A, Serie B and all three Serie C groups, with 100 selectable Italian clubs plus 121 non-selectable European and world-pool clubs in the base database.
 - **Domestic football** — league seasons, Coppa Italia, Coppa Italia Serie C, Supercoppa Italiana, Serie B play-offs/play-outs and Serie C post-season.
 - **International competitions** — UEFA Champions League, Europa League, Conference League, UEFA Super Cup, Intercontinental Cup and Club World Cup, with qualification and season-to-season progression.
@@ -26,8 +26,8 @@ CalcioTotale is a local, single-player football management game centred on Itali
 - **Commercial management** — ticketing and season tickets, sponsors, TV rights, press and official communication, social channels and merchandising.
 - **Youth and development** — academy prospects, promotion paths, technical growth, personalities and individual treatment.
 - **Statistics and news** — tables, calendars, competition filters, player and team reports, awards, records and contextual news.
-- **Local saves** — nine career slots stored in the local `saves/` directory; portable executable builds keep it beside the executable.
-- **Italian interface** — all player-facing text is maintained in `locales/locale_it.py`.
+- **Local saves** — nine career slots stored in the local `saves/` directory; portable executable builds keep it beside the executable, while system packages use the user's data directory.
+- **Italian interface** — generic player-facing prose is maintained in `locales/locale_it.py`; competition names and organisers are data-driven.
 
 ## Runtime and privacy
 
@@ -40,7 +40,7 @@ CalcioTotale is an offline desktop game:
 
 The links in the About dialog open the user's default browser only when selected; any resulting connection is made by that browser to the linked website, not by the game runtime.
 
-Each occupied slot uses a gzip-compressed JSON payload named `saves/slotN.json.gz` and may use a small plain-JSON summary named `saves/slotN.meta.json`. In a portable executable build, `saves/` is resolved beside the executable instead of from the process working directory. The application may also generate replaceable raster caches in the operating system's temporary directory. During startup it creates a short-lived `calciototale-display-*.json` probe there with the primary display geometry and scaling factor, then removes it; this file contains no career or profile data.
+Each occupied slot uses a gzip-compressed JSON payload named `saves/slotN.json.gz` and may use a small plain-JSON summary named `saves/slotN.meta.json`. In a portable executable build, `saves/` is resolved beside the executable instead of from the process working directory. The Fedora RPM stores it in `${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/saves/`. The application may also generate replaceable raster caches in the operating system's temporary directory. During startup it creates a short-lived `calciototale-display-*.json` probe there with the primary display geometry and scaling factor, then removes it; this file contains no career or profile data.
 
 The importer and maintenance utilities in `tools/` are separate development tools. Some of them access third-party websites, but they are never invoked by the game at runtime.
 
@@ -48,12 +48,14 @@ See [privacy.html](privacy.html) for the complete bilingual privacy policy.
 
 ## Technical overview
 
-- `data/data.json.gz` contains the version 1.0, 2025-26 base database as gzip-compressed UTF-8 JSON.
-- `models/` defines clubs, players, staff, matches, standings, facilities and economic data.
-- `engine/` contains match simulation, calendars, competitions, transfers, contracts, finance, news, training and season progression.
+- `data/data.json.gz` contains the version 1.0, 2025-26 base database as gzip-compressed UTF-8 JSON, including competition names, short names, organisers and icon paths.
+- `data/competitions/` contains every competition image referenced by that database; `data/teams/` contains club badges.
+- `catalogs/` contains database I/O, static-record schemas and access to the replaceable game catalogues.
+- `models/` defines clubs, players, staff, matches, standings, facilities, economic data and the season-objective policy.
+- `engine/` contains world construction, match simulation, calendars, competitions, transfers, contracts, finance, news, training and season progression.
 - `ui/` contains the PySide6 interface, dialogs, styling and presentation logic.
 - `locales/locale_it.py` is the single catalogue for the Italian interface.
-- `assets/` contains local branding, backgrounds, icons, flags, fonts and other visual resources.
+- `assets/` contains local branding, backgrounds, interface icons, flags, fonts and other non-competition visual resources.
 - `saves/` is created at runtime for local save slots and their summaries.
 
 The reference environment is Fedora Linux with KDE Plasma. The source also contains display handling for Windows, but only official builds explicitly published for a platform should be considered supported.
@@ -80,18 +82,20 @@ The source repository is private. Public distribution, when available, is limite
 
 Official executable builds may be downloaded, installed and used only for personal, non-commercial purposes under [LICENSE](LICENSE). Source access, redistribution, modification, publication and commercial use require prior written authorisation. Do not redistribute builds or rely on unofficial mirrors.
 
-The reproducible Windows x64 portable-build procedure is documented in [packaging/windows/README.md](packaging/windows/README.md). It creates an autonomous folder and ZIP containing Python, PySide6/Qt and all runtime resources; the end user does not install Python packages.
+The Windows x64 portable-build procedure is documented in [packaging/windows/README.md](packaging/windows/README.md). Linux x86_64 portable and Fedora RPM builds are documented in [packaging/linux/README.md](packaging/linux/README.md). Both create an autonomous payload containing Python, PySide6/Qt and all runtime resources; the end user does not install Python packages.
 
 ## Project structure
 
 ```text
 assets/                   Branding, backgrounds, icons, flags, fonts and UI media
-data/                     Base database, schema and world-loading code
-engine/                   Simulation and game-state logic
+catalogs/                 Static database I/O, schemas, configuration and catalogue access
+data/                     Replaceable base database and competition/team images
+engine/                   World construction, simulation and game-state logic
 licenses/                 Included third-party licence texts
 locales/                  Italian localisation catalogue
-models/                   Domain models and constants
+models/                   Domain models, identifiers, policies and constants
 packaging/windows/        PyInstaller recipe and PowerShell build script
+packaging/linux/          Shared Linux payload, portable archive and Fedora RPM
 tools/                    Tests, database importer and maintenance utilities
 ui/                       PySide6 interface, palette and styling
 calciototale.py           Application entry point
