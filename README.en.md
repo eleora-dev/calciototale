@@ -28,9 +28,12 @@ Official packages from [Release v1.0beta](https://github.com/eleora-dev/calcioto
 - [Fedora 44 x86_64 — RPM package](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/calciototale-1.0-0.beta.1.fc44.x86_64.rpm)
 - [macOS 13+ Apple Silicon](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-macOS-arm64.zip)
 - [macOS 13+ Intel](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-macOS-x86_64.zip)
-- [SHA-256 checksums](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/SHA256SUMS)
 
 The packages are self-contained: Python and Python packages do not need to be installed. This repository distributes official executable builds only; the source code is private.
+
+### Integrity verification
+
+To verify downloaded files, use [SHA256SUMS](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/SHA256SUMS).
 
 ## Installation and startup
 
