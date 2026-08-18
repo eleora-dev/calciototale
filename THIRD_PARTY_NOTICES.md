@@ -2,7 +2,7 @@
 
 CalcioTotale includes original project material and uses or references third-party software, assets, names, trademarks and data. The proprietary terms in `LICENSE` apply only to material owned by Gerardo Perilli / Eleòra and do not replace any third-party licence or right.
 
-This notice reflects the current version 1.0 repository. It is a practical inventory, not a substitute for the complete licence texts or for legal review of a particular executable build.
+This notice reflects the current version 1.0 beta repository. It is a practical inventory, not a substitute for the complete licence texts or for legal review of a particular executable build.
 
 ---
 
@@ -26,6 +26,18 @@ Any bundled item that is not owned by Gerardo Perilli / Eleòra is excluded from
 - Official information: https://doc.qt.io/qtforpython-6/
 
 PySide6 and Qt are not relicensed by CalcioTotale. The source repository does not select a licensing option for every possible executable package. Whoever creates or distributes a build must use an applicable option and include all notices, licence texts, source/relinking provisions and other materials required by that option and by the Qt modules actually bundled.
+
+---
+
+## PyInstaller
+
+- Material: build system; its bootloader and loader files are embedded in executable packages
+- Current build requirement: `PyInstaller==6.21.0`
+- Licence: GPLv2 or later with the PyInstaller bootloader exception; runtime hooks use Apache License 2.0
+- Included text: `licenses/PYINSTALLER-COPYING.txt`
+- Upstream project: https://github.com/pyinstaller/pyinstaller
+
+The bootloader exception permits PyInstaller's compiled bootloader and related files to be combined with and distributed as part of non-free applications. It does not relicense CalcioTotale or remove the terms that apply to PyInstaller itself.
 
 ---
 
@@ -63,6 +75,17 @@ CalcioTotale does not relicense Exo 2.
 - Upstream project: https://github.com/lipis/flag-icons
 
 CalcioTotale does not relicense the `flag-icons` material.
+
+---
+
+## Development-tool dependencies
+
+The following direct dependencies are used only by the importer and maintenance utilities under `tools/` and are excluded from executable game builds:
+
+- **Requests** (`requests>=2.31.0`) — Apache License 2.0; included text: `licenses/APACHE-2.0.txt`; upstream project: https://github.com/psf/requests
+- **Beautiful Soup** (`beautifulsoup4>=4.12.0`) — MIT License; included text: `licenses/MIT-BEAUTIFULSOUP.txt`; upstream project: https://www.crummy.com/software/BeautifulSoup/bs4/
+
+Their own dependencies, when installed in a development environment, remain subject to the notices and licence terms distributed by their respective packages.
 
 ---
 

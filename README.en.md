@@ -62,11 +62,11 @@ The Windows build does not yet have a code signature and may trigger a Microsoft
 ## Main features
 
 - two career modes: *Solo la Maglia* and *Sentieri di Gloria*;
-- Serie A, Serie B and all three Serie C groups, with 100 selectable Italian clubs;
+- Serie A, Serie B and all three Serie C groups, with 100 selectable Italian clubs plus 121 European and international clubs in the base database;
 - Coppa Italia, Coppa Italia Serie C, Supercoppa Italiana, play-offs and play-outs;
 - UEFA competitions, Intercontinental Cup and Club World Cup;
-- formations, line-ups, tactics, training, injuries, suspensions and match reports;
-- transfers, loans, contracts, scouting and youth development;
+- formations, line-ups, tactics, roles, shirt numbers, training, injuries, suspensions and match reports;
+- transfers, loans, negotiations, pre-contracts, scouting and youth development;
 - finances, board objectives, staff, stadium and training-centre development;
 - ticketing, sponsors, TV rights, press, social channels and merchandising;
 - tables, calendars, statistics, awards, records and contextual news;
@@ -79,7 +79,7 @@ CalcioTotale is an offline desktop game:
 - no account or remote server is required;
 - it does not include telemetry, analytics or advertising;
 - normal gameplay does not make network requests;
-- career data remains on the user's computer.
+- career data remains on the user's device unless the user copies or shares it.
 
 The links in the About dialog open the default browser only when selected. See the complete bilingual [privacy policy](privacy.html) for further details.
 
@@ -87,7 +87,7 @@ The links in the About dialog open the default browser only when selected. See t
 
 The official build may be downloaded, installed and used for personal, non-commercial purposes under the [CalcioTotale proprietary licence](LICENSE). Redistribution, modification, publication, commercial use and attempts to derive the source code are not permitted without prior written authorisation.
 
-Third-party components and materials remain subject to their respective licences, terms and rights. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the [`licenses/`](licenses/) directory.
+Third-party components and materials, including Qt/PySide6, PyInstaller, icons, fonts and development-tool dependencies, remain subject to their respective licences, terms and rights. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the [`licenses/`](licenses/) directory.
 
 CalcioTotale is an unofficial project and is not affiliated with, endorsed by or sponsored by any football federation, league, competition, club, player or data provider.
 

@@ -62,11 +62,11 @@ La build Windows non dispone ancora di una firma del codice e può mostrare un a
 ## Caratteristiche principali
 
 - due modalità carriera: *Solo la Maglia* e *Sentieri di Gloria*;
-- Serie A, Serie B e tutti e tre i gironi di Serie C, con 100 club italiani selezionabili;
+- Serie A, Serie B e tutti e tre i gironi di Serie C, con 100 club italiani selezionabili e altri 121 club europei e internazionali nel database di base;
 - Coppa Italia, Coppa Italia Serie C, Supercoppa Italiana, play-off e play-out;
 - competizioni UEFA, Coppa Intercontinentale e Mondiale per Club;
-- moduli, formazioni, tattiche, allenamento, infortuni, squalifiche e cronache delle partite;
-- trasferimenti, prestiti, contratti, osservazione e sviluppo dei giovani;
+- moduli, formazioni, tattiche, ruoli, numeri di maglia, allenamento, infortuni, squalifiche e cronache delle partite;
+- trasferimenti, prestiti, trattative, precontratti, osservazione e sviluppo dei giovani;
 - finanze, obiettivi societari, staff, stadio e centro di allenamento;
 - biglietteria, sponsor, diritti TV, stampa, canali social e merchandising;
 - classifiche, calendari, statistiche, premi, record e notizie contestuali;
@@ -79,7 +79,7 @@ CalcioTotale è un gioco desktop offline:
 - non richiede un account né un server remoto;
 - non include telemetria, sistemi di analisi o pubblicità;
 - durante il normale utilizzo non effettua richieste di rete;
-- i dati delle carriere rimangono sul computer dell'utente.
+- i dati delle carriere rimangono sul dispositivo dell'utente, salvo copia o condivisione da parte dell'utente stesso.
 
 I collegamenti nella finestra Informazioni aprono il browser predefinito soltanto quando vengono selezionati. Per ulteriori dettagli consulta l'[informativa sulla privacy](privacy.html) completa in italiano e inglese.
 
@@ -87,7 +87,7 @@ I collegamenti nella finestra Informazioni aprono il browser predefinito soltant
 
 La build ufficiale può essere scaricata, installata e utilizzata per uso personale e non commerciale secondo la [licenza proprietaria di CalcioTotale](LICENSE). La redistribuzione, la modifica, la pubblicazione, l'uso commerciale e i tentativi di ricavare il codice sorgente non sono consentiti senza preventiva autorizzazione scritta.
 
-I componenti e i materiali di terze parti rimangono soggetti alle rispettive licenze, condizioni e titolarità. Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e la directory [`licenses/`](licenses/).
+I componenti e i materiali di terze parti, compresi Qt/PySide6, PyInstaller, icone, font e dipendenze degli strumenti di sviluppo, rimangono soggetti alle rispettive licenze, condizioni e titolarità. Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e la directory [`licenses/`](licenses/).
 
 CalcioTotale è un progetto non ufficiale e non è affiliato, approvato o sponsorizzato da federazioni, leghe, competizioni, club, giocatori o fornitori di dati.
 
