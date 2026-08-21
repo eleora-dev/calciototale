@@ -23,7 +23,7 @@ CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singo
 
 I pacchetti ufficiali della [Release v1.0beta](https://github.com/eleora-dev/calciototale/releases/tag/v1.0beta) sono disponibili per:
 
-Pacchetti aggiornati il **19 agosto 2026**.
+Pacchetti aggiornati il **21 agosto 2026**.
 
 - [Windows 10/11 x64 — ZIP portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-windows-x64.zip)
 - [Linux x86_64 — archivio portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-linux-x86_64.tar.gz)
