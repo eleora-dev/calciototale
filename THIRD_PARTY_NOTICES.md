@@ -2,7 +2,7 @@
 
 CalcioTotale includes original project material and uses or references third-party software, assets, names, trademarks and data. The proprietary terms in `LICENSE` apply only to material owned by Gerardo Perilli / Eleòra and do not replace any third-party licence or right.
 
-This notice reflects the current version 1.0 beta repository. It is a practical inventory, not a substitute for the complete licence texts or for legal review of a particular executable build.
+This notice reflects the current version 1.0 beta repository and was last reviewed on 22 August 2026. It is a practical inventory, not a substitute for the complete licence texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
 
 ---
 
@@ -17,15 +17,30 @@ Any bundled item that is not owned by Gerardo Perilli / Eleòra is excluded from
 
 ---
 
+## Python
+
+- Material: Python interpreter and standard library embedded in official executable builds
+- Source requirement: Python 3.10 or newer
+- Automated release environment: Python 3.12
+- Licence: Python Software Foundation License Version 2 and the additional licences for software incorporated into the corresponding Python distribution
+- Included text: `licenses/PYTHON-3.12-LICENSE.txt`
+- Official project: https://www.python.org/
+
+Python is not relicensed by CalcioTotale. The included file is the complete licence shipped for the Python 3.12 line used by the automated release workflow. A package built locally with another supported Python line must include the licence material supplied with that exact interpreter.
+
+---
+
 ## PySide6 / Qt for Python
 
 - Material: Python bindings and Qt libraries used by the graphical interface
 - Repository location: declared in `requirements.txt`; installed as an external dependency
 - Current requirement: `PySide6>=6.7,<7`
-- Licensing: Qt for Python is offered under LGPLv3/GPLv3 and Qt commercial licensing options
+- Current automated-build channel: PySide6 Community wheels installed from PyPI
+- Licensing: LGPLv3/GPLv3 for the Community distribution; separate Qt commercial licensing is available only under its own terms
+- Included general texts: `licenses/LGPL-3.0.txt` and `licenses/GPL-3.0.txt`
 - Official information: https://doc.qt.io/qtforpython-6/
 
-PySide6 and Qt are not relicensed by CalcioTotale. The source repository does not select a licensing option for every possible executable package. Whoever creates or distributes a build must use an applicable option and include all notices, licence texts, source/relinking provisions and other materials required by that option and by the Qt modules actually bundled.
+PySide6, Shiboken6 and Qt are not relicensed by CalcioTotale. The automated pipeline's use of Community wheels means that a public build must satisfy the applicable LGPLv3/GPLv3 requirements, including the notices, licence texts, relinking or replacement rights, source-code availability obligations and third-party acknowledgements required by the exact Qt modules and wheel versions bundled. A build made under a valid Qt commercial licence must instead be produced and documented through the corresponding commercial distribution channel.
 
 ---
 
@@ -38,6 +53,19 @@ PySide6 and Qt are not relicensed by CalcioTotale. The source repository does no
 - Upstream project: https://github.com/pyinstaller/pyinstaller
 
 The bootloader exception permits PyInstaller's compiled bootloader and related files to be combined with and distributed as part of non-free applications. It does not relicense CalcioTotale or remove the terms that apply to PyInstaller itself.
+
+---
+
+## Pillow
+
+- Material: image-processing dependency used by the packaging environment, including platform-icon handling
+- Current build requirement: `Pillow>=10,<13`
+- Runtime status: not imported by CalcioTotale and not required for source gameplay
+- Licence: MIT-CMU License
+- Included text: `licenses/MIT-CMU-PILLOW.txt`
+- Upstream project: https://github.com/python-pillow/Pillow
+
+Pillow is installed in the temporary build environment on Linux, Windows and macOS. It is a build-time tool rather than a declared game-runtime dependency.
 
 ---
 

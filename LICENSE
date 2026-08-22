@@ -1,7 +1,7 @@
 CalcioTotale — Proprietary License and Terms of Use
 
 Copyright (c) 2026 Gerardo Perilli / Eleòra. All rights reserved.
-Effective date: 21 Aug 2026.
+Effective date: 22 Aug 2026.
 
 1. Scope
 --------
@@ -34,11 +34,12 @@ identify or promote another product without prior written authorization.
 
 4. Third-party materials
 ------------------------
-This license does not apply to third-party dependencies, fonts, icons, data,
-football club or competition names, badges, logos, trademarks or other
-materials not owned by Gerardo Perilli / Eleòra. Those materials remain subject
-to their respective licenses, terms and rights. See THIRD_PARTY_NOTICES.md and
-the licenses directory.
+This license does not apply to third-party dependencies, interpreters, build
+tools, fonts, icons, data, football club or competition names, badges, logos,
+trademarks or other materials not owned by Gerardo Perilli / Eleòra. Those
+materials remain subject to their respective licenses, terms and rights. See
+THIRD_PARTY_NOTICES.md and the licenses directory for the maintained inventory
+and the licence texts distributed with the project.
 
 Nothing in this license restricts rights granted directly by a third-party
 license for the relevant third-party material.

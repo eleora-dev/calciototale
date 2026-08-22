@@ -23,7 +23,7 @@ CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singo
 
 I pacchetti ufficiali della [Release v1.0beta](https://github.com/eleora-dev/calciototale/releases/tag/v1.0beta) sono disponibili per:
 
-Pacchetti aggiornati il **21 agosto 2026**.
+Pacchetti aggiornati il **22 agosto 2026**.
 
 - [Windows 10/11 x64 — ZIP portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-windows-x64.zip)
 - [Linux x86_64 — archivio portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-linux-x86_64.tar.gz)
@@ -64,6 +64,7 @@ La build Windows non dispone ancora di una firma del codice e può mostrare un a
 ## Caratteristiche principali
 
 - due modalità carriera: *Solo la Maglia* e *Sentieri di Gloria*;
+- controllo tecnico configurabile: formazione, tattiche, allenamento e gestione della gara possono essere diretti dal giocatore oppure delegati allo staff;
 - Serie A, Serie B e tutti e tre i gironi di Serie C, con 100 club italiani selezionabili e altri 121 club europei e internazionali nel database di base;
 - Coppa Italia, Coppa Italia Serie C, Supercoppa Italiana, play-off e play-out;
 - competizioni UEFA, Coppa Intercontinentale e Mondiale per Club;
@@ -89,7 +90,7 @@ I collegamenti nella finestra Informazioni aprono il browser predefinito soltant
 
 La build ufficiale può essere scaricata, installata e utilizzata per uso personale e non commerciale secondo la [licenza proprietaria di CalcioTotale](LICENSE). La redistribuzione, la modifica, la pubblicazione, l'uso commerciale e i tentativi di ricavare il codice sorgente non sono consentiti senza preventiva autorizzazione scritta.
 
-I componenti e i materiali di terze parti, compresi Qt/PySide6, PyInstaller, icone, font e dipendenze degli strumenti di sviluppo, rimangono soggetti alle rispettive licenze, condizioni e titolarità. Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e la directory [`licenses/`](licenses/).
+I componenti e i materiali di terze parti, compresi Python, Qt/PySide6, PyInstaller, Pillow usato per la build, icone e font, rimangono soggetti alle rispettive licenze, condizioni e titolarità. Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e la directory [`licenses/`](licenses/); ogni pacchetto include inoltre `BUILD_COMPONENTS.txt` con le versioni principali effettivamente usate.
 
 CalcioTotale è un progetto non ufficiale e non è affiliato, approvato o sponsorizzato da federazioni, leghe, competizioni, club, giocatori o fornitori di dati.
 

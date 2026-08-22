@@ -23,7 +23,7 @@ CalcioTotale is a local, single-player football management game centred on Itali
 
 Official packages from [Release v1.0beta](https://github.com/eleora-dev/calciototale/releases/tag/v1.0beta) are available for:
 
-Packages updated on **21 August 2026**.
+Packages updated on **22 August 2026**.
 
 - [Windows 10/11 x64 — portable ZIP](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-windows-x64.zip)
 - [Linux x86_64 — portable archive](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-linux-x86_64.tar.gz)
@@ -64,6 +64,7 @@ The Windows build does not yet have a code signature and may trigger a Microsoft
 ## Main features
 
 - two career modes: *Solo la Maglia* and *Sentieri di Gloria*;
+- configurable technical control: line-ups, tactics, training and match management can be directed by the player or delegated to the technical staff;
 - Serie A, Serie B and all three Serie C groups, with 100 selectable Italian clubs plus 121 European and international clubs in the base database;
 - Coppa Italia, Coppa Italia Serie C, Supercoppa Italiana, play-offs and play-outs;
 - UEFA competitions, Intercontinental Cup and Club World Cup;
@@ -89,7 +90,7 @@ The links in the About dialog open the default browser only when selected. See t
 
 The official build may be downloaded, installed and used for personal, non-commercial purposes under the [CalcioTotale proprietary licence](LICENSE). Redistribution, modification, publication, commercial use and attempts to derive the source code are not permitted without prior written authorisation.
 
-Third-party components and materials, including Qt/PySide6, PyInstaller, icons, fonts and development-tool dependencies, remain subject to their respective licences, terms and rights. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the [`licenses/`](licenses/) directory.
+Third-party components and materials, including Python, Qt/PySide6, PyInstaller, build-time Pillow, icons and fonts, remain subject to their respective licences, terms and rights. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the [`licenses/`](licenses/) directory; each package also includes `BUILD_COMPONENTS.txt` with the principal versions actually used.
 
 CalcioTotale is an unofficial project and is not affiliated with, endorsed by or sponsored by any football federation, league, competition, club, player or data provider.
 
