@@ -23,13 +23,13 @@ CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singo
 
 I pacchetti ufficiali della [Release v1.0beta](https://github.com/eleora-dev/calciototale/releases/tag/v1.0beta) sono disponibili per:
 
-Pacchetti aggiornati il **22 agosto 2026**.
-
 - [Windows 10/11 x64 — ZIP portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-windows-x64.zip)
 - [Linux x86_64 — archivio portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-linux-x86_64.tar.gz)
 - [Fedora 44 x86_64 — pacchetto RPM](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/calciototale-1.0-0.beta.1.fc44.x86_64.rpm)
 - [macOS 13+ Apple Silicon](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-macOS-arm64.zip)
 - [macOS 13+ Intel](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-macOS-x86_64.zip)
+
+Pacchetti aggiornati il **22 agosto 2026**.
 
 I pacchetti sono autonomi: non è necessario installare Python o pacchetti Python. Questo repository distribuisce esclusivamente le build eseguibili ufficiali; il codice sorgente è privato.
 
