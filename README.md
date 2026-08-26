@@ -2,7 +2,7 @@
 
 [English version](README.en.md)
 
-CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singolo, incentrato sul calcio italiano. La build pubblica attuale è la **versione 1.0 beta**, con database aggiornato alla stagione **2025-26**.
+CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singolo, incentrato sul calcio italiano. La build pubblica attuale è la **versione 1.0 beta**, con database aggiornato alla stagione **2026-27**.
 
 > **Lingua:** il gioco e la sua interfaccia sono attualmente disponibili esclusivamente in italiano.
 
@@ -29,7 +29,7 @@ I pacchetti ufficiali della [Release v1.0beta](https://github.com/eleora-dev/cal
 - [macOS 13+ Apple Silicon](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-macOS-arm64.zip)
 - [macOS 13+ Intel](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-macOS-x86_64.zip)
 
-Pacchetti aggiornati il **22 agosto 2026**.
+Pacchetti aggiornati il **26 agosto 2026**.
 
 I pacchetti sono autonomi: non è necessario installare Python o pacchetti Python. Questo repository distribuisce esclusivamente le build eseguibili ufficiali; il codice sorgente è privato.
 
@@ -65,12 +65,12 @@ La build Windows non dispone ancora di una firma del codice e può mostrare un a
 
 - due modalità carriera: *Solo la Maglia* e *Sentieri di Gloria*;
 - controllo tecnico configurabile: formazione, tattiche, allenamento e gestione della gara possono essere diretti dal giocatore oppure delegati allo staff;
-- Serie A, Serie B e tutti e tre i gironi di Serie C, con 100 club italiani selezionabili e altri 121 club europei e internazionali nel database di base;
+- Serie A, Serie B e tutti e tre i gironi di Serie C, con 100 club italiani selezionabili e altri 145 club europei e internazionali nel database di base;
 - Coppa Italia, Coppa Italia Serie C, Supercoppa Italiana, play-off e play-out;
 - competizioni UEFA, Coppa Intercontinentale e Mondiale per Club;
 - moduli, formazioni, tattiche, ruoli, numeri di maglia, allenamento, infortuni, squalifiche e cronache delle partite;
 - trasferimenti, prestiti, trattative, precontratti, osservazione e sviluppo dei giovani;
-- finanze, obiettivi societari, staff, stadio e centro di allenamento;
+- finanze, conto economico e contabilità dei cartellini, obiettivi societari, staff, stadio e centro di allenamento;
 - biglietteria, sponsor, diritti TV, stampa, canali social e merchandising;
 - classifiche, calendari, statistiche, premi, record e notizie contestuali;
 - nove slot locali per le carriere.

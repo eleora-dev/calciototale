@@ -2,7 +2,7 @@
 
 [Versione italiana](README.md)
 
-CalcioTotale is a local, single-player football management game centred on Italian club football. The current public build is **version 1.0 beta**, with a database updated for the **2025-26** season.
+CalcioTotale is a local, single-player football management game centred on Italian club football. The current public build is **version 1.0 beta**, with a database updated for the **2026-27** season.
 
 > **Language:** the game and its interface are currently available in Italian only.
 
@@ -23,7 +23,7 @@ CalcioTotale is a local, single-player football management game centred on Itali
 
 Official packages from [Release v1.0beta](https://github.com/eleora-dev/calciototale/releases/tag/v1.0beta) are available for:
 
-Packages updated on **22 August 2026**.
+Packages updated on **26 August 2026**.
 
 - [Windows 10/11 x64 — portable ZIP](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-windows-x64.zip)
 - [Linux x86_64 — portable archive](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-linux-x86_64.tar.gz)
@@ -65,12 +65,12 @@ The Windows build does not yet have a code signature and may trigger a Microsoft
 
 - two career modes: *Solo la Maglia* and *Sentieri di Gloria*;
 - configurable technical control: line-ups, tactics, training and match management can be directed by the player or delegated to the technical staff;
-- Serie A, Serie B and all three Serie C groups, with 100 selectable Italian clubs plus 121 European and international clubs in the base database;
+- Serie A, Serie B and all three Serie C groups, with 100 selectable Italian clubs plus 145 European and international clubs in the base database;
 - Coppa Italia, Coppa Italia Serie C, Supercoppa Italiana, play-offs and play-outs;
 - UEFA competitions, Intercontinental Cup and Club World Cup;
 - formations, line-ups, tactics, roles, shirt numbers, training, injuries, suspensions and match reports;
 - transfers, loans, negotiations, pre-contracts, scouting and youth development;
-- finances, board objectives, staff, stadium and training-centre development;
+- finances, income statement and player-registration accounting, board objectives, staff, stadium and training-centre development;
 - ticketing, sponsors, TV rights, press, social channels and merchandising;
 - tables, calendars, statistics, awards, records and contextual news;
 - nine local career slots.

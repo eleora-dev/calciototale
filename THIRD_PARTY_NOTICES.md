@@ -2,7 +2,7 @@
 
 CalcioTotale includes original project material and uses or references third-party software, assets, names, trademarks and data. The proprietary terms in `LICENSE` apply only to material owned by Gerardo Perilli / Eleòra and do not replace any third-party licence or right.
 
-This notice reflects the current version 1.0 beta repository and was last reviewed on 22 August 2026. It is a practical inventory, not a substitute for the complete licence texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
+This notice reflects the current version 1.0 beta repository and was last reviewed on 26 August 2026. It is a practical inventory, not a substitute for the complete licence texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
 
 ---
 
@@ -121,7 +121,7 @@ Their own dependencies, when installed in a development environment, remain subj
 
 Football club, player, federation, league and competition names; crests, logos and other marks; and football data are not covered by the CalcioTotale proprietary licence unless explicitly owned or licensed by Gerardo Perilli / Eleòra. All corresponding rights remain with their respective owners.
 
-The maintenance tools described in `tools/README.md` can consult SoccerWiki, EA SPORTS FC resources and FIFACM. Those services and names are not runtime dependencies, sponsors or partners of CalcioTotale. References to them do not imply affiliation, endorsement or permission beyond the terms granted by their respective owners.
+The maintenance tools described in `tools/README.md` can consult SoccerWiki directly and BeSoccer and Transfermarkt through the Jina AI Reader text gateway. Those services and names are not runtime dependencies, sponsors or partners of CalcioTotale. References to them do not imply affiliation, endorsement or permission beyond the terms granted by their respective owners.
 
 CalcioTotale is an unofficial project and is not affiliated with, endorsed by or sponsored by any football federation, league, competition, club, player or data provider.
 
