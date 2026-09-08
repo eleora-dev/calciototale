@@ -6,6 +6,8 @@ CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singo
 
 > **Lingue:** il gioco e la sua interfaccia sono disponibili in italiano e inglese.
 
+> **Questa è la versione demo di CalcioTotale.** Comprende tutte le funzionalità di gioco, ma ogni carriera può proseguire soltanto fino al termine del girone di andata della prima stagione. La versione completa non è distribuita attraverso questo repository.
+
 ![Windows](https://img.shields.io/badge/Windows-x64-0078d4)
 ![Linux](https://img.shields.io/badge/Linux-x86__64-fcc624)
 ![macOS](https://img.shields.io/badge/macOS-Apple%20Silicon%20%7C%20Intel-000000)
@@ -19,7 +21,7 @@ CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singo
 
 ---
 
-## Download
+## Download della demo
 
 I pacchetti ufficiali della [Release v1.0](https://github.com/eleora-dev/calciototale/releases/tag/v1.0) sono disponibili per:
 

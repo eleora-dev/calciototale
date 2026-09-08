@@ -6,6 +6,8 @@ CalcioTotale is a local, single-player football management game centred on Itali
 
 > **Languages:** the game and its interface are available in Italian and English.
 
+> **This is the demo version of CalcioTotale.** It includes all gameplay features, but each career can continue only through the end of the first season's opening half. The full version is not distributed through this repository.
+
 ![Windows](https://img.shields.io/badge/Windows-x64-0078d4)
 ![Linux](https://img.shields.io/badge/Linux-x86__64-fcc624)
 ![macOS](https://img.shields.io/badge/macOS-Apple%20Silicon%20%7C%20Intel-000000)
@@ -19,7 +21,7 @@ CalcioTotale is a local, single-player football management game centred on Itali
 
 ---
 
-## Download
+## Demo download
 
 Official packages from [Release v1.0](https://github.com/eleora-dev/calciototale/releases/tag/v1.0) are available for:
 
