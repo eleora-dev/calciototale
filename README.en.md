@@ -2,14 +2,14 @@
 
 [Versione italiana](README.md)
 
-CalcioTotale is a local, single-player football management game centred on Italian club football. The current public build is **version 1.0 beta**, with a database updated for the **2026-27** season.
+CalcioTotale is a local, single-player football management game centred on Italian club football. This repository distributes the **version 1.0 demo**, with a database updated for the **2026-27** season.
 
-> **Language:** the game and its interface are currently available in Italian only.
+> **Languages:** the game and its interface are available in Italian and English.
 
 ![Windows](https://img.shields.io/badge/Windows-x64-0078d4)
 ![Linux](https://img.shields.io/badge/Linux-x86__64-fcc624)
 ![macOS](https://img.shields.io/badge/macOS-Apple%20Silicon%20%7C%20Intel-000000)
-![Release](https://img.shields.io/badge/release-1.0%20beta-f6a91a)
+![Release](https://img.shields.io/badge/release-1.0%20Demo-f6a91a)
 ![License](https://img.shields.io/badge/license-proprietary-red)
 ![Offline](https://img.shields.io/badge/game-offline-41cd52)
 
@@ -21,41 +21,41 @@ CalcioTotale is a local, single-player football management game centred on Itali
 
 ## Download
 
-Official packages from [Release v1.0beta](https://github.com/eleora-dev/calciototale/releases/tag/v1.0beta) are available for:
+Official packages from [Release v1.0](https://github.com/eleora-dev/calciototale/releases/tag/v1.0) are available for:
 
-Packages updated on **26 August 2026**.
+Packages updated on **8 September 2026**.
 
-- [Windows 10/11 x64 — portable ZIP](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-windows-x64.zip)
-- [Linux x86_64 — portable archive](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-linux-x86_64.tar.gz)
-- [Fedora 44 x86_64 — RPM package](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/calciototale-1.0-0.beta.1.fc44.x86_64.rpm)
-- [macOS 13+ Apple Silicon](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-macOS-arm64.zip)
-- [macOS 13+ Intel](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/CalcioTotale-1.0beta-macOS-x86_64.zip)
+- [Windows 10/11 x64 — portable ZIP](https://github.com/eleora-dev/calciototale/releases/download/v1.0/CalcioTotale-1.0-demo-windows-x64.zip)
+- [Linux x86_64 — portable archive](https://github.com/eleora-dev/calciototale/releases/download/v1.0/CalcioTotale-1.0-demo-linux-x86_64.tar.gz)
+- [Fedora 44 x86_64 — RPM package](https://github.com/eleora-dev/calciototale/releases/download/v1.0/calciototale-demo-1.0-1.fc44.x86_64.rpm)
+- [macOS 13+ Apple Silicon](https://github.com/eleora-dev/calciototale/releases/download/v1.0/CalcioTotale-1.0-demo-macOS-arm64.zip)
+- [macOS 13+ Intel](https://github.com/eleora-dev/calciototale/releases/download/v1.0/CalcioTotale-1.0-demo-macOS-x86_64.zip)
 
-The packages are self-contained: Python and Python packages do not need to be installed. This repository distributes official executable builds only; the source code is private.
+The demo lets you start a career with all features available and play through the end of the first season's opening half. The packages are self-contained: Python and Python packages do not need to be installed. This repository distributes the demo exclusively; neither the full version nor the source code is published here.
 
 ### Integrity verification
 
-To verify downloaded files, use [SHA256SUMS](https://github.com/eleora-dev/calciototale/releases/download/v1.0beta/SHA256SUMS).
+To verify downloaded files, use [SHA256SUMS](https://github.com/eleora-dev/calciototale/releases/download/v1.0/SHA256SUMS).
 
 ## Installation and startup
 
 ### Windows
 
-Extract the complete ZIP into a writable folder, open the `CalcioTotale` directory and run `CalcioTotale.exe`. This is a portable build: do not run it directly from the ZIP and do not place it in `Program Files`. Saves are stored in `saves/` beside the executable.
+Extract the complete ZIP into a writable folder, open the `CalcioTotale` directory and run `CalcioTotale.exe`. This is a portable build: do not run it directly from the ZIP and do not place it in `Program Files`. Saves are stored in `user/` beside the executable.
 
 ### Linux
 
 For the portable version, extract the archive and run `CalcioTotale/CalcioTotale`. The build is produced and tested on Fedora 44. On Fedora, you can install the RPM instead:
 
 ```bash
-sudo dnf install ./calciototale-1.0-0.beta.1.fc44.x86_64.rpm
+sudo dnf install ./calciototale-demo-1.0-1.fc44.x86_64.rpm
 ```
 
-The portable build stores `saves/` beside the executable; the RPM uses `${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/saves/`.
+The portable build stores `user/` beside the executable; the RPM uses `${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/user/`.
 
 ### macOS
 
-Choose the `arm64` package for Apple Silicon Macs or `x86_64` for Intel Macs. Extract the ZIP and drag `CalcioTotale.app` into `Applications`. Saves are stored in `~/Library/Application Support/CalcioTotale/saves/` and remain separate from the application.
+Choose the `arm64` package for Apple Silicon Macs or `x86_64` for Intel Macs. Extract the ZIP and drag `CalcioTotale.app` into `Applications`. Saves are stored in `~/Library/Application Support/CalcioTotale/user/` and remain separate from the application.
 
 ## Operating-system security warnings
 
