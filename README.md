@@ -2,16 +2,15 @@
 
 [English version](README.en.md)
 
-CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singolo, incentrato sul calcio italiano. Questo repository distribuisce la **versione demo 1.0**, con database aggiornato alla stagione **2026-27**.
+CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singolo, incentrato sul calcio italiano. Questo repository distribuisce la **versione demo 1.0.1**, con database aggiornato alla stagione **2026-27**.
 
 > **Lingue:** il gioco e la sua interfaccia sono disponibili in italiano e inglese.
 
-> **Questa è la versione demo di CalcioTotale.** Comprende tutte le funzionalità di gioco, ma ogni carriera può proseguire soltanto fino al termine del girone di andata della prima stagione. La versione completa non è distribuita attraverso questo repository.
+> **Questa è la versione demo di CalcioTotale.** Comprende tutte le funzionalità di gioco, ma ogni carriera può proseguire soltanto fino al termine del girone di andata della prima stagione. La versione completa sarà disponibile su Steam.
 
 ![Windows](https://img.shields.io/badge/Windows-x64-0078d4)
 ![Linux](https://img.shields.io/badge/Linux-x86__64-fcc624)
-![macOS](https://img.shields.io/badge/macOS-Apple%20Silicon%20%7C%20Intel-000000)
-![Versione](https://img.shields.io/badge/versione-1.0%20Demo-f6a91a)
+![Versione](https://img.shields.io/badge/versione-1.0.1%20Demo-f6a91a)
 ![Licenza](https://img.shields.io/badge/licenza-proprietaria-red)
 ![Offline](https://img.shields.io/badge/gioco-offline-41cd52)
 
@@ -23,21 +22,22 @@ CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singo
 
 ## Download della demo
 
-I pacchetti ufficiali della [Release v1.0](https://github.com/eleora-dev/calciototale/releases/tag/v1.0) sono disponibili per:
+I pacchetti ufficiali della [Release v1.0.1](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.1) sono disponibili per:
 
-- [Windows 10/11 x64 — ZIP portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0/CalcioTotale-1.0-demo-windows-x64.zip)
-- [Linux x86_64 — archivio portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0/CalcioTotale-1.0-demo-linux-x86_64.tar.gz)
-- [Fedora 44 x86_64 — pacchetto RPM](https://github.com/eleora-dev/calciototale/releases/download/v1.0/calciototale-demo-1.0-1.fc44.x86_64.rpm)
-- [macOS 13+ Apple Silicon](https://github.com/eleora-dev/calciototale/releases/download/v1.0/CalcioTotale-1.0-demo-macOS-arm64.zip)
-- [macOS 13+ Intel](https://github.com/eleora-dev/calciototale/releases/download/v1.0/CalcioTotale-1.0-demo-macOS-x86_64.zip)
+- [Windows 10/11 x64 — ZIP portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0.1/CalcioTotale-1.0.1-demo-windows-x64.zip)
+- [Linux x86_64 — archivio portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0.1/CalcioTotale-1.0.1-demo-linux-x86_64.tar.gz)
 
-Pacchetti aggiornati l'**8 settembre 2026**.
+Pacchetti aggiornati il **15 settembre 2026**.
 
 La demo permette di iniziare una carriera con tutte le funzionalità e di giocare fino al termine del girone di andata della prima stagione. I pacchetti sono autonomi: non è necessario installare Python o pacchetti Python. Questo repository distribuisce esclusivamente la demo; la versione completa e il codice sorgente non sono pubblicati qui.
 
 ### Verifica dell'integrità
 
-Per controllare i file scaricati è disponibile [SHA256SUMS](https://github.com/eleora-dev/calciototale/releases/download/v1.0/SHA256SUMS).
+Per controllare i file scaricati è disponibile [SHA256SUMS](https://github.com/eleora-dev/calciototale/releases/download/v1.0.1/SHA256SUMS).
+
+## Versione completa su Steam
+
+La versione completa uscirà il **2 ottobre 2026**. Visita la [pagina Steam di Calcio Totale](https://store.steampowered.com/app/5247020/Calcio_Totale/) per aggiungerlo alla Lista dei desideri e acquistarlo dal giorno del lancio.
 
 ## Installazione e avvio
 
@@ -47,21 +47,11 @@ Estrai completamente lo ZIP in una cartella scrivibile, apri la directory `Calci
 
 ### Linux
 
-Per la versione portabile, estrai l'archivio e avvia `CalcioTotale/CalcioTotale`. La build è generata e collaudata su Fedora 44. Su Fedora puoi in alternativa installare l'RPM con:
-
-```bash
-sudo dnf install ./calciototale-demo-1.0-1.fc44.x86_64.rpm
-```
-
-La build portabile conserva `user/` accanto all'eseguibile; l'RPM usa `${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/user/`.
-
-### macOS
-
-Scegli il pacchetto `arm64` per i Mac Apple Silicon oppure `x86_64` per i Mac Intel. Estrai lo ZIP e trascina `CalcioTotale.app` in `Applicazioni`. I salvataggi sono conservati in `~/Library/Application Support/CalcioTotale/user/` e rimangono separati dall'applicazione.
+Estrai l'archivio e avvia `CalcioTotale/CalcioTotale`. La build è generata e collaudata su Fedora 44 e conserva `user/` accanto all'eseguibile.
 
 ## Avvisi di sicurezza del sistema operativo
 
-La build Windows non dispone ancora di una firma del codice e può mostrare un avviso Microsoft Defender SmartScreen. Le build macOS hanno una firma ad hoc ma non sono firmate con un certificato Apple Developer ID né notarizzate da Apple; Gatekeeper può quindi richiedere di confermare il primo avvio tramite clic destro sull'app e **Apri**. Scarica i pacchetti soltanto da questo repository ufficiale e verifica il file `SHA256SUMS` prima dell'uso.
+La build Windows non dispone ancora di una firma del codice e può mostrare un avviso Microsoft Defender SmartScreen. Scarica i pacchetti soltanto da questo repository ufficiale e verifica il file `SHA256SUMS` prima dell'uso.
 
 ## Caratteristiche principali
 

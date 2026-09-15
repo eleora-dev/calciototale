@@ -186,7 +186,7 @@
     <img src="assets/branding/eleora_calciototale_logo_blue.png" alt="CalcioTotale" class="brand-logo">
   </div>
 
-  <p class="meta">Privacy Policy · Version 1.0 · Last updated: 26 August 2026</p>
+  <p class="meta">Privacy Policy · Version 1.0.1 · Last updated: 15 September 2026</p>
 </header>
 
 <main>
@@ -196,11 +196,11 @@
     <div class="lang-tag">English</div>
     <h2>Privacy Policy</h2>
 
-    <p>CalcioTotale version 1.0 beta is a local, single-player football management game with a 2026-27 base database, built with Python and PySide6. Its reference environment is desktop Linux. The game simulates football seasons, club and squad management, finances, transfers, marketing, facilities and matches.</p>
+    <p>CalcioTotale version 1.0.1 is a local, single-player football management application built with Python and PySide6 and accompanied by a separate, replaceable 2026-27 football content package. Its reference environment is desktop Linux. The interface is available in Italian and English. Italian is selected by default only when the system language is Italian; every other system language defaults to English. The application simulates football seasons, club and squad management, finances, transfers, marketing, facilities and matches.</p>
 
     <p><strong>The application does not collect, transmit, sell or share personal data.</strong> All gameplay and simulation logic run locally on the user's device. CalcioTotale does not require an account, telemetry, analytics, advertising services or a remote server, and the runtime does not intentionally make network requests during normal gameplay.</p>
 
-    <p>The user may enter a display name for the president/managing director profile. If the user chooses to enter a real name or other identifying text, that text is stored only inside the local career files. Save data may also include the selected club, career mode, chosen management-control level, squads, staff, fixtures, results, finances, transfers, facilities, news and the other information needed to restore game progress.</p>
+    <p>The user may enter a display name for the CEO profile. If the user chooses to enter a real name or other identifying text, that text is stored only inside the local career files. Save data may also include the selected club, career mode, chosen management-control level, squads, staff, fixtures, results, finances, transfers, facilities, news and the other information needed to restore game progress.</p>
 
     <p>No profile name, save payload, selected club, match result or other progress data is sent by the application to Eleòra or to an external service.</p>
 
@@ -210,15 +210,19 @@
       <ul>
         <li>
           <span class="permission-name">Career payloads</span>
-          <span class="permission-reason">Up to nine slots are stored as gzip-compressed JSON in <code>saves/slotN.json.gz</code>. Portable Windows and Linux builds keep this directory beside the executable; the Fedora RPM uses <code>${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/saves/</code>; macOS uses <code>~/Library/Application Support/CalcioTotale/saves/</code>. The files remain on the user's device unless the user copies, backs up or shares them.</span>
+          <span class="permission-reason">Up to nine slots are stored as gzip-compressed JSON in <code>user/slotN.json.gz</code>. Portable Windows and Linux builds keep this directory beside the executable; the Fedora RPM uses <code>${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/user/</code>; macOS uses <code>~/Library/Application Support/CalcioTotale/user/</code>. The files remain on the user's device unless the user copies, backs up or shares them.</span>
         </li>
         <li>
           <span class="permission-name">Slot summaries</span>
-          <span class="permission-reason">The game may create <code>saves/slotN.meta.json</code> with a plain-JSON summary used by the load screen, containing only profile name, club, career mode, management-control level and in-game date.</span>
+          <span class="permission-reason">The game may create <code>user/slotN.meta.json</code> with a plain-JSON summary used by the load screen, containing only profile name, club, career mode, management-control level and in-game date.</span>
         </li>
         <li>
-          <span class="permission-name">Game database</span>
-          <span class="permission-reason">The bundled database in <code>data/data.json.gz</code> is gzip-compressed JSON and is read locally to initialize clubs, competitions, players and season data.</span>
+          <span class="permission-name">Local preferences</span>
+          <span class="permission-reason"><code>user/preferences.json</code> may store the selected interface language and other local display preferences. A language selected from the game menu is applied on the next launch; clicking the same switch again before restarting cancels the pending change. The file contains no career payload or online identifier.</span>
+        </li>
+        <li>
+          <span class="permission-name">Separate football content package</span>
+          <span class="permission-reason">The replaceable package under <code>data/</code> is separate from the application. Its gzip-compressed JSON data is read to initialize clubs, players, seasonal content and the colours and patterns used to generate identifying team shirts. The associated local images are used for competition visuals.</span>
         </li>
         <li>
           <span class="permission-name">Local assets</span>
@@ -237,13 +241,11 @@
 
     <p>The game does not create an online profile, persistent telemetry identifier, cookie or cloud backup. Root or administrator privileges are not required. The application runs as the current user and needs write access only where its local saves and operating-system temporary files are stored.</p>
 
-    <p>The user controls these local files and can remove career data by deleting the corresponding <code>slotN.json.gz</code> and <code>slotN.meta.json</code> files. Temporary icon caches can also be deleted and are regenerated when required. Copies created through backups, synchronisation software or manual sharing are controlled by the user and by the chosen third-party service, not by CalcioTotale.</p>
+    <p>The user controls these local files and can remove career data by deleting the corresponding <code>slotN.json.gz</code> and <code>slotN.meta.json</code> files. Deleting <code>preferences.json</code> resets stored interface preferences, including language selection, so the next launch returns to the system-language rule described above. Temporary icon caches can also be deleted and are regenerated when required. Copies created through backups, synchronisation software or manual sharing are controlled by the user and by the chosen third-party service, not by CalcioTotale.</p>
 
     <p>The About dialog contains links to official Eleòra pages. They are opened in the user's default browser only when selected. The game does not send career or profile data with those links; any subsequent connection is made by the browser and is subject to the destination website's privacy terms.</p>
 
-    <p>The importer and maintenance programs under <code>tools/</code> are separate development utilities and may access third-party websites when an authorised collaborator runs them. They are not invoked by the game runtime and are outside normal gameplay covered by the no-network statement above.</p>
-
-    <p>Licensing and third-party rights are documented separately in <code>LICENSE</code>, <code>THIRD_PARTY_NOTICES.md</code> and the <code>licenses/</code> directory. The original CalcioTotale material is proprietary. Python, PySide6/Qt, PyInstaller, build-time Pillow, Exo 2, applicable Google icons, applicable <code>flag-icons</code> SVGs and football-related names, marks and data remain subject to their respective licences, terms and rights.</p>
+    <p>Licensing and third-party rights are documented in <code>LICENSE</code>, <code>THIRD_PARTY_NOTICES.md</code> and the <code>licenses/</code> directory. The original CalcioTotale application material is proprietary. The entire <code>data/</code> football content package is a separate component outside that proprietary licence. Software dependencies and other third-party material remain subject to their respective licences, terms and rights.</p>
 
     <p>CalcioTotale is an unofficial project and is not affiliated with, endorsed by or sponsored by football federations, leagues, competitions, clubs or players.</p>
 
@@ -257,11 +259,11 @@
     <div class="lang-tag">Italiano</div>
     <h2>Informativa sulla Privacy</h2>
 
-    <p>CalcioTotale versione 1.0 beta è un gioco manageriale calcistico locale e per giocatore singolo con database di base 2026-27, sviluppato con Python e PySide6. L'ambiente di riferimento è Linux desktop. Il gioco simula stagioni calcistiche, gestione del club e della squadra, finanze, mercato, marketing, strutture e partite.</p>
+    <p>CalcioTotale versione 1.0.1 è un'applicazione manageriale calcistica locale e per giocatore singolo, sviluppata con Python e PySide6 e accompagnata da un pacchetto separato e sostituibile di contenuti calcistici 2026-27. L'ambiente di riferimento è Linux desktop. L'interfaccia è disponibile in italiano e inglese: l'italiano viene selezionato automaticamente soltanto quando la lingua del sistema è l'italiano, mentre per qualsiasi altra lingua di sistema viene usato l'inglese. L'applicazione simula stagioni calcistiche, gestione del club e della squadra, finanze, mercato, marketing, strutture e partite.</p>
 
     <p><strong>L'applicazione non raccoglie, trasmette, vende o condivide dati personali.</strong> Tutte le logiche di gioco e simulazione vengono eseguite localmente sul dispositivo dell'utente. CalcioTotale non richiede account, telemetria, analytics, servizi pubblicitari o server remoto e il runtime non effettua intenzionalmente richieste di rete durante il normale utilizzo.</p>
 
-    <p>L'utente può inserire un nome visualizzato per il profilo Presidente/Amministratore Delegato. Se sceglie di indicare un nome reale o un altro testo identificativo, quel testo viene conservato esclusivamente nei file locali della carriera. I salvataggi possono contenere anche club selezionato, modalità carriera, livello di controllo gestionale scelto, rose, staff, calendari, risultati, finanze, trasferimenti, strutture, notizie e gli altri dati necessari a ripristinare l'avanzamento.</p>
+    <p>L'utente può inserire un nome visualizzato per il profilo dell'amministratore delegato. Se sceglie di indicare un nome reale o un altro testo identificativo, quel testo viene conservato esclusivamente nei file locali della carriera. I salvataggi possono contenere anche club selezionato, modalità carriera, livello di controllo gestionale scelto, rose, staff, calendari, risultati, finanze, trasferimenti, strutture, notizie e gli altri dati necessari a ripristinare l'avanzamento.</p>
 
     <p>Nessun nome profilo, contenuto dei salvataggi, club selezionato, risultato o altro dato di avanzamento viene inviato dall'applicazione a Eleòra o a servizi esterni.</p>
 
@@ -271,15 +273,19 @@
       <ul>
         <li>
           <span class="permission-name">Dati della carriera</span>
-          <span class="permission-reason">Fino a nove slot vengono salvati come JSON compresso con gzip in <code>saves/slotN.json.gz</code>. Le build portabili Windows e Linux mantengono questa cartella accanto all'eseguibile; il pacchetto RPM per Fedora usa <code>${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/saves/</code>; macOS usa <code>~/Library/Application Support/CalcioTotale/saves/</code>. I file restano sul dispositivo salvo copia, backup o condivisione da parte dell'utente.</span>
+          <span class="permission-reason">Fino a nove slot vengono salvati come JSON compresso con gzip in <code>user/slotN.json.gz</code>. Le build portabili Windows e Linux mantengono questa cartella accanto all'eseguibile; il pacchetto RPM per Fedora usa <code>${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/user/</code>; macOS usa <code>~/Library/Application Support/CalcioTotale/user/</code>. I file restano sul dispositivo salvo copia, backup o condivisione da parte dell'utente.</span>
         </li>
         <li>
           <span class="permission-name">Riepiloghi degli slot</span>
-          <span class="permission-reason">Il gioco può creare <code>saves/slotN.meta.json</code>, un riepilogo in JSON non compresso usato dalla schermata di caricamento e contenente soltanto nome profilo, club, modalità carriera, livello di controllo gestionale e data di gioco.</span>
+          <span class="permission-reason">Il gioco può creare <code>user/slotN.meta.json</code>, un riepilogo in JSON non compresso usato dalla schermata di caricamento e contenente soltanto nome profilo, club, modalità carriera, livello di controllo gestionale e data di gioco.</span>
         </li>
         <li>
-          <span class="permission-name">Database di gioco</span>
-          <span class="permission-reason">Il database incluso in <code>data/data.json.gz</code> è JSON compresso con gzip e viene letto localmente per inizializzare club, competizioni, giocatori e dati stagionali.</span>
+          <span class="permission-name">Preferenze locali</span>
+          <span class="permission-reason"><code>user/preferences.json</code> può conservare la lingua dell'interfaccia selezionata e altre preferenze locali di visualizzazione. La lingua scelta dal menu di gioco viene applicata al successivo avvio; un secondo clic sullo stesso comando prima del riavvio annulla la modifica pendente. Il file non contiene dati della carriera né identificativi online.</span>
+        </li>
+        <li>
+          <span class="permission-name">Pacchetto separato di contenuti calcistici</span>
+          <span class="permission-reason">Il pacchetto sostituibile nella cartella <code>data/</code> è separato dall'applicazione. I dati JSON compressi con gzip vengono letti per inizializzare club, giocatori, contenuti stagionali e colori e schemi usati per generare le magliette identificative delle squadre. Le immagini locali associate sono utilizzate per la grafica delle competizioni.</span>
         </li>
         <li>
           <span class="permission-name">Asset locali</span>
@@ -298,13 +304,11 @@
 
     <p>Il gioco non crea profili online, identificativi persistenti di telemetria, cookie o backup cloud. Non sono richiesti privilegi di amministratore. L'applicazione viene eseguita come utente corrente e necessita di scrittura solo dove vengono conservati i salvataggi locali e i file temporanei del sistema operativo.</p>
 
-    <p>L'utente controlla questi file locali e può rimuovere una carriera eliminando i relativi file <code>slotN.json.gz</code> e <code>slotN.meta.json</code>. Anche le cache temporanee delle icone possono essere eliminate e vengono rigenerate quando necessario. Le copie prodotte da backup, programmi di sincronizzazione o condivisione manuale dipendono dall'utente e dal servizio terzo scelto, non da CalcioTotale.</p>
+    <p>L'utente controlla questi file locali e può rimuovere una carriera eliminando i relativi file <code>slotN.json.gz</code> e <code>slotN.meta.json</code>. Eliminando <code>preferences.json</code> vengono ripristinate le preferenze predefinite dell'interfaccia, compresa la selezione della lingua secondo la regola di sistema descritta sopra. Anche le cache temporanee delle icone possono essere eliminate e vengono rigenerate quando necessario. Le copie prodotte da backup, programmi di sincronizzazione o condivisione manuale dipendono dall'utente e dal servizio terzo scelto, non da CalcioTotale.</p>
 
     <p>Il dialog Informazioni contiene link alle pagine ufficiali Eleòra. Vengono aperti nel browser predefinito dell'utente soltanto quando selezionati. Il gioco non invia con tali link dati di carriera o del profilo; l'eventuale connessione successiva è effettuata dal browser ed è soggetta all'informativa privacy del sito di destinazione.</p>
 
-    <p>L'importer e i programmi di manutenzione in <code>tools/</code> sono strumenti di sviluppo separati e possono accedere a siti di terze parti quando vengono avviati da un collaboratore autorizzato. Non sono richiamati dal runtime del gioco e restano fuori dal normale utilizzo cui si riferisce la dichiarazione sull'assenza di rete.</p>
-
-    <p>Licenze e diritti di terze parti sono documentati separatamente in <code>LICENSE</code>, <code>THIRD_PARTY_NOTICES.md</code> e nella cartella <code>licenses/</code>. I materiali originali di CalcioTotale sono proprietari. Python, PySide6/Qt, PyInstaller, Pillow usato in fase di build, Exo 2, le icone Google applicabili, gli SVG <code>flag-icons</code> applicabili e nomi, marchi e dati calcistici restano soggetti alle rispettive licenze, condizioni e diritti.</p>
+    <p>Licenze e diritti di terze parti sono documentati in <code>LICENSE</code>, <code>THIRD_PARTY_NOTICES.md</code> e nella cartella <code>licenses/</code>. I materiali originali dell'applicazione CalcioTotale sono proprietari. L'intero pacchetto di contenuti calcistici in <code>data/</code> è un componente separato ed esterno a tale licenza proprietaria. Le dipendenze software e gli altri materiali di terze parti restano soggetti alle rispettive licenze, condizioni e diritti.</p>
 
     <p>CalcioTotale è un progetto non ufficiale e non è affiliato, approvato o sponsorizzato da federazioni calcistiche, leghe, competizioni, club o giocatori.</p>
 

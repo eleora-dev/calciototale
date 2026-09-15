@@ -1,13 +1,19 @@
 CalcioTotale — Proprietary License and Terms of Use
 
 Copyright (c) 2026 Gerardo Perilli / Eleòra. All rights reserved.
-Effective date: 22 Aug 2026.
+Effective date: 10 Sep 2026.
 
 1. Scope
 --------
-This license applies to the original CalcioTotale source code, documentation,
-artwork and other original project materials, unless an individual file states
-otherwise.
+This license applies to the original CalcioTotale source code, Italian and
+English localisations, documentation, artwork and other original project
+materials, unless an individual file states otherwise.
+
+For the purposes of this license and all project documentation, the
+CalcioTotale application and the replaceable football content package are two
+separate components. The entire `data/` directory, including its database,
+and competition images, is the content package: it is not part of
+the proprietary CalcioTotale application and is excluded from this license.
 
 The source code is private and confidential. Access to a private repository,
 development copy or source archive does not grant any ownership or license
@@ -17,6 +23,9 @@ except where Gerardo Perilli / Eleòra has provided express written permission.
 -----------------------------
 An official executable build made available by Gerardo Perilli / Eleòra may be
 downloaded, installed and used for personal, non-commercial purposes.
+
+The selected interface language does not alter these terms or grant additional
+rights in the software, its localisations or its documentation.
 
 No permission is granted to copy or redistribute an executable build, publish
 it on another service, sell it, sublicense it, modify it, create derivative
@@ -34,12 +43,12 @@ identify or promote another product without prior written authorization.
 
 4. Third-party materials
 ------------------------
-This license does not apply to third-party dependencies, interpreters, build
-tools, fonts, icons, data, football club or competition names, badges, logos,
-trademarks or other materials not owned by Gerardo Perilli / Eleòra. Those
-materials remain subject to their respective licenses, terms and rights. See
-THIRD_PARTY_NOTICES.md and the licenses directory for the maintained inventory
-and the licence texts distributed with the project.
+This license does not apply to the separate `data/` content package or to
+third-party dependencies, interpreters, build tools, fonts, icons, names,
+badges, logos, trademarks or other materials not owned by Gerardo Perilli /
+Eleòra. Those materials remain subject to their respective licenses, terms and
+rights. See THIRD_PARTY_NOTICES.md and the licenses directory for the maintained
+inventory and the licence texts distributed with the project.
 
 Nothing in this license restricts rights granted directly by a third-party
 license for the relevant third-party material.

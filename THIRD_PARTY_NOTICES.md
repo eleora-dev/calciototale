@@ -2,13 +2,13 @@
 
 CalcioTotale includes original project material and uses or references third-party software, assets, names, trademarks and data. The proprietary terms in `LICENSE` apply only to material owned by Gerardo Perilli / Eleòra and do not replace any third-party licence or right.
 
-This notice reflects the current version 1.0 beta repository and was last reviewed on 26 August 2026. It is a practical inventory, not a substitute for the complete licence texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
+This notice reflects the current version 1.0.1 repository and was last reviewed on 15 September 2026. It is a practical inventory, not a substitute for the complete licence texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
 
 ---
 
 ## Original CalcioTotale material
 
-- Material: original source code, documentation, localisation and original project assets
+- Material: original source code, Italian and English localisations, documentation and original project assets
 - Copyright: Copyright (c) 2026 Gerardo Perilli / Eleòra
 - Licence: proprietary; all rights reserved
 - Terms: `LICENSE`
@@ -93,6 +93,19 @@ CalcioTotale does not relicense Exo 2.
 
 ---
 
+## Oxanium
+
+- Material: Oxanium variable font, used at Bold weight
+- Location: `assets/fonts/Oxanium.ttf`
+- Copyright: Copyright 2019 The Oxanium Project Authors (https://github.com/sevmeyer/oxanium)
+- Licence: SIL Open Font License 1.1
+- Included text: `licenses/OFL-1.1.txt`
+- Upstream distribution: https://github.com/google/fonts/tree/main/ofl/oxanium
+
+CalcioTotale does not relicense Oxanium.
+
+---
+
 ## flag-icons
 
 - Material: applicable country and territory flags derived from the `flag-icons` SVG collection
@@ -104,24 +117,15 @@ CalcioTotale does not relicense Exo 2.
 
 CalcioTotale does not relicense the `flag-icons` material.
 
----
-
-## Development-tool dependencies
-
-The following direct dependencies are used only by the importer and maintenance utilities under `tools/` and are excluded from executable game builds:
-
-- **Requests** (`requests>=2.31.0`) — Apache License 2.0; included text: `licenses/APACHE-2.0.txt`; upstream project: https://github.com/psf/requests
-- **Beautiful Soup** (`beautifulsoup4>=4.12.0`) — MIT License; included text: `licenses/MIT-BEAUTIFULSOUP.txt`; upstream project: https://www.crummy.com/software/BeautifulSoup/bs4/
-
-Their own dependencies, when installed in a development environment, remain subject to the notices and licence terms distributed by their respective packages.
+The language-selector PNG files `assets/icons/menu/language_it.png` and `assets/icons/menu/language_en.png` are project-provided UI assets and are not identified as upstream `flag-icons` material by this notice. They are covered by the proprietary project licence only to the extent that they are original material owned by Gerardo Perilli / Eleòra; any third-party element remains subject to its original rights.
 
 ---
 
-## Football names, crests, competition marks and data
+## Separate football content package
 
-Football club, player, federation, league and competition names; crests, logos and other marks; and football data are not covered by the CalcioTotale proprietary licence unless explicitly owned or licensed by Gerardo Perilli / Eleòra. All corresponding rights remain with their respective owners.
+For the purposes of the project documentation and licensing structure, the entire `data/` directory is a replaceable football content package distributed separately from the proprietary CalcioTotale application. Its database and competition images are outside the scope of the CalcioTotale proprietary licence.
 
-The maintenance tools described in `tools/README.md` can consult SoccerWiki directly and BeSoccer and Transfermarkt through the Jina AI Reader text gateway. Those services and names are not runtime dependencies, sponsors or partners of CalcioTotale. References to them do not imply affiliation, endorsement or permission beyond the terms granted by their respective owners.
+Football club, player, federation, league and competition names; competition logos and other marks; and football data contained in that package are not CalcioTotale application material. All corresponding rights remain with their respective owners.
 
 CalcioTotale is an unofficial project and is not affiliated with, endorsed by or sponsored by any football federation, league, competition, club, player or data provider.
 
