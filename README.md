@@ -27,7 +27,7 @@ I pacchetti ufficiali della [Release v1.0.1](https://github.com/eleora-dev/calci
 - [Windows 10/11 x64 — ZIP portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0.1/CalcioTotale-1.0.1-demo-windows-x64.zip)
 - [Linux x86_64 — archivio portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0.1/CalcioTotale-1.0.1-demo-linux-x86_64.tar.gz)
 
-Pacchetti aggiornati il **15 settembre 2026**.
+Pacchetti aggiornati il **24 settembre 2026**.
 
 La demo permette di iniziare una carriera con tutte le funzionalità e di giocare fino al termine del girone di andata della prima stagione. I pacchetti sono autonomi: non è necessario installare Python o pacchetti Python. Questo repository distribuisce esclusivamente la demo; la versione completa e il codice sorgente non sono pubblicati qui.
 

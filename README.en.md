@@ -24,7 +24,7 @@ CalcioTotale is a local, single-player football management game centred on Itali
 
 Official packages from [Release v1.0.1](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.1) are available for:
 
-Packages updated on **15 September 2026**.
+Packages updated on **24 September 2026**.
 
 - [Windows 10/11 x64 — portable ZIP](https://github.com/eleora-dev/calciototale/releases/download/v1.0.1/CalcioTotale-1.0.1-demo-windows-x64.zip)
 - [Linux x86_64 — portable archive](https://github.com/eleora-dev/calciototale/releases/download/v1.0.1/CalcioTotale-1.0.1-demo-linux-x86_64.tar.gz)
