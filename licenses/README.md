@@ -9,7 +9,9 @@ The Italian and English CalcioTotale localisations are project material covered 
 - `PYINSTALLER-COPYING.txt` — PyInstaller, including its bootloader exception and runtime-hook terms.
 - `MIT-CMU-PILLOW.txt` — Pillow, used during packaging.
 - `APACHE-2.0.txt` — applicable Google interface icons.
-- `OFL-1.1.txt` — Exo 2 and Oxanium.
+- `OFL-BARLOW-1.1.txt` — Barlow, used for the UI and trailer body text.
+- `OFL-OXANIUM-1.1.txt` — Oxanium, used for shirt sponsors.
 - `MIT-FLAG-ICONS.txt` — applicable `flag-icons` SVG material.
+- `CC0-KENNEY-CURSOR-PACK.txt` — four static interface cursors from the Kenney Cursor Pack.
 
 `THIRD_PARTY_NOTICES.md` is the maintained inventory and explains where each component is used. Every release must also be checked against the exact dependency versions listed in its `BUILD_COMPONENTS.txt`; Qt/PySide packages may require additional module-specific notices or compliance material beyond these general licence texts.

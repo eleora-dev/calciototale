@@ -1,0 +1,13 @@
+Kenney Cursor Pack
+Source: https://kenney.nl/assets/cursor-pack
+License: Creative Commons CC0 1.0 Universal
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+
+Files used from PNG/Outline/Default:
+- pointer_a.png -> arrow.png
+- hand_thin_small_point.png -> hand.png
+- cursor_help.png -> help.png
+- bracket_a_vertical.png -> ibeam.png
+
+Attribution is not required by CC0. This notice is retained to document the
+origin and licensing of the bundled assets.

@@ -2,7 +2,7 @@
 
 [Versione italiana](README.md)
 
-CalcioTotale is a local, single-player football management game centred on Italian club football. This repository distributes the **version 1.0.1 demo**, with a database updated for the **2026-27** season.
+CalcioTotale is a local, single-player football management game centred on Italian club football. This repository distributes the **version 1.0.2 demo**, with a database updated for the **2026-27** season.
 
 > **Languages:** the game and its interface are available in Italian and English.
 
@@ -10,7 +10,7 @@ CalcioTotale is a local, single-player football management game centred on Itali
 
 ![Windows](https://img.shields.io/badge/Windows-x64-0078d4)
 ![Linux](https://img.shields.io/badge/Linux-x86__64-fcc624)
-![Release](https://img.shields.io/badge/release-1.0.1%20Demo-f6a91a)
+![Release](https://img.shields.io/badge/release-1.0.2%20Demo-f6a91a)
 ![License](https://img.shields.io/badge/license-proprietary-red)
 ![Offline](https://img.shields.io/badge/game-offline-41cd52)
 
@@ -22,18 +22,18 @@ CalcioTotale is a local, single-player football management game centred on Itali
 
 ## Demo download
 
-Official packages from [Release v1.0.1](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.1) are available for:
+Official packages from [Release v1.0.2](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.2) are available for:
 
-Packages updated on **24 September 2026**.
+Packages updated on **26 September 2026**.
 
-- [Windows 10/11 x64 — portable ZIP](https://github.com/eleora-dev/calciototale/releases/download/v1.0.1/CalcioTotale-1.0.1-demo-windows-x64.zip)
-- [Linux x86_64 — portable archive](https://github.com/eleora-dev/calciototale/releases/download/v1.0.1/CalcioTotale-1.0.1-demo-linux-x86_64.tar.gz)
+- [Windows 10/11 x64 — portable ZIP](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-windows-x64.zip)
+- [Linux x86_64 — portable archive](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-linux-x86_64.tar.gz)
 
 The demo lets you start a career with all features available and play through the end of the first season's opening half. The packages are self-contained: Python and Python packages do not need to be installed. This repository distributes the demo exclusively; neither the full version nor the source code is published here.
 
 ### Integrity verification
 
-To verify downloaded files, use [SHA256SUMS](https://github.com/eleora-dev/calciototale/releases/download/v1.0.1/SHA256SUMS).
+To verify downloaded files, use [SHA256SUMS](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/SHA256SUMS).
 
 ## Full version on Steam
 

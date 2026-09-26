@@ -2,7 +2,7 @@
 
 CalcioTotale includes original project material and uses or references third-party software, assets, names, trademarks and data. The proprietary terms in `LICENSE` apply only to material owned by Gerardo Perilli / Eleòra and do not replace any third-party licence or right.
 
-This notice reflects the current version 1.0.1 repository and was last reviewed on 15 September 2026. It is a practical inventory, not a substitute for the complete licence texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
+This notice reflects the current version 1.0.2 repository and was last reviewed on 26 September 2026. It is a practical inventory, not a substitute for the complete licence texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
 
 ---
 
@@ -81,15 +81,16 @@ CalcioTotale does not relicense these icons.
 
 ---
 
-## Exo 2
+## Barlow
 
-- Material: Exo 2 static Regular font
-- Location: `assets/fonts/Exo2-Regular.ttf`
-- Copyright: Copyright 2013 The Exo 2 Project Authors (https://github.com/googlefonts/Exo-2.0)
+- Material: Barlow static Regular, Medium, SemiBold, Bold, ExtraBold and Black fonts, used for the UI and trailer body text
+- Location: `assets/fonts/Barlow-*.ttf`
+- Copyright: Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
 - Licence: SIL Open Font License 1.1
-- Included text: `licenses/OFL-1.1.txt`
+- Included text: `licenses/OFL-BARLOW-1.1.txt`
+- Upstream distribution: https://github.com/google/fonts/tree/main/ofl/barlow
 
-CalcioTotale does not relicense Exo 2.
+CalcioTotale does not relicense Barlow.
 
 ---
 
@@ -99,7 +100,7 @@ CalcioTotale does not relicense Exo 2.
 - Location: `assets/fonts/Oxanium.ttf`
 - Copyright: Copyright 2019 The Oxanium Project Authors (https://github.com/sevmeyer/oxanium)
 - Licence: SIL Open Font License 1.1
-- Included text: `licenses/OFL-1.1.txt`
+- Included text: `licenses/OFL-OXANIUM-1.1.txt`
 - Upstream distribution: https://github.com/google/fonts/tree/main/ofl/oxanium
 
 CalcioTotale does not relicense Oxanium.
@@ -121,6 +122,19 @@ The language-selector PNG files `assets/icons/menu/language_it.png` and `assets/
 
 ---
 
+## Kenney Cursor Pack
+
+- Material: four static UI cursors from the Kenney Cursor Pack
+- Upstream files: `pointer_a.png`, `hand_thin_small_point.png`, `cursor_help.png` and `bracket_a_vertical.png` from `PNG/Outline/Default`
+- Repository locations: `assets/cursors/arrow.png`, `assets/cursors/hand.png`, `assets/cursors/help.png` and `assets/cursors/ibeam.png`
+- Licence: Creative Commons CC0 1.0 Universal
+- Included notice: `licenses/CC0-KENNEY-CURSOR-PACK.txt`
+- Official project: https://kenney.nl/assets/cursor-pack
+
+These four files may be used, modified and redistributed without attribution under CC0. The source and mapping are retained in the included notice for provenance.
+
+---
+
 ## Separate football content package
 
 For the purposes of the project documentation and licensing structure, the entire `data/` directory is a replaceable football content package distributed separately from the proprietary CalcioTotale application. Its database and competition images are outside the scope of the CalcioTotale proprietary licence.
@@ -133,4 +147,4 @@ CalcioTotale is an unofficial project and is not affiliated with, endorsed by or
 
 ## Other bundled media
 
-Branding, backgrounds, facility images, cursors, feature illustrations, competition icons and other media are covered by `LICENSE` only where they are original CalcioTotale material. Any third-party element remains under its original ownership, licence, terms or reserved rights even if it is stored in the repository or transformed for use by the application.
+Branding, backgrounds, facility images, the animated wait cursor, feature illustrations, competition icons and other media are covered by `LICENSE` only where they are original CalcioTotale material. The four static Kenney cursors are documented separately above. Any other third-party element remains under its original ownership, licence, terms or reserved rights even if it is stored in the repository or transformed for use by the application.
