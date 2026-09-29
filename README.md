@@ -1,91 +1,50 @@
 # CalcioTotale
 
-[English version](README.en.md)
+[Italiano](README.it.md) · [Español](README.es.md)
 
-CalcioTotale è un videogioco gestionale calcistico locale e per giocatore singolo, incentrato sul calcio italiano. Questo repository distribuisce la **versione demo 1.0.2**, con database aggiornato alla stagione **2026-27**.
+**CalcioTotale** is a single-player football management game set in Italian club football. You take charge as a club's chief executive, making sporting and financial decisions. This repository distributes the free **1.0.2 demo**, with 2026–27 football content.
 
-> **Lingue:** il gioco e la sua interfaccia sono disponibili in italiano e inglese.
+> **Languages:** English, Italian and Spanish. The demo has all gameplay features, but each career ends after the first half of its opening season.
 
-> **Questa è la versione demo di CalcioTotale.** Comprende tutte le funzionalità di gioco, ma ogni carriera può proseguire soltanto fino al termine del girone di andata della prima stagione. La versione completa sarà disponibile su Steam.
+![Windows](https://img.shields.io/badge/Windows-x64-0078d4) ![Linux](https://img.shields.io/badge/Linux-x86__64-fcc624) ![Release](https://img.shields.io/badge/release-1.0.2%20Demo-f6a91a)
 
-![Windows](https://img.shields.io/badge/Windows-x64-0078d4)
-![Linux](https://img.shields.io/badge/Linux-x86__64-fcc624)
-![Versione](https://img.shields.io/badge/versione-1.0.2%20Demo-f6a91a)
-![Licenza](https://img.shields.io/badge/licenza-proprietaria-red)
-![Offline](https://img.shields.io/badge/gioco-offline-41cd52)
+![CalcioTotale home screen](assets/branding/screenshot_en.png)
 
----
+## Download the demo
 
-![CalcioTotale](assets/branding/screenshot.png)
+Packages updated **29 September 2026**. Download them from the [official 1.0.2 release](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.2):
 
----
+- [Windows 10/11 x64 — portable ZIP](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-windows-x64.zip)
+- [Linux x86_64 — portable archive](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-linux-x86_64.tar.gz)
+- [SHA256 checksums](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/SHA256SUMS)
 
-## Download della demo
+Both packages are self-contained and require no Python installation. The full game and source code are not published in this repository.
 
-I pacchetti ufficiali della [Release v1.0.2](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.2) sono disponibili per:
+## Install and play
 
-- [Windows 10/11 x64 — ZIP portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-windows-x64.zip)
-- [Linux x86_64 — archivio portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-linux-x86_64.tar.gz)
+**Windows:** Extract the ZIP completely into a writable folder, open the `CalcioTotale` directory and run `CalcioTotale.exe`. Do not run the game from inside the ZIP or place the portable folder in `Program Files`.
 
-Pacchetti aggiornati il **26 settembre 2026**.
+**Linux:** Extract the archive and run `CalcioTotale/CalcioTotale`. The build was produced and smoke-tested in the Steam Linux Runtime for x86_64 desktop Linux.
 
-La demo permette di iniziare una carriera con tutte le funzionalità e di giocare fino al termine del girone di andata della prima stagione. I pacchetti sono autonomi: non è necessario installare Python o pacchetti Python. Questo repository distribuisce esclusivamente la demo; la versione completa e il codice sorgente non sono pubblicati qui.
+Portable builds keep career saves in `user/` beside the executable. The unsigned Windows build may display a Microsoft Defender SmartScreen warning; download only from this official repository and check the published SHA256 digest.
 
-### Verifica dell'integrità
+## Main features
 
-Per controllare i file scaricati è disponibile [SHA256SUMS](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/SHA256SUMS).
+- *One Shirt* keeps you at one club; *Path to Glory* follows a director's career across clubs.
+- Direct formations, tactics, training and matches yourself, or delegate technical decisions to your staff.
+- Manage clubs in Serie A, Serie B and all three Serie C groups: 100 selectable Italian clubs and 145 additional clubs in the seasonal content package.
+- Play domestic and international competitions, including cups, play-offs and UEFA tournaments.
+- Handle transfers, loans, contracts, scouting, youth development, staff, finances, stadium facilities and commercial activities.
+- Follow tables, calendars, match reports, statistics and contextual news; save careers locally in nine slots.
 
-## Versione completa su Steam
+The full version is planned for **7 October 2026** on [Steam](https://store.steampowered.com/app/5247020/Calcio_Totale/).
 
-La versione completa uscirà il **2 ottobre 2026**. Visita la [pagina Steam di Calcio Totale](https://store.steampowered.com/app/5247020/Calcio_Totale/) per aggiungerlo alla Lista dei desideri e acquistarlo dal giorno del lancio.
+## Privacy and rights
 
-## Installazione e avvio
+CalcioTotale is an offline desktop game. It requires no CalcioTotale account and uses no telemetry or advertising. Career data is saved locally. Read the [privacy policy](privacy.html) for details.
 
-### Windows
+Official builds may be used for personal, non-commercial purposes under the [CalcioTotale license](LICENSE). Redistribution, modification, publication and commercial use require prior written authorisation. Third-party materials retain their own rights; see [third-party notices](THIRD_PARTY_NOTICES.md) and the included [license texts](licenses/README.md).
 
-Estrai completamente lo ZIP in una cartella scrivibile, apri la directory `CalcioTotale` e avvia `CalcioTotale.exe`. È una build portabile: non avviarla direttamente dallo ZIP e non collocarla in `Program Files`. I salvataggi sono conservati in `user/` accanto all'eseguibile.
-
-### Linux
-
-Estrai l'archivio e avvia `CalcioTotale/CalcioTotale`. La build è generata e collaudata su Fedora 44 e conserva `user/` accanto all'eseguibile.
-
-## Avvisi di sicurezza del sistema operativo
-
-La build Windows non dispone ancora di una firma del codice e può mostrare un avviso Microsoft Defender SmartScreen. Scarica i pacchetti soltanto da questo repository ufficiale e verifica il file `SHA256SUMS` prima dell'uso.
-
-## Caratteristiche principali
-
-- due modalità carriera: *Solo la Maglia* e *Sentieri di Gloria*;
-- controllo tecnico configurabile: formazione, tattiche, allenamento e gestione della gara possono essere diretti dal giocatore oppure delegati allo staff;
-- Serie A, Serie B e tutti e tre i gironi di Serie C, con 100 club italiani selezionabili e altri 145 club europei e internazionali nel database di base;
-- Coppa Italia, Coppa Italia Serie C, Supercoppa Italiana, play-off e play-out;
-- competizioni UEFA, Coppa Intercontinentale e Mondiale per Club;
-- moduli, formazioni, tattiche, ruoli, numeri di maglia, allenamento, infortuni, squalifiche e cronache delle partite;
-- trasferimenti, prestiti, trattative, precontratti, osservazione e sviluppo dei giovani;
-- finanze, conto economico e contabilità dei cartellini, obiettivi societari, staff, stadio e centro di allenamento;
-- biglietteria, sponsor, diritti TV, stampa, canali social e merchandising;
-- classifiche, calendari, statistiche, premi, record e notizie contestuali;
-- nove slot locali per le carriere.
-
-## Privacy
-
-CalcioTotale è un gioco desktop offline:
-
-- non richiede un account né un server remoto;
-- non include telemetria, sistemi di analisi o pubblicità;
-- durante il normale utilizzo non effettua richieste di rete;
-- i dati delle carriere rimangono sul dispositivo dell'utente, salvo copia o condivisione da parte dell'utente stesso.
-
-I collegamenti nella finestra Informazioni aprono il browser predefinito soltanto quando vengono selezionati. Per ulteriori dettagli consulta l'[informativa sulla privacy](privacy.html) completa in italiano e inglese.
-
-## Licenza e diritti
-
-La build ufficiale può essere scaricata, installata e utilizzata per uso personale e non commerciale secondo la [licenza proprietaria di CalcioTotale](LICENSE). La redistribuzione, la modifica, la pubblicazione, l'uso commerciale e i tentativi di ricavare il codice sorgente non sono consentiti senza preventiva autorizzazione scritta.
-
-I componenti e i materiali di terze parti, compresi Python, Qt/PySide6, PyInstaller, Pillow usato per la build, icone e font, rimangono soggetti alle rispettive licenze, condizioni e titolarità. Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e la directory [`licenses/`](licenses/); ogni pacchetto include inoltre `BUILD_COMPONENTS.txt` con le versioni principali effettivamente usate.
-
-CalcioTotale è un progetto non ufficiale e non è affiliato, approvato o sponsorizzato da federazioni, leghe, competizioni, club, giocatori o fornitori di dati.
-
-## Autore
+CalcioTotale is unofficial and is not affiliated with or endorsed by any football federation, league, competition, club, player or data provider.
 
 Gerardo Perilli · [Eleòra](https://github.com/eleora-dev)

@@ -186,7 +186,7 @@
     <img src="assets/branding/eleora_calciototale_logo_blue.png" alt="CalcioTotale" class="brand-logo">
   </div>
 
-  <p class="meta">Privacy Policy · Version 1.0.1 · Last updated: 15 September 2026</p>
+  <p class="meta">Privacy Policy · Version 1.0.2 · Last updated: 28 September 2026</p>
 </header>
 
 <main>
@@ -196,13 +196,13 @@
     <div class="lang-tag">English</div>
     <h2>Privacy Policy</h2>
 
-    <p>CalcioTotale version 1.0.1 is a local, single-player football management application built with Python and PySide6 and accompanied by a separate, replaceable 2026-27 football content package. Its reference environment is desktop Linux. The interface is available in Italian and English. Italian is selected by default only when the system language is Italian; every other system language defaults to English. The application simulates football seasons, club and squad management, finances, transfers, marketing, facilities and matches.</p>
+    <p>CalcioTotale version 1.0.2 is a local, single-player football management application built with Python and PySide6 and accompanied by a separate, replaceable 2026-27 football content package. Its reference environment is desktop Linux. The interface is available in Italian, English and Spanish. Italian is selected by default only when the system language is Italian; every other system language defaults to English. The application simulates football seasons, club and squad management, finances, transfers, marketing, facilities and matches.</p>
 
-    <p><strong>The application does not collect, transmit, sell or share personal data.</strong> All gameplay and simulation logic run locally on the user's device. CalcioTotale does not require an account, telemetry, analytics, advertising services or a remote server, and the runtime does not intentionally make network requests during normal gameplay.</p>
+    <p><strong>The application does not collect, transmit, sell or share personal data.</strong> All gameplay and simulation logic run locally on the user's device. CalcioTotale does not create or require its own account, telemetry, analytics, advertising services or an Eleòra-operated server, and the runtime does not intentionally make network requests during normal gameplay.</p>
 
     <p>The user may enter a display name for the CEO profile. If the user chooses to enter a real name or other identifying text, that text is stored only inside the local career files. Save data may also include the selected club, career mode, chosen management-control level, squads, staff, fixtures, results, finances, transfers, facilities, news and the other information needed to restore game progress.</p>
 
-    <p>No profile name, save payload, selected club, match result or other progress data is sent by the application to Eleòra or to an external service.</p>
+    <p>No profile name, save payload, selected club, match result or other progress data is sent by the application to Eleòra. In the Steam edition, configured save files may be synchronised by the Steam client through Steam Cloud according to the user's Steam settings and Valve's terms; this transfer is not performed by the CalcioTotale runtime.</p>
 
     <p>The following local files are read or may be written during normal use:</p>
 
@@ -210,7 +210,7 @@
       <ul>
         <li>
           <span class="permission-name">Career payloads</span>
-          <span class="permission-reason">Up to nine slots are stored as gzip-compressed JSON in <code>user/slotN.json.gz</code>. Portable Windows and Linux builds keep this directory beside the executable; the Fedora RPM uses <code>${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/user/</code>; macOS uses <code>~/Library/Application Support/CalcioTotale/user/</code>. The files remain on the user's device unless the user copies, backs up or shares them.</span>
+          <span class="permission-reason">Up to nine slots are stored as gzip-compressed JSON in <code>user/slotN.json.gz</code>. Portable Windows and Linux builds keep this directory beside the executable; the Fedora RPM uses <code>${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/user/</code>; macOS uses <code>~/Library/Application Support/CalcioTotale/user/</code>. The files remain local unless the user copies, backs up or shares them, or the Steam client synchronises them through Steam Cloud.</span>
         </li>
         <li>
           <span class="permission-name">Slot summaries</span>
@@ -239,13 +239,13 @@
       </ul>
     </div>
 
-    <p>The game does not create an online profile, persistent telemetry identifier, cookie or cloud backup. Root or administrator privileges are not required. The application runs as the current user and needs write access only where its local saves and operating-system temporary files are stored.</p>
+    <p>The game does not create an online profile, persistent telemetry identifier, cookie or its own cloud-backup service. The Steam edition may use Steam Auto-Cloud, with synchronisation handled externally by the Steam client. Root or administrator privileges are not required. The application runs as the current user and needs write access only where its local saves and operating-system temporary files are stored.</p>
 
-    <p>The user controls these local files and can remove career data by deleting the corresponding <code>slotN.json.gz</code> and <code>slotN.meta.json</code> files. Deleting <code>preferences.json</code> resets stored interface preferences, including language selection, so the next launch returns to the system-language rule described above. Temporary icon caches can also be deleted and are regenerated when required. Copies created through backups, synchronisation software or manual sharing are controlled by the user and by the chosen third-party service, not by CalcioTotale.</p>
+    <p>The user controls these local files and can remove career data by deleting the corresponding <code>slotN.json.gz</code> and <code>slotN.meta.json</code> files. Deleting <code>preferences.json</code> resets stored interface preferences, including language selection, so the next launch returns to the system-language rule described above. Temporary icon caches can also be deleted and are regenerated when required. Copies created through Steam Cloud, other synchronisation software, backups or manual sharing are controlled by the user and by the chosen third-party service, not by CalcioTotale.</p>
 
     <p>The About dialog contains links to official Eleòra pages. They are opened in the user's default browser only when selected. The game does not send career or profile data with those links; any subsequent connection is made by the browser and is subject to the destination website's privacy terms.</p>
 
-    <p>Licensing and third-party rights are documented in <code>LICENSE</code>, <code>THIRD_PARTY_NOTICES.md</code> and the <code>licenses/</code> directory. The original CalcioTotale application material is proprietary. The entire <code>data/</code> football content package is a separate component outside that proprietary licence. Software dependencies and other third-party material remain subject to their respective licences, terms and rights.</p>
+    <p>Licensing and third-party rights are documented in <code>LICENSE</code>, <code>THIRD_PARTY_NOTICES.md</code> and the <code>licenses/</code> directory. The original CalcioTotale application material is proprietary. The entire <code>data/</code> football content package is a separate component outside that proprietary license. Software dependencies and other third-party material remain subject to their respective licenses, terms and rights.</p>
 
     <p>CalcioTotale is an unofficial project and is not affiliated with, endorsed by or sponsored by football federations, leagues, competitions, clubs or players.</p>
 
@@ -259,13 +259,13 @@
     <div class="lang-tag">Italiano</div>
     <h2>Informativa sulla Privacy</h2>
 
-    <p>CalcioTotale versione 1.0.1 è un'applicazione manageriale calcistica locale e per giocatore singolo, sviluppata con Python e PySide6 e accompagnata da un pacchetto separato e sostituibile di contenuti calcistici 2026-27. L'ambiente di riferimento è Linux desktop. L'interfaccia è disponibile in italiano e inglese: l'italiano viene selezionato automaticamente soltanto quando la lingua del sistema è l'italiano, mentre per qualsiasi altra lingua di sistema viene usato l'inglese. L'applicazione simula stagioni calcistiche, gestione del club e della squadra, finanze, mercato, marketing, strutture e partite.</p>
+    <p>CalcioTotale versione 1.0.2 è un'applicazione manageriale calcistica locale e per giocatore singolo, sviluppata con Python e PySide6 e accompagnata da un pacchetto separato e sostituibile di contenuti calcistici 2026-27. L'ambiente di riferimento è Linux desktop. L'interfaccia è disponibile in italiano, inglese e spagnolo: l'italiano viene selezionato automaticamente soltanto quando la lingua del sistema è l'italiano, mentre per qualsiasi altra lingua di sistema viene usato l'inglese. L'applicazione simula stagioni calcistiche, gestione del club e della squadra, finanze, mercato, marketing, strutture e partite.</p>
 
-    <p><strong>L'applicazione non raccoglie, trasmette, vende o condivide dati personali.</strong> Tutte le logiche di gioco e simulazione vengono eseguite localmente sul dispositivo dell'utente. CalcioTotale non richiede account, telemetria, analytics, servizi pubblicitari o server remoto e il runtime non effettua intenzionalmente richieste di rete durante il normale utilizzo.</p>
+    <p><strong>L'applicazione non raccoglie, trasmette, vende o condivide dati personali.</strong> Tutte le logiche di gioco e simulazione vengono eseguite localmente sul dispositivo dell'utente. CalcioTotale non crea né richiede un proprio account, telemetria, analytics, servizi pubblicitari o un server gestito da Eleòra e il runtime non effettua intenzionalmente richieste di rete durante il normale utilizzo.</p>
 
     <p>L'utente può inserire un nome visualizzato per il profilo dell'amministratore delegato. Se sceglie di indicare un nome reale o un altro testo identificativo, quel testo viene conservato esclusivamente nei file locali della carriera. I salvataggi possono contenere anche club selezionato, modalità carriera, livello di controllo gestionale scelto, rose, staff, calendari, risultati, finanze, trasferimenti, strutture, notizie e gli altri dati necessari a ripristinare l'avanzamento.</p>
 
-    <p>Nessun nome profilo, contenuto dei salvataggi, club selezionato, risultato o altro dato di avanzamento viene inviato dall'applicazione a Eleòra o a servizi esterni.</p>
+    <p>Nessun nome profilo, contenuto dei salvataggi, club selezionato, risultato o altro dato di avanzamento viene inviato dall'applicazione a Eleòra. Nell'edizione Steam, i file di salvataggio configurati possono essere sincronizzati dal client Steam tramite Steam Cloud secondo le impostazioni dell'utente e le condizioni di Valve; il trasferimento non viene effettuato dal runtime di CalcioTotale.</p>
 
     <p>I seguenti file locali vengono letti o possono essere scritti durante l'uso normale:</p>
 
@@ -273,7 +273,7 @@
       <ul>
         <li>
           <span class="permission-name">Dati della carriera</span>
-          <span class="permission-reason">Fino a nove slot vengono salvati come JSON compresso con gzip in <code>user/slotN.json.gz</code>. Le build portabili Windows e Linux mantengono questa cartella accanto all'eseguibile; il pacchetto RPM per Fedora usa <code>${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/user/</code>; macOS usa <code>~/Library/Application Support/CalcioTotale/user/</code>. I file restano sul dispositivo salvo copia, backup o condivisione da parte dell'utente.</span>
+          <span class="permission-reason">Fino a nove slot vengono salvati come JSON compresso con gzip in <code>user/slotN.json.gz</code>. Le build portabili Windows e Linux mantengono questa cartella accanto all'eseguibile; il pacchetto RPM per Fedora usa <code>${XDG_DATA_HOME:-$HOME/.local/share}/calciototale/user/</code>; macOS usa <code>~/Library/Application Support/CalcioTotale/user/</code>. I file restano locali salvo copia, backup o condivisione da parte dell'utente oppure sincronizzazione tramite Steam Cloud effettuata dal client Steam.</span>
         </li>
         <li>
           <span class="permission-name">Riepiloghi degli slot</span>
@@ -302,9 +302,9 @@
       </ul>
     </div>
 
-    <p>Il gioco non crea profili online, identificativi persistenti di telemetria, cookie o backup cloud. Non sono richiesti privilegi di amministratore. L'applicazione viene eseguita come utente corrente e necessita di scrittura solo dove vengono conservati i salvataggi locali e i file temporanei del sistema operativo.</p>
+    <p>Il gioco non crea profili online, identificativi persistenti di telemetria, cookie o un proprio servizio di backup cloud. L'edizione Steam può utilizzare Steam Auto-Cloud, con sincronizzazione gestita esternamente dal client Steam. Non sono richiesti privilegi di amministratore. L'applicazione viene eseguita come utente corrente e necessita di scrittura solo dove vengono conservati i salvataggi locali e i file temporanei del sistema operativo.</p>
 
-    <p>L'utente controlla questi file locali e può rimuovere una carriera eliminando i relativi file <code>slotN.json.gz</code> e <code>slotN.meta.json</code>. Eliminando <code>preferences.json</code> vengono ripristinate le preferenze predefinite dell'interfaccia, compresa la selezione della lingua secondo la regola di sistema descritta sopra. Anche le cache temporanee delle icone possono essere eliminate e vengono rigenerate quando necessario. Le copie prodotte da backup, programmi di sincronizzazione o condivisione manuale dipendono dall'utente e dal servizio terzo scelto, non da CalcioTotale.</p>
+    <p>L'utente controlla questi file locali e può rimuovere una carriera eliminando i relativi file <code>slotN.json.gz</code> e <code>slotN.meta.json</code>. Eliminando <code>preferences.json</code> vengono ripristinate le preferenze predefinite dell'interfaccia, compresa la selezione della lingua secondo la regola di sistema descritta sopra. Anche le cache temporanee delle icone possono essere eliminate e vengono rigenerate quando necessario. Le copie prodotte tramite Steam Cloud, altri programmi di sincronizzazione, backup o condivisione manuale dipendono dall'utente e dal servizio terzo scelto, non da CalcioTotale.</p>
 
     <p>Il dialog Informazioni contiene link alle pagine ufficiali Eleòra. Vengono aperti nel browser predefinito dell'utente soltanto quando selezionati. Il gioco non invia con tali link dati di carriera o del profilo; l'eventuale connessione successiva è effettuata dal browser ed è soggetta all'informativa privacy del sito di destinazione.</p>
 
