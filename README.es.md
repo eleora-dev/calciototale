@@ -8,11 +8,11 @@
 
 ![Windows](https://img.shields.io/badge/Windows-x64-0078d4) ![Linux](https://img.shields.io/badge/Linux-x86__64-fcc624) ![Versión](https://img.shields.io/badge/versi%C3%B3n-1.0.2%20Demo-f6a91a)
 
-![Pantalla inicial de CalcioTotale, interfaz en inglés](assets/branding/screenshot_en.png)
+![Pantalla inicial de CalcioTotale en español](assets/branding/screenshot_es.png)
 
 ## Descargar la demo
 
-Paquetes actualizados el **29 de septiembre de 2026**. Descárgalos desde la [versión oficial 1.0.2](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.2):
+Paquetes actualizados el **30 de septiembre de 2026**. Descárgalos desde la [versión oficial 1.0.2](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.2):
 
 - [Windows 10/11 x64 — ZIP portátil](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-windows-x64.zip)
 - [Linux x86_64 — archivo portátil](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-linux-x86_64.tar.gz)

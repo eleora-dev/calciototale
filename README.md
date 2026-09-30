@@ -12,7 +12,7 @@
 
 ## Download the demo
 
-Packages updated **29 September 2026**. Download them from the [official 1.0.2 release](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.2):
+Packages updated **30 September 2026**. Download them from the [official 1.0.2 release](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.2):
 
 - [Windows 10/11 x64 — portable ZIP](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-windows-x64.zip)
 - [Linux x86_64 — portable archive](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-linux-x86_64.tar.gz)
