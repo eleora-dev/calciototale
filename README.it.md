@@ -8,11 +8,26 @@
 
 ![Windows](https://img.shields.io/badge/Windows-x64-0078d4) ![Linux](https://img.shields.io/badge/Linux-x86__64-fcc624) ![Versione](https://img.shields.io/badge/versione-1.0.2%20Demo-f6a91a)
 
-![Schermata iniziale di CalcioTotale](assets/branding/screenshot_it.png)
+<table>
+  <tr>
+    <td width="20%"><a href="assets/branding/screenshots/it/01_home_it.png"><img src="assets/branding/screenshots/it/01_home_it.png" alt="CalcioTotale — Home" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/it/02_finances_it.png"><img src="assets/branding/screenshots/it/02_finances_it.png" alt="CalcioTotale — Finanze" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/it/03_facilities_it.png"><img src="assets/branding/screenshots/it/03_facilities_it.png" alt="CalcioTotale — Strutture" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/it/04_staff_it.png"><img src="assets/branding/screenshots/it/04_staff_it.png" alt="CalcioTotale — Staff" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/it/05_marketing_it.png"><img src="assets/branding/screenshots/it/05_marketing_it.png" alt="CalcioTotale — Marketing" width="100%"></a></td>
+  </tr>
+  <tr>
+    <td width="20%"><a href="assets/branding/screenshots/it/06_transfer_it.png"><img src="assets/branding/screenshots/it/06_transfer_it.png" alt="CalcioTotale — Calciomercato" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/it/07_squad_it.png"><img src="assets/branding/screenshots/it/07_squad_it.png" alt="CalcioTotale — Squadra" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/it/08_matchday_it.png"><img src="assets/branding/screenshots/it/08_matchday_it.png" alt="CalcioTotale — Scheda partita" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/it/09_verdict_it.png"><img src="assets/branding/screenshots/it/09_verdict_it.png" alt="CalcioTotale — Celebrazione del trofeo" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/it/10_start_it.png"><img src="assets/branding/screenshots/it/10_start_it.png" alt="CalcioTotale — Nuova carriera" width="100%"></a></td>
+  </tr>
+</table>
 
 ## Scarica la demo
 
-Pacchetti aggiornati il **30 settembre 2026**. Scaricali dalla [release ufficiale 1.0.2](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.2):
+Pacchetti aggiornati il **1 ottobre 2026**. Scaricali dalla [release ufficiale 1.0.2](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.2):
 
 - [Windows 10/11 x64 — ZIP portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-windows-x64.zip)
 - [Linux x86_64 — archivio portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-linux-x86_64.tar.gz)
