@@ -1,12 +1,20 @@
 # CalcioTotale
 
-[English](README.md) · [Español](README.es.md)
+[English version](README.md) · [Versión española](README.es.md)
 
-**CalcioTotale** è un gestionale calcistico per giocatore singolo ambientato nel calcio italiano. Interpreti l'amministratore delegato di un club e prendi decisioni sportive ed economiche. Questo repository distribuisce la **demo gratuita 1.0.2**, con contenuti calcistici della stagione 2026–27.
+**CalcioTotale** è un gestionale calcistico per giocatore singolo che riprende lo spirito dei classici del genere, ma cambiandone il punto di vista: non interpreti più il tradizionale allenatore-manager, bensì l’amministratore delegato di un club. Definisci la strategia della società, costruisci una struttura sostenibile e affronta le conseguenze sportive ed economiche di ogni decisione.
 
-> **Lingue:** italiano, inglese e spagnolo. La demo offre tutte le funzionalità, ma ogni carriera termina alla fine del girone di andata della prima stagione.
+È sviluppato in Python e PySide6; la versione **1.0.3** è in preparazione per l'uscita del **7 ottobre 2026**. L'applicazione è accompagnata da un pacchetto di contenuti calcistici sostituibile aggiornato alla stagione **2026-27**.
 
-![Windows](https://img.shields.io/badge/Windows-x64-0078d4) ![Linux](https://img.shields.io/badge/Linux-x86__64-fcc624) ![Versione](https://img.shields.io/badge/versione-1.0.2%20Demo-f6a91a)
+> **Lingue:** interfaccia disponibile in italiano, inglese e spagnolo.
+
+![Fedora](https://img.shields.io/badge/riferimento-Fedora-blue)
+![Licenza](https://img.shields.io/badge/licenza-proprietaria-red)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![PySide6](https://img.shields.io/badge/UI-PySide6-41cd52)
+![Gioco](https://img.shields.io/badge/gioco-gestionale%20calcistico-f6a91a)
+
+---
 
 <table>
   <tr>
@@ -21,45 +29,147 @@
     <td width="20%"><a href="assets/branding/screenshots/it/07_squad_it.png"><img src="assets/branding/screenshots/it/07_squad_it.png" alt="CalcioTotale — Squadra" width="100%"></a></td>
     <td width="20%"><a href="assets/branding/screenshots/it/08_matchday_it.png"><img src="assets/branding/screenshots/it/08_matchday_it.png" alt="CalcioTotale — Scheda partita" width="100%"></a></td>
     <td width="20%"><a href="assets/branding/screenshots/it/09_verdict_it.png"><img src="assets/branding/screenshots/it/09_verdict_it.png" alt="CalcioTotale — Celebrazione del trofeo" width="100%"></a></td>
-    <td width="20%"><a href="assets/branding/screenshots/it/10_start_it.png"><img src="assets/branding/screenshots/it/10_start_it.png" alt="CalcioTotale — Nuova carriera" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/it/10_career_it.png"><img src="assets/branding/screenshots/it/10_career_it.png" alt="CalcioTotale — Offerte di carriera" width="100%"></a></td>
   </tr>
 </table>
 
-## Scarica la demo
+---
 
-Pacchetti aggiornati il **1 ottobre 2026**. Scaricali dalla [release ufficiale 1.0.2](https://github.com/eleora-dev/calciototale/releases/tag/v1.0.2):
+## Il gioco
 
-- [Windows 10/11 x64 — ZIP portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-windows-x64.zip)
-- [Linux x86_64 — archivio portabile](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/CalcioTotale-1.0.2-demo-linux-x86_64.tar.gz)
-- [Codici SHA256 per verificare i download](https://github.com/eleora-dev/calciototale/releases/download/v1.0.2/SHA256SUMS)
+- **Due modalità carriera** — *Solo la Maglia* lega il giocatore a un unico club, mentre *Sentieri di Gloria* segue la carriera di un dirigente dalle serie inferiori attraverso offerte, valutazioni e possibili revoche dell'incarico.
+- **Controllo tecnico configurabile** — quando *Controllo totale* non è attivo, formazione, tattiche, allenamento e gestione della gara sono delegati allo staff tecnico secondo qualità e mandato assegnato; attivandolo, ogni scelta tecnica passa direttamente al giocatore.
+- **Cinque campionati giocabili** — Serie A, Serie B e tutti e tre i gironi di Serie C, con 100 club italiani selezionabili e altri 145 club europei e internazionali non selezionabili nel pacchetto stagionale fornito.
+- **Calcio nazionale** — campionati, Coppa Italia, Coppa Italia Serie C, Supercoppa Italiana, play-off e play-out di Serie B e fase post-campionato di Serie C.
+- **Competizioni internazionali** — UEFA Champions League, Europa League, Conference League, Supercoppa UEFA, Coppa Intercontinentale e Mondiale per Club, con play-off di qualificazione, sorteggi, fasi campionato e progressione tra le stagioni.
+- **Gestione della squadra e delle partite** — moduli, formazioni, tattiche, numeri di maglia, ruoli, preparazione della gara, allenamento settimanale, infortuni, malattie, squalifiche e cronache delle partite.
+- **Gestione societaria** — obiettivi e relazioni della dirigenza, flussi di cassa, conto economico, contabilità dei cartellini, contratti, premi, credito, ricapitalizzazioni, staff, stadio e sviluppo del centro di allenamento.
+- **Calciomercato e osservazione** — acquisti, cessioni, prestiti, trattative, precontratti, liste in uscita, giocatori osservati e ricerca di giovani talenti.
+- **Gestione commerciale** — biglietteria e abbonamenti, sponsor, diritti televisivi, stampa e comunicazione ufficiale, canali social e merchandising.
+- **Settore giovanile e crescita** — giovani del vivaio, percorsi di promozione, sviluppo tecnico, personalità e gestione individuale.
+- **Statistiche e notizie** — classifiche, calendari, filtri per competizione, rapporti su giocatori e squadre, premi, record e notizie contestuali.
+- **Salvataggi locali** — nove slot carriera nella cartella locale `user/`; le build portabili Windows e Linux la mantengono accanto all'eseguibile, i pacchetti di sistema usano la cartella dati dell'utente e macOS usa `~/Library/Application Support/CalcioTotale/user/`.
+- **Tre lingue per l'interfaccia** — italiano, inglese e spagnolo condividono la stessa struttura di localizzazione; la lingua predefinita segue il sistema e la scelta manuale viene conservata localmente.
 
-Entrambi i pacchetti sono autonomi e non richiedono l'installazione di Python. La versione completa e il codice sorgente non sono pubblicati in questo repository.
+## Funzionamento e privacy
 
-## Installazione e avvio
+CalcioTotale è un gioco desktop offline:
 
-**Windows:** Estrai completamente lo ZIP in una cartella scrivibile, apri la directory `CalcioTotale` e avvia `CalcioTotale.exe`. Non avviare il gioco direttamente dallo ZIP e non collocare la cartella portabile in `Program Files`.
+- non crea né richiede un proprio account o un server gestito da Eleòra;
+- non utilizza telemetria, sistemi di analisi o servizi pubblicitari;
+- durante il normale utilizzo non effettua richieste di rete;
+- i dati delle carriere vengono salvati localmente; nell'edizione Steam possono essere sincronizzati dal client Steam quando Steam Cloud è abilitato.
 
-**Linux:** Estrai l'archivio e avvia `CalcioTotale/CalcioTotale`. La build è stata prodotta e verificata nel runtime Linux di Steam per sistemi desktop x86_64.
+I collegamenti nella finestra Informazioni aprono il browser predefinito soltanto quando vengono selezionati; l'eventuale connessione viene effettuata dal browser verso il sito collegato, non dal gioco.
 
-Le build portabili conservano i salvataggi in `user/` accanto all'eseguibile. La build Windows non è firmata e può mostrare un avviso di Microsoft Defender SmartScreen; scarica i file solo da questo repository ufficiale e verifica il codice SHA256 pubblicato.
+Consulta [privacy.html](privacy.html) per l'informativa sulla privacy completa in italiano e inglese.
 
-## Caratteristiche principali
+## Panoramica tecnica
 
-- *Solo la Maglia* lega la carriera a un club; *Sentieri di Gloria* segue un percorso dirigenziale tra società diverse.
-- Gestisci personalmente formazione, tattiche, allenamento e partite, oppure delega le decisioni tecniche allo staff.
-- Guida squadre di Serie A, Serie B e dei tre gironi di Serie C: 100 club italiani selezionabili e altri 145 club nel pacchetto stagionale.
-- Affronta competizioni nazionali e internazionali, comprese coppe, play-off e tornei UEFA.
-- Cura mercato, prestiti, contratti, osservazione, settore giovanile, staff, finanze, stadio e attività commerciali.
-- Segui classifiche, calendari, cronache, statistiche e notizie contestuali; salva localmente le carriere in nove slot.
+Nella struttura del progetto, **CalcioTotale** indica l'applicazione, mentre l'intera cartella `data/` costituisce un pacchetto di contenuti calcistici separato e sostituibile. Il pacchetto viene collocato accanto all'applicazione perché possa essere letto localmente, ma non fa parte del materiale proprietario di CalcioTotale.
 
-L'uscita della versione completa su [Steam](https://store.steampowered.com/app/5247020/Calcio_Totale/) è prevista per il **7 ottobre 2026**.
+- `data/data.json.gz` contiene i dati stagionali in formato JSON UTF-8 compresso con gzip: 245 club, 6.475 giocatori, nomi, abbreviazioni, organizzatori, colori e schemi delle magliette identificative e percorsi delle icone delle competizioni.
+- `data/competitions/` appartiene allo stesso pacchetto separato e contiene le immagini richiamate dai dati stagionali.
+- `catalogs/` contiene lettura e scrittura del database, schemi dei record statici e accesso ai cataloghi sostituibili del gioco.
+- `models/` definisce club, giocatori, staff, partite, classifiche, strutture, dati economici e criteri per gli obiettivi stagionali.
+- `engine/` contiene costruzione del mondo di gioco, simulazione delle partite, calendari, competizioni, trasferimenti, contratti, finanza, notizie, allenamento e avanzamento tra le stagioni.
+- `ui/` contiene l'interfaccia PySide6, le finestre di dialogo, lo stile e la logica di presentazione.
+- `locales/locale_it.py`, `locales/locale_en.py` e `locales/locale_es.py` contengono i cataloghi paralleli italiano, inglese e spagnolo; `locales/runtime_settings.py` gestisce la preferenza linguistica locale.
+- `assets/` contiene elementi grafici del progetto, sfondi, icone dell'interfaccia, bandiere, font e altre risorse non legate alle competizioni.
+- `user/` viene creata durante l'esecuzione per gli slot di salvataggio e i relativi riepiloghi.
 
-## Privacy e diritti
+L'ambiente di riferimento è Fedora Linux con KDE Plasma. Il sorgente comprende anche la gestione dello schermo per Windows e macOS, ma devono essere considerate supportate soltanto le piattaforme per le quali viene pubblicata esplicitamente una build ufficiale.
 
-CalcioTotale è un gioco desktop offline. Non richiede un account CalcioTotale e non utilizza telemetria o pubblicità. I dati delle carriere vengono salvati localmente. Consulta l'[informativa sulla privacy](privacy.html) per i dettagli.
+## Requisiti della versione sorgente
 
-Le build ufficiali possono essere usate per scopi personali e non commerciali secondo la [licenza di CalcioTotale](LICENSE). Redistribuzione, modifica, pubblicazione e uso commerciale richiedono una preventiva autorizzazione scritta. I materiali di terze parti conservano i rispettivi diritti; consulta le [note sui componenti di terze parti](THIRD_PARTY_NOTICES.md) e i [testi delle licenze](licenses/README.md).
+- Python 3.10 o successivo
+- PySide6 6.7 o successivo, ma precedente alla versione 7
+- un ambiente desktop grafico funzionante
+- uno schermo di almeno 1280 × 720 per la superficie di gioco fissa da 1600 × 900 e il relativo ridimensionamento automatico multipiattaforma
 
-CalcioTotale è un progetto non ufficiale e non è affiliato né approvato da federazioni, leghe, competizioni, club, giocatori o fornitori di dati.
+Per una copia di sviluppo autorizzata:
+
+```bash
+python3 -B -m venv .venv
+source .venv/bin/activate
+python3 -B -m pip install -r requirements.txt
+python3 -B calciototale.py
+```
+
+Per avviare direttamente la demo dalla stessa copia sorgente:
+
+```bash
+python3 -B calciototale.py --demo
+```
+
+## Verifiche di sviluppo
+
+Il runner include sia i test `unittest` sia le funzioni `test_*` e isola ogni modulo in un processo con dati utente temporanei. La suite completa è suddivisa in quattro blocchi seriali e, per evitare picchi di memoria, viene eseguito un solo modulo alla volta. I test UI usano Qt in modalità offscreen.
+
+```bash
+PYTHONPATH=. python3 -B tools/run_tests.py
+```
+
+Stato, log e fallimenti vengono salvati atomicamente dopo ogni modulo in `.test-results/full-suite`. Dopo un'interruzione, `--resume` esegue soltanto i moduli mancanti o interrotti; `--retry-failures` riesegue quelli non superati. Un avvio senza queste opzioni crea una sessione nuova. Per limitare la verifica a uno o più moduli, passa i nomi senza `.py`; `--parts`, `--jobs`, `--timeout` e `--log-dir` permettono di modificare esplicitamente i valori predefiniti.
+
+```bash
+PYTHONPATH=. python3 -B tools/run_tests.py --resume
+PYTHONPATH=. python3 -B tools/run_tests.py --retry-failures
+```
+
+## Distribuzione
+
+Il repository dei sorgenti `calciototale-src` è privato. La versione completa è distribuita tramite [Steam](https://store.steampowered.com/app/5247020/Calcio_Totale/), mentre il repository pubblico [`calciototale`](https://github.com/eleora-dev/calciototale) distribuisce esclusivamente i pacchetti della versione demo.
+
+Le build eseguibili ufficiali possono essere scaricate, installate e utilizzate esclusivamente per uso personale e non commerciale, secondo quanto stabilito nella [licenza](LICENSE). L'accesso ai sorgenti, la redistribuzione, la modifica, la pubblicazione e l'uso commerciale richiedono una preventiva autorizzazione scritta. Non redistribuire le build e non affidarti a mirror non ufficiali.
+
+La procedura per la build portabile Windows x64 è documentata in [packaging/windows/README.md](packaging/windows/README.md). Le build Linux x86_64 portabile e RPM per Fedora sono documentate in [packaging/linux/README.md](packaging/linux/README.md). Il bundle `.app` per Apple Silicon, Mac Intel o Universal 2, con firma e notarizzazione, è documentato in [packaging/macos/README.md](packaging/macos/README.md). Tutti i formati producono un pacchetto autonomo composto dall'applicazione, dalle sue dipendenze e dal pacchetto di contenuti separato collocato in `data/`; l'utente finale non deve installare pacchetti Python.
+
+Il workflow manuale `Build Steam and demo packages` costruisce e verifica entrambe le edizioni per Windows x64 e Linux x86_64 nel runtime Steam. I pacchetti completi restano artefatti privati destinati ai depot Steam; quando viene richiesta la pubblicazione, soltanto i pacchetti demo vengono caricati nella release pubblica di [`calciototale`](https://github.com/eleora-dev/calciototale). Le build macOS e RPM restano disponibili come procedure manuali, ma sono escluse dalla distribuzione corrente.
+
+Durante il packaging i moduli UI caricati dinamicamente vengono trasformati in un bundle binario compresso. Ogni script di build interrompe la procedura se trova un file Python `.py` in chiaro nel pacchetto finale.
+
+## Struttura del progetto
+
+```text
+assets/                   Identità grafica, sfondi, icone, bandiere, font e risorse UI
+catalogs/                 I/O dei dati statici, schemi, configurazione e cataloghi
+data/                     Pacchetto separato e sostituibile di contenuti calcistici
+engine/                   Mondo di gioco, simulazione e gestione dello stato
+licenses/                 Testi delle licenze dei componenti di terze parti
+locales/                  Cataloghi italiano/inglese/spagnolo e preferenze linguistiche
+models/                   Modelli di dominio, identificatori, criteri e costanti
+packaging/windows/        Configurazione PyInstaller e script PowerShell di build
+packaging/linux/          Payload Linux, archivio portabile e pacchetto RPM
+packaging/macos/          Bundle .app, firma, notarizzazione e archivio ZIP
+engine/runtime_paths.py   Percorsi dati specifici delle build desktop
+ui/                       Interfaccia PySide6, palette e stile
+calciototale.py           Punto di ingresso dell'applicazione
+LICENSE                   Licenza proprietaria di CalcioTotale
+THIRD_PARTY_NOTICES.md    Componenti, risorse e diritti di terze parti
+privacy.html              Informativa sulla privacy in italiano e inglese
+user/                     Salvataggi, riepiloghi e preferenze locali, creati quando necessari
+```
+
+## Licenza e diritti di terze parti
+
+Il codice originale di CalcioTotale, la documentazione e le risorse originali dell'applicazione sono proprietari e tutti i diritti sono riservati. L'intera cartella `data/` è un pacchetto di contenuti separato ed è esclusa dalla licenza proprietaria. Consulta [LICENSE](LICENSE).
+
+I componenti e i materiali di terze parti rimangono soggetti alle rispettive licenze, condizioni e titolarità. Il repository documenta in particolare:
+
+- **Python** — Python Software Foundation License Version 2 e licenze dei componenti incorporati nella distribuzione Python;
+- **PySide6 / Qt for Python** — le build automatizzate usano la distribuzione Community sotto LGPLv3/GPLv3; un'eventuale distribuzione commerciale Qt richiede una pipeline e condizioni separate;
+- **PyInstaller** — GPLv2 o successiva con eccezione specifica per il bootloader incorporato nelle build;
+- **Pillow** — licenza MIT-CMU; dipendenza usata esclusivamente durante il packaging delle icone e non dal runtime del gioco;
+- **Google Material Symbols / Material Design icons** — licenza Apache 2.0 per le icone derivate applicabili;
+- **Red Hat Display** — SIL Open Font License 1.1, usato per l'interfaccia e i testi del trailer;
+- **Oxanium** — SIL Open Font License 1.1, usato per gli sponsor sulle maglie e i titoli del trailer;
+- **flag-icons** — licenza MIT per le bandiere SVG applicabili;
+- **Kenney Cursor Pack** — licenza CC0 1.0 per freccia, manina, help e cursore di testo;
+- **pacchetto `data/`** — database e immagini delle competizioni costituiscono contenuti separati dall'applicazione; i relativi diritti rimangono ai rispettivi titolari.
+
+Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e la directory [`licenses/`](licenses/). CalcioTotale è un progetto non ufficiale e non è affiliato, approvato o sponsorizzato da federazioni, leghe, competizioni, club, giocatori o fornitori di dati.
+
+## Autore
 
 Gerardo Perilli · [Eleòra](https://github.com/eleora-dev)
