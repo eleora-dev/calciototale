@@ -43,7 +43,7 @@ Está desarrollado en Python y PySide6. La versión **1.0.3** se está preparand
 - **Fútbol nacional** — ligas, Coppa Italia, Coppa Italia Serie C, Supercoppa Italiana, play-offs y play-outs de Serie B y fase posterior a la liga de Serie C.
 - **Competiciones internacionales** — UEFA Champions League, Europa League, Conference League, Supercopa de la UEFA, Copa Intercontinental y Mundial de Clubes, con eliminatorias de clasificación, sorteos, fases de liga y continuidad entre temporadas.
 - **Gestión de la plantilla y los partidos** — sistemas de juego, alineaciones, tácticas, dorsales, roles, preparación de encuentros, entrenamiento semanal, lesiones, enfermedades, sanciones y crónicas de los partidos.
-- **Gestión del club** — objetivos e informes de la directiva, flujos de caja, cuenta de resultados, contabilidad de traspasos, contratos, primas, crédito, ampliaciones de capital, personal, estadio y desarrollo del centro de entrenamiento.
+- **Gestión del club** — objetivos e informes de la directiva, flujos de caja, cuenta de resultados, contabilidad de traspasos, contratos, primas, crédito, ampliaciones de capital, personal, estadio y desarrollo del centro de entrenamiento, con renegociación del canon con el propietario del estadio.
 - **Fichajes y ojeo** — incorporaciones, ventas, cesiones, negociaciones, precontratos, listas de transferibles y cedibles, seguimiento de futbolistas y búsqueda de jóvenes promesas.
 - **Gestión comercial** — venta de entradas y abonos, patrocinadores, derechos televisivos, prensa y comunicados oficiales, redes sociales y productos del club.
 - **Cantera y desarrollo** — jóvenes de la cantera, ascenso al primer equipo, evolución técnica, personalidad y seguimiento individual.
