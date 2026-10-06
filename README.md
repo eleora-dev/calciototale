@@ -4,7 +4,7 @@
 
 **CalcioTotale** is a single-player football management game that captures the spirit of the genre's classics while shifting the perspective: you no longer play the traditional manager, but the club's chief executive. Define the club's strategy, build a sustainable organisation and face the sporting and financial consequences of every decision.
 
-It is built with Python and PySide6; version **1.0.5** is being prepared for release on **7 October 2026**. The application is accompanied by a replaceable **2026-27** football content package.
+It is built with Python and PySide6. The current game version is **1.0.5**. The application is accompanied by a replaceable **2026-27** football content package.
 
 > **Languages:** the interface is available in Italian, English and Spanish.
 
