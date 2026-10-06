@@ -4,7 +4,7 @@
 
 **CalcioTotale** è un gestionale calcistico per giocatore singolo che riprende lo spirito dei classici del genere, ma cambiandone il punto di vista: non interpreti più il tradizionale allenatore-manager, bensì l’amministratore delegato di un club. Definisci la strategia della società, costruisci una struttura sostenibile e affronta le conseguenze sportive ed economiche di ogni decisione.
 
-È sviluppato in Python e PySide6; la versione **1.0.4** è in preparazione per l'uscita del **7 ottobre 2026**. L'applicazione è accompagnata da un pacchetto di contenuti calcistici sostituibile aggiornato alla stagione **2026-27**.
+È sviluppato in Python e PySide6; la versione **1.0.5** è in preparazione per l'uscita del **7 ottobre 2026**. L'applicazione è accompagnata da un pacchetto di contenuti calcistici sostituibile aggiornato alla stagione **2026-27**.
 
 > **Lingue:** interfaccia disponibile in italiano, inglese e spagnolo.
 

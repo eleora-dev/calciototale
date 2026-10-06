@@ -2,7 +2,7 @@
 
 CalcioTotale includes original project material and uses or references third-party software, assets, names, trademarks and data. The proprietary terms in `LICENSE` apply only to material owned by Gerardo Perilli / Eleòra and do not replace any third-party license or right.
 
-This notice reflects the current version 1.0.4 repository and was last reviewed on 29 September 2026. It is a practical inventory, not a substitute for the complete license texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
+This notice reflects the current version 1.0.5 repository and was last reviewed on 29 September 2026. It is a practical inventory, not a substitute for the complete license texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
 
 ---
 
