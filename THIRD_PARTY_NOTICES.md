@@ -138,14 +138,16 @@ These four files may be used, modified and redistributed without attribution und
 
 ## Separate football content package
 
-For the purposes of the project documentation and licensing structure, the entire `data/` directory is a replaceable football content package distributed separately from the proprietary CalcioTotale application. Its database and competition images are outside the scope of the CalcioTotale proprietary license.
+For the purposes of the project documentation and licensing structure, the entire `data/` directory is a replaceable football content package distributed separately from the proprietary CalcioTotale application. Its database is outside the scope of the CalcioTotale proprietary license. Fixed, generic competition illustrations are application resources under `assets/competitions/`, selected by neutral identifiers in the database.
 
-Football club, player, federation, league and competition names; competition logos and other marks; and football data contained in that package are not CalcioTotale application material. All corresponding rights remain with their respective owners.
+Football club, player, federation, league and competition names, other marks and football data contained in that package are not CalcioTotale application material. All corresponding rights remain with their respective owners.
 
 CalcioTotale is an unofficial project and is not affiliated with, endorsed by or sponsored by any football federation, league, competition, club, player or data provider.
 
 ---
 
 ## Other bundled media
+
+The stylised map in `assets/competitions/regional_organizer.png` is derived from the public-domain Natural Earth 1:110m country boundaries, simplified for small interface sizes. Source: https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson. Terms: https://www.naturalearthdata.com/about/terms-of-use/. The surrounding artwork is original project material.
 
 Branding, backgrounds, facility images, the animated wait cursor, feature illustrations, competition icons and other media are covered by `LICENSE` only where they are original CalcioTotale material. The four static Kenney cursors are documented separately above. Any other third-party element remains under its original ownership, license, terms or reserved rights even if it is stored in the repository or transformed for use by the application.

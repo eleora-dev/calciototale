@@ -4,7 +4,7 @@
 
 **CalcioTotale** es un juego de gestión futbolística para un solo jugador que recupera el espíritu de los clásicos del género desde otra perspectiva: en lugar de asumir el papel habitual de entrenador y mánager, diriges un club como director general. Define la estrategia de la entidad, construye una estructura sostenible y afronta las consecuencias deportivas y económicas de cada decisión.
 
-Está desarrollado en Python y PySide6. La versión actual del juego es **1.0.5**. La aplicación se distribuye junto con un paquete de datos futbolísticos sustituible, actualizado para la temporada **2026-27**.
+Está desarrollado en Python y PySide6. La versión actual del juego es **1.0.6**. La aplicación se distribuye junto con un paquete de datos futbolísticos sustituible, actualizado para la temporada **2026-27**.
 
 > **Idiomas:** la interfaz está disponible en italiano, inglés y español.
 
@@ -68,14 +68,14 @@ Consulta [privacy.html](privacy.html) para leer la política de privacidad compl
 
 En la estructura del proyecto, **CalcioTotale** designa la aplicación. La carpeta `data/` completa constituye un paquete independiente y sustituible de contenido futbolístico. Se coloca junto a la aplicación para que esta pueda leerlo localmente, pero no forma parte del material propietario de CalcioTotale.
 
-- `data/data.json.gz` contiene los datos de la temporada en JSON UTF-8 comprimido con gzip: 245 clubes, 6475 jugadores, nombres, abreviaturas, organizadores, colores y diseños de camisetas identificativas y rutas de los iconos de las competiciones.
-- `data/competitions/` pertenece al mismo paquete independiente y contiene las imágenes a las que hacen referencia los datos de la temporada.
+- `data/data.json.gz` contiene los datos de la temporada en JSON UTF-8 comprimido con gzip: 245 clubes, 6475 jugadores, nombres, abreviaturas, organizadores, colores y diseños de camisetas identificativas e identificadores neutros de los iconos de las competiciones.
+- `assets/competitions/` contiene las ilustraciones genéricas y fijas de la aplicación. Los campos `icon`, `organizer_icon`, `trophy_icon` y `winter_champion_icon` de la base de datos seleccionan identificadores neutros (por ejemplo, `continental_cup_1`); cambiar los nombres u organizadores de las competiciones no cambia las imágenes ni su ubicación. Los artículos de las competiciones se declaran en `article_it` y `article_es` en la base de datos.
 - `catalogs/` contiene la lectura y escritura de la base de datos, los esquemas de registros estáticos y el acceso a los catálogos sustituibles del juego.
 - `models/` define clubes, jugadores, personal, partidos, clasificaciones, instalaciones, datos económicos y criterios de los objetivos de temporada.
 - `engine/` contiene la creación del mundo de juego, la simulación de partidos, los calendarios, las competiciones, los traspasos, los contratos, las finanzas, las noticias, los entrenamientos y el avance entre temporadas.
 - `ui/` contiene la interfaz PySide6, los cuadros de diálogo, el estilo y la lógica de presentación.
 - `locales/locale_it.py`, `locales/locale_en.py` y `locales/locale_es.py` contienen los catálogos de italiano, inglés y español; `locales/runtime_settings.py` gestiona la preferencia de idioma local.
-- `assets/` contiene la identidad gráfica, los fondos, los iconos de la interfaz, las banderas, las fuentes y otros recursos visuales ajenos a las competiciones.
+- `assets/` contiene la identidad gráfica, los fondos, los iconos de la interfaz, las banderas, las fuentes, las ilustraciones de las competiciones y otros recursos visuales.
 - `user/` se crea durante la ejecución para las partidas guardadas y sus resúmenes.
 
 El entorno de referencia es Fedora Linux con KDE Plasma. El código también incluye gestión de pantalla para Windows y macOS, pero solo deben considerarse compatibles las plataformas para las que se publique expresamente una versión oficial.

@@ -11,9 +11,12 @@ materials, unless an individual file states otherwise.
 
 For the purposes of this license and all project documentation, the
 CalcioTotale application and the replaceable football content package are two
-separate components. The entire `data/` directory, including its database,
-and competition images, is the content package: it is not part of
-the proprietary CalcioTotale application and is excluded from this license.
+separate components. The entire `data/` directory contains the replaceable
+database: it is not part of the proprietary CalcioTotale application and is
+excluded from this license. The fixed, generic illustrations under
+`assets/competitions/` are application resources, independent of the database;
+original artwork is covered by this license and third-party elements retain
+their respective rights.
 
 The source code is private and confidential. Access to a private repository,
 development copy or source archive does not grant any ownership or license
