@@ -4,13 +4,14 @@
 
 **CalcioTotale** is a single-player football management game that captures the spirit of the genre's classics while shifting the perspective: you no longer play the traditional manager, but the club's chief executive. Define the club's strategy, build a sustainable organisation and face the sporting and financial consequences of every decision.
 
-It is built with Python and PySide6. The current game version is **1.0.6**. The application is accompanied by a replaceable **2026-27** football content package.
+It is built with Python and C++17, with a PySide6 interface. The current game version is **1.0.7**. The application is accompanied by a replaceable **2026-27** football content package.
 
 > **Languages:** the interface is available in Italian, English and Spanish.
 
 ![Fedora](https://img.shields.io/badge/reference-Fedora-blue)
 ![License](https://img.shields.io/badge/license-proprietary-red)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![PySide6](https://img.shields.io/badge/UI-PySide6-41cd52)
 ![Game](https://img.shields.io/badge/game-football%20club%20executive-f6a91a)
 
@@ -73,6 +74,7 @@ Within the project structure, **CalcioTotale** means the application, while the 
 - `catalogs/` contains database I/O, static-record schemas and access to the replaceable game catalogues.
 - `models/` defines clubs, players, staff, matches, standings, facilities, economic data and the season-objective policy.
 - `engine/` contains world construction, match simulation, calendars, competitions, transfers, contracts, finance, news, training and season progression.
+- `native_engine/` contains the C++17 library used for intensive numerical calculations, including line-ups, CPU transfer filters, training, seasonal development, calendars and standings. Python manages game state and calls the library through `ctypes`.
 - `ui/` contains the PySide6 interface, dialogs, styling and presentation logic.
 - `locales/locale_it.py`, `locales/locale_en.py` and `locales/locale_es.py` contain the matching Italian, English and Spanish catalogues; `locales/runtime_settings.py` manages the local language preference.
 - `assets/` contains local branding, backgrounds, interface icons, flags, fonts competition illustrations and other visual resources.
@@ -84,8 +86,11 @@ The reference environment is Fedora Linux with KDE Plasma. The source also conta
 
 - Python 3.10 or newer
 - PySide6 6.7 or newer, below version 7
+- CMake 3.20 or newer and a C++17 compiler: g++ on Linux, Visual Studio 2022 with the x64 C++ tools on Windows, or Apple Clang on macOS
 - a working graphical desktop environment
 - a display of at least 1280 × 720 for the fixed 1600 × 900 game surface and its automatic cross-platform scaling
+
+Starting from source automatically compiles the native library when it is missing or its C++ sources change. Subsequent launches reuse it from `packaging/build/native_engine/`. See [native_engine/README.txt](native_engine/README.txt) for native-engine build and verification details.
 
 For an authorised development copy:
 
@@ -127,7 +132,7 @@ The Windows x64 portable-build procedure is documented in [packaging/windows/REA
 
 The manual `Build Steam and demo packages` workflow builds and verifies both editions for Windows x64 and Linux x86_64 in the Steam runtime. Full packages remain private workflow artifacts intended for the Steam depots; when publication is requested, only demo packages are uploaded to the public [`calciototale`](https://github.com/eleora-dev/calciototale) release. The macOS and RPM procedures remain available for manual use but are excluded from the current distribution.
 
-During packaging, dynamically loaded UI modules are transformed into a compressed binary bundle. Every build script aborts if a plain Python `.py` source file is found in the final package.
+During packaging, the C++ library is compiled for the target platform and included under `native/`; players do not need CMake or a compiler. Dynamically loaded UI modules are transformed into a compressed binary bundle. Every build script aborts if a plain Python `.py` source file is found in the final package.
 
 ## Project structure
 
@@ -139,6 +144,8 @@ engine/                   World construction, simulation, and game-state logic
 licenses/                 Included third-party license texts
 locales/                  Italian/English/Spanish catalogues and language preferences
 models/                   Domain models, identifiers, policies and constants
+native_engine/            C++17 numerical library, CMake configuration and build helper
+packaging/build/          Generated build files and the local native-library cache
 packaging/windows/        PyInstaller recipe and PowerShell build script
 packaging/linux/          Shared Linux payload, portable archive and Fedora RPM
 packaging/macos/          .app bundle, signing, notarization and ZIP archive

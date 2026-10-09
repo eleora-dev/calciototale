@@ -2,18 +2,20 @@
 
 CalcioTotale includes original project material and uses or references third-party software, assets, names, trademarks and data. The proprietary terms in `LICENSE` apply only to material owned by Gerardo Perilli / Eleòra and do not replace any third-party license or right.
 
-This notice reflects the current version 1.0.5 repository and was last reviewed on 29 September 2026. It is a practical inventory, not a substitute for the complete license texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
+This notice reflects the current version 1.0.7 repository and was last reviewed on 09 October 2026. It is a practical inventory, not a substitute for the complete license texts or for legal review of a particular executable build. `BUILD_COMPONENTS.txt` records the exact principal versions used for each generated package.
 
 ---
 
 ## Original CalcioTotale material
 
-- Material: original source code, Italian, English and Spanish localisations, documentation and original project assets
+- Material: original Python and C++17 source code, Italian, English and Spanish localisations, documentation and original project assets
 - Copyright: Copyright (c) 2026 Gerardo Perilli / Eleòra
 - License: proprietary; all rights reserved
 - Terms: `LICENSE`
 
 Any bundled item that is not owned by Gerardo Perilli / Eleòra is excluded from this proprietary grant and remains subject to its own rights.
+
+The numerical library under `native_engine/` is original CalcioTotale code. It is compiled with CMake for each target platform and included in executable packages under `native/`; Python calls it through the standard-library `ctypes` module. CMake and the C++ compiler are development and packaging tools, not requirements for players.
 
 ---
 

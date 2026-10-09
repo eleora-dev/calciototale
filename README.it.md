@@ -4,13 +4,14 @@
 
 **CalcioTotale** è un gestionale calcistico per giocatore singolo che riprende lo spirito dei classici del genere, ma cambiandone il punto di vista: non interpreti più il tradizionale allenatore-manager, bensì l’amministratore delegato di un club. Definisci la strategia della società, costruisci una struttura sostenibile e affronta le conseguenze sportive ed economiche di ogni decisione.
 
-È sviluppato in Python e PySide6. La versione attuale del gioco è **1.0.6**. L'applicazione è accompagnata da un pacchetto di contenuti calcistici sostituibile aggiornato alla stagione **2026-27**.
+È sviluppato in Python e C++17, con un'interfaccia PySide6. La versione attuale del gioco è **1.0.7**. L'applicazione è accompagnata da un pacchetto di contenuti calcistici sostituibile aggiornato alla stagione **2026-27**.
 
 > **Lingue:** interfaccia disponibile in italiano, inglese e spagnolo.
 
 ![Fedora](https://img.shields.io/badge/riferimento-Fedora-blue)
 ![Licenza](https://img.shields.io/badge/licenza-proprietaria-red)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![PySide6](https://img.shields.io/badge/UI-PySide6-41cd52)
 ![Gioco](https://img.shields.io/badge/gioco-gestionale%20calcistico-f6a91a)
 
@@ -73,6 +74,7 @@ Nella struttura del progetto, **CalcioTotale** indica l'applicazione, mentre l'i
 - `catalogs/` contiene lettura e scrittura del database, schemi dei record statici e accesso ai cataloghi sostituibili del gioco.
 - `models/` definisce club, giocatori, staff, partite, classifiche, strutture, dati economici e criteri per gli obiettivi stagionali.
 - `engine/` contiene costruzione del mondo di gioco, simulazione delle partite, calendari, competizioni, trasferimenti, contratti, finanza, notizie, allenamento e avanzamento tra le stagioni.
+- `native_engine/` contiene la libreria C++17 per i calcoli numerici più intensivi, tra cui formazioni, filtri del mercato CPU, allenamento, sviluppo stagionale, calendari e classifiche. Python gestisce lo stato del gioco e richiama la libreria tramite `ctypes`.
 - `ui/` contiene l'interfaccia PySide6, le finestre di dialogo, lo stile e la logica di presentazione.
 - `locales/locale_it.py`, `locales/locale_en.py` e `locales/locale_es.py` contengono i cataloghi paralleli italiano, inglese e spagnolo; `locales/runtime_settings.py` gestisce la preferenza linguistica locale.
 - `assets/` contiene elementi grafici del progetto, sfondi, icone dell'interfaccia, bandiere, font, illustrazioni delle competizioni e altre risorse visive.
@@ -84,8 +86,11 @@ L'ambiente di riferimento è Fedora Linux con KDE Plasma. Il sorgente comprende 
 
 - Python 3.10 o successivo
 - PySide6 6.7 o successivo, ma precedente alla versione 7
+- CMake 3.20 o successivo e un compilatore C++17: g++ su Linux, Visual Studio 2022 con gli strumenti C++ x64 su Windows oppure Apple Clang su macOS
 - un ambiente desktop grafico funzionante
 - uno schermo di almeno 1280 × 720 per la superficie di gioco fissa da 1600 × 900 e il relativo ridimensionamento automatico multipiattaforma
+
+L'avvio dai sorgenti compila automaticamente la libreria nativa quando manca o cambiano i suoi sorgenti C++. Gli avvii successivi la riusano da `packaging/build/native_engine/`. I dettagli di compilazione e verifica sono in [native_engine/README.txt](native_engine/README.txt).
 
 Per una copia di sviluppo autorizzata:
 
@@ -127,7 +132,7 @@ La procedura per la build portabile Windows x64 è documentata in [packaging/win
 
 Il workflow manuale `Build Steam and demo packages` costruisce e verifica entrambe le edizioni per Windows x64 e Linux x86_64 nel runtime Steam. I pacchetti completi restano artefatti privati destinati ai depot Steam; quando viene richiesta la pubblicazione, soltanto i pacchetti demo vengono caricati nella release pubblica di [`calciototale`](https://github.com/eleora-dev/calciototale). Le build macOS e RPM restano disponibili come procedure manuali, ma sono escluse dalla distribuzione corrente.
 
-Durante il packaging i moduli UI caricati dinamicamente vengono trasformati in un bundle binario compresso. Ogni script di build interrompe la procedura se trova un file Python `.py` in chiaro nel pacchetto finale.
+Durante il packaging la libreria C++ viene compilata per la piattaforma di destinazione e inclusa in `native/`; i giocatori non devono installare CMake o un compilatore. I moduli UI caricati dinamicamente vengono trasformati in un bundle binario compresso. Ogni script di build interrompe la procedura se trova un file Python `.py` in chiaro nel pacchetto finale.
 
 ## Struttura del progetto
 
@@ -139,6 +144,8 @@ engine/                   Mondo di gioco, simulazione e gestione dello stato
 licenses/                 Testi delle licenze dei componenti di terze parti
 locales/                  Cataloghi italiano/inglese/spagnolo e preferenze linguistiche
 models/                   Modelli di dominio, identificatori, criteri e costanti
+native_engine/            Libreria numerica C++17, configurazione CMake e compilazione
+packaging/build/          File generati dalle build e cache locale della libreria nativa
 packaging/windows/        Configurazione PyInstaller e script PowerShell di build
 packaging/linux/          Payload Linux, archivio portabile e pacchetto RPM
 packaging/macos/          Bundle .app, firma, notarizzazione e archivio ZIP
