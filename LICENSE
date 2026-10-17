@@ -5,8 +5,8 @@ Effective date: 04 Oct 2026.
 
 1. Scope
 --------
-This license applies to the original CalcioTotale source code, Italian and
-English localisations, documentation, artwork and other original project
+This license applies to the original CalcioTotale source code, Italian, English and
+Spanish localisations, documentation, artwork and other original project
 materials, unless an individual file states otherwise.
 
 For the purposes of this license and all project documentation, the
@@ -47,7 +47,7 @@ identify or promote another product without prior written authorization.
 4. Third-party materials
 ------------------------
 This license does not apply to the separate `data/` content package or to
-third-party dependencies, interpreters, build tools, fonts, icons, names,
+third-party libraries, attributed algorithms, development tools, fonts, icons, names,
 badges, logos, trademarks or other materials not owned by Gerardo Perilli /
 Eleòra. Those materials remain subject to their respective licenses, terms and
 rights. See THIRD_PARTY_NOTICES.md and the licenses directory for the maintained

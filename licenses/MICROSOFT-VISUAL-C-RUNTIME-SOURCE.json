@@ -1,0 +1,10 @@
+{
+  "component": "Microsoft Visual C++ 2022 x64 Redistributable",
+  "version": "14.44.35211.0",
+  "source": "vc_redist.x64.exe included in CalcioTotale-1.0.8-demo-windows-x64.zip",
+  "installer_sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b",
+  "embedded_payload": "license.rtf",
+  "payload_source": "u4",
+  "license_sha256": "8099dc3cf9502c335da829e5c755948a12e3e6de490eb492a99deb673d883d8b",
+  "upstream": "https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files"
+}

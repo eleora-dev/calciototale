@@ -4,15 +4,13 @@
 
 **CalcioTotale** is a single-player football management game that captures the spirit of the genre's classics while shifting the perspective: you no longer play the traditional manager, but the club's chief executive. Define the club's strategy, build a sustainable organisation and face the sporting and financial consequences of every decision.
 
-It is built with Python and C++17, with a PySide6 interface. The current game version is **1.0.7**. The application is accompanied by a replaceable **2026-27** football content package.
+The application and game engine are built with C++17 and native Qt Widgets, without an embedded Python runtime. Version **1.0.8** brings performance, interface, season-transition and database improvements to Windows and Linux. Demo downloads are available from the public GitHub releases; Steam availability is managed separately. The application is accompanied by a replaceable **2026-27** football content package.
 
 > **Languages:** the interface is available in Italian, English and Spanish.
 
 ![Fedora](https://img.shields.io/badge/reference-Fedora-blue)
 ![License](https://img.shields.io/badge/license-proprietary-red)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
-![PySide6](https://img.shields.io/badge/UI-PySide6-41cd52)
 ![Game](https://img.shields.io/badge/game-football%20club%20executive-f6a91a)
 
 ---
@@ -35,6 +33,16 @@ It is built with Python and C++17, with a PySide6 interface. The current game ve
 </table>
 
 ---
+
+## What’s new in 1.0.8
+
+- **Performance** — faster initial career loading, optimised career progression and management operations, and improved interface responsiveness.
+- **Board and season transition** — an official Board communication during the first week of June covers the projected squad, expiring contracts and financial concerns; time to address issues before the season closes and a corrected cash assessment accounting for confirmed season-end transactions.
+- **Lineup** — a tooltip with a miniature pitch shows all slots in the current formation and highlights the player’s position; reference role, position in formation and natural positions are explicitly distinguished.
+- **Consistent wording** — terminology aligned across player profiles, transfers, negotiations and technical screens in Italian, English and Spanish.
+- **Loan purchase options** — wage controls with percentage adjustments and the ability to restore the initial wage when exercising an option to buy.
+- **Interface and database** — graphical fixes and updates covering the latest managerial changes. Seasonal data remains in `data/data.json.gz`; database updates apply to new careers.
+
 
 ## Current game
 
@@ -71,56 +79,13 @@ Within the project structure, **CalcioTotale** means the application, while the 
 
 - `data/data.json.gz` contains the seasonal data as gzip-compressed UTF-8 JSON: 245 clubs, 6,475 players, names, short names, organisers, identifying-shirt colours and patterns, and neutral competition-icon identifiers.
 - `assets/competitions/` contains the application’s fixed, generic competition illustrations. Database fields `icon`, `organizer_icon`, `trophy_icon` and `winter_champion_icon` select neutral asset identifiers (for example, `continental_cup_1`); changing competition names or organisers does not change the images or their location. Competition articles are declared in `article_it` and `article_es` in the database.
-- `catalogs/` contains database I/O, static-record schemas and access to the replaceable game catalogues.
-- `models/` defines clubs, players, staff, matches, standings, facilities, economic data and the season-objective policy.
-- `engine/` contains world construction, match simulation, calendars, competitions, transfers, contracts, finance, news, training and season progression.
-- `native_engine/` contains the C++17 library used for intensive numerical calculations, including line-ups, CPU transfer filters, training, seasonal development, calendars and standings. Python manages game state and calls the library through `ctypes`.
-- `ui/` contains the PySide6 interface, dialogs, styling and presentation logic.
-- `locales/locale_it.py`, `locales/locale_en.py` and `locales/locale_es.py` contain the matching Italian, English and Spanish catalogues; `locales/runtime_settings.py` manages the local language preference.
+- `src/app/` contains the Qt Widgets interface and C++ controllers; Qt transforms original `assets/` images in memory, with presentation catalogues under `src/ui/`.
+- `src/engine/domain/` contains C++ game state and models, simulation, contracts, career services and persistence.
 - `assets/` contains local branding, backgrounds, interface icons, flags, fonts competition illustrations and other visual resources.
 - `user/` is created at runtime for local save slots and their summaries.
 
 The reference environment is Fedora Linux with KDE Plasma. The source also contains display handling for Windows and macOS, but only official builds explicitly published for a platform should be considered supported.
 
-## Requirements for the source version
-
-- Python 3.10 or newer
-- PySide6 6.7 or newer, below version 7
-- CMake 3.20 or newer and a C++17 compiler: g++ on Linux, Visual Studio 2022 with the x64 C++ tools on Windows, or Apple Clang on macOS
-- a working graphical desktop environment
-- a display of at least 1280 × 720 for the fixed 1600 × 900 game surface and its automatic cross-platform scaling
-
-Starting from source automatically compiles the native library when it is missing or its C++ sources change. Subsequent launches reuse it from `packaging/build/native_engine/`. See [native_engine/README.txt](native_engine/README.txt) for native-engine build and verification details.
-
-For an authorised development copy:
-
-```bash
-python3 -B -m venv .venv
-source .venv/bin/activate
-python3 -B -m pip install -r requirements.txt
-python3 -B calciototale.py
-```
-
-To start the demo directly from the same source tree:
-
-```bash
-python3 -B calciototale.py --demo
-```
-
-## Development checks
-
-The runner includes both `unittest` cases and standalone `test_*` functions. Each module runs in a separate process with temporary user data. The full suite is split into four serial parts and runs one module at a time to avoid memory spikes; UI tests use Qt offscreen.
-
-```bash
-PYTHONPATH=. python3 -B tools/run_tests.py
-```
-
-State, logs and failures are saved atomically after every module under `.test-results/full-suite`. After an interruption, `--resume` runs only missing or interrupted modules; `--retry-failures` reruns unsuccessful ones. Starting without either option creates a fresh session. To run selected modules, pass their names without `.py`; `--parts`, `--jobs`, `--timeout` and `--log-dir` explicitly override the defaults.
-
-```bash
-PYTHONPATH=. python3 -B tools/run_tests.py --resume
-PYTHONPATH=. python3 -B tools/run_tests.py --retry-failures
-```
 
 ## Distribution
 
@@ -128,30 +93,24 @@ The `calciototale-src` source repository is private. The full version is distrib
 
 Official executable builds may be downloaded, installed and used only for personal, non-commercial purposes under [LICENSE](LICENSE). Source access, redistribution, modification, publication and commercial use require prior written authorisation. Do not redistribute builds or rely on unofficial mirrors.
 
-The Windows x64 portable-build procedure is documented in [packaging/windows/README.md](packaging/windows/README.md). Linux x86_64 portable and Fedora RPM builds are documented in [packaging/linux/README.md](packaging/linux/README.md). The `.app` bundle for Apple Silicon, Intel Macs or Universal 2, including signing and notarization, is documented in [packaging/macos/README.md](packaging/macos/README.md). Every format creates an autonomous payload composed of the application, its dependencies and the separate content package placed under `data/`; the end user does not install Python packages.
+The Windows x64 portable-build procedure is documented in [build/windows/README.md](build/windows/README.md). Linux x86_64 portable and Fedora RPM builds are documented in [build/linux/README.md](build/linux/README.md). The `.app` bundle for Apple Silicon, Intel Macs or Universal 2, including signing and notarization, is documented in [build/macos/README.md](build/macos/README.md). Every format creates an autonomous payload composed of the application, its dependencies and the separate content package placed under `data/`; the end user does not install Python packages.
 
 The manual `Build Steam and demo packages` workflow builds and verifies both editions for Windows x64 and Linux x86_64 in the Steam runtime. Full packages remain private workflow artifacts intended for the Steam depots; when publication is requested, only demo packages are uploaded to the public [`calciototale`](https://github.com/eleora-dev/calciototale) release. The macOS and RPM procedures remain available for manual use but are excluded from the current distribution.
 
-During packaging, the C++ library is compiled for the target platform and included under `native/`; players do not need CMake or a compiler. Dynamically loaded UI modules are transformed into a compressed binary bundle. Every build script aborts if a plain Python `.py` source file is found in the final package.
 
 ## Project structure
 
 ```text
 assets/                   Branding, backgrounds, icons, flags, fonts and UI media
-catalogs/                 Static database I/O, schemas, configuration and catalogue access
 data/                     Separate, replaceable football content package
-engine/                   World construction, simulation, and game-state logic
 licenses/                 Included third-party license texts
-locales/                  Italian/English/Spanish catalogues and language preferences
-models/                   Domain models, identifiers, policies and constants
-native_engine/            C++17 numerical library, CMake configuration and build helper
-packaging/build/          Generated build files and the local native-library cache
-packaging/windows/        PyInstaller recipe and PowerShell build script
-packaging/linux/          Shared Linux payload, portable archive and Fedora RPM
-packaging/macos/          .app bundle, signing, notarization and ZIP archive
-engine/runtime_paths.py   Platform-specific data paths for desktop builds
-ui/                       PySide6 interface, palette and styling
-calciototale.py           Application entry point
+src/app/                  Qt Widgets interface and C++17 controllers
+src/ui/                   Presentation catalogues and Qt image-rendering definitions
+src/engine/               C++17 engine, models, simulation, persistence and C ABI interfaces
+build/desktop/            Generated build files and the local native-library cache
+build/windows/            CMake / Qt deployment and PowerShell build script
+build/linux/              Shared Linux payload, portable archive and Fedora RPM
+build/macos/              .app bundle, signing, notarization and ZIP archive
 LICENSE                   CalcioTotale proprietary license
 THIRD_PARTY_NOTICES.md    Third-party components, assets and rights
 privacy.html              English and Italian privacy policy
@@ -164,10 +123,11 @@ Original CalcioTotale code, documentation and original application assets are pr
 
 Third-party components and materials remain under their own licenses, terms and rights. The current repository specifically documents:
 
-- **Python** — Python Software Foundation License Version 2 and the licenses of components incorporated into the Python distribution;
-- **PySide6 / Qt for Python** — automated builds use the Community distribution under LGPLv3/GPLv3; a Qt commercial distribution requires a separate pipeline and terms;
-- **PyInstaller** — GPLv2 or later with the specific exception for the bootloader embedded in executable builds;
-- **Pillow** — MIT-CMU License; used only while packaging application icons and not by the game runtime;
+- **miniz** — MIT License; compression and decompression of the database and career saves;
+- **Unicode data** — Unicode License V3; text-processing tables used by the C++ model;
+- **MT19937 / CPython algorithms** — retained BSD/PSF notices for algorithms adapted into C++; no Python interpreter is distributed;
+- **Qt and image codecs** — native shared libraries; module licenses and third-party attributions are included under `licenses/qt/6.11.2/`;
+- **Microsoft C++ runtime** — Windows runtime DLLs retain Microsoft terms;
 - **Google Material Symbols / Material Design icons** — Apache License 2.0 for applicable derived icons;
 - **Red Hat Display** — SIL Open Font License 1.1, used for the interface and trailer body text;
 - **Oxanium** — SIL Open Font License 1.1, used for shirt sponsors and trailer headings;
