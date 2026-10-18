@@ -41,7 +41,7 @@ The application and game engine are built with C++17 and native Qt Widgets, with
 - **Lineup** — a tooltip with a miniature pitch shows all slots in the current formation and highlights the player’s position; reference role, position in formation and natural positions are explicitly distinguished.
 - **Consistent wording** — terminology aligned across player profiles, transfers, negotiations and technical screens in Italian, English and Spanish.
 - **Loan purchase options** — wage controls with percentage adjustments and the ability to restore the initial wage when exercising an option to buy.
-- **Interface and database** — graphical fixes and updates covering the latest managerial changes. Seasonal data remains in `data/data.json.gz`; database updates apply to new careers.
+- **Interface and database** — graphical fixes and updates covering the latest managerial changes. Seasonal data remains in `data/data.json.gz`; roster updates apply to new careers.
 
 
 ## Current game
@@ -79,6 +79,7 @@ Within the project structure, **CalcioTotale** means the application, while the 
 
 - `data/data.json.gz` contains the seasonal data as gzip-compressed UTF-8 JSON: 245 clubs, 6,475 players, names, short names, organisers, identifying-shirt colours and patterns, and neutral competition-icon identifiers.
 - `assets/competitions/` contains the application’s fixed, generic competition illustrations. Database fields `icon`, `organizer_icon`, `trophy_icon` and `winter_champion_icon` select neutral asset identifiers (for example, `continental_cup_1`); changing competition names or organisers does not change the images or their location. Competition articles are declared in `article_it` and `article_es` in the database.
+- Competition names, federations, organisers, venues and name pools are read from the current database; translatable text belongs exclusively in the three `locales/` files.
 - `src/app/` contains the Qt Widgets interface and C++ controllers; Qt transforms original `assets/` images in memory, with presentation catalogues under `src/ui/`.
 - `src/engine/domain/` contains C++ game state and models, simulation, contracts, career services and persistence.
 - `assets/` contains local branding, backgrounds, interface icons, flags, fonts competition illustrations and other visual resources.
@@ -105,7 +106,8 @@ assets/                   Branding, backgrounds, icons, flags, fonts and UI medi
 data/                     Separate, replaceable football content package
 licenses/                 Included third-party license texts
 src/app/                  Qt Widgets interface and C++17 controllers
-src/ui/                   Presentation catalogues and Qt image-rendering definitions
+src/ui/                   Layouts, styles and Qt image-rendering definitions
+locales/                  Game text: it.json, en.json, es.json
 src/engine/               C++17 engine, models, simulation, persistence and C ABI interfaces
 build/desktop/            Generated build files and the local native-library cache
 build/windows/            CMake / Qt deployment and PowerShell build script

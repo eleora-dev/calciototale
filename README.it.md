@@ -41,8 +41,9 @@ L'applicazione e il motore sono sviluppati in C++17 con Qt Widgets nativo, senza
 - **Formazione** — tooltip con un piccolo campo che mostra tutti gli slot del modulo attuale ed evidenzia la collocazione del calciatore; ruolo di riferimento, collocazione nel modulo e posizioni naturali sono distinti esplicitamente.
 - **Diciture coerenti** — terminologia uniformata nei profili, nel Mercato, nelle trattative e nelle schermate tecniche, in italiano, inglese e spagnolo.
 - **Riscatto dei prestiti** — controllo dell’ingaggio con variazioni percentuali e ripristino del valore iniziale per i prestiti con diritto di riscatto.
-- **Interfaccia e database** — correzioni grafiche e aggiornamento ai cambi di allenatore più recenti. I dati stagionali restano in `data/data.json.gz`; gli aggiornamenti del database riguardano le nuove carriere.
+- **Interfaccia e database** — correzioni grafiche e aggiornamento ai cambi di allenatore più recenti. I dati stagionali restano in `data/data.json.gz`; gli aggiornamenti delle rose riguardano le nuove carriere.
 
+Per il piano di sviluppo e le verifiche ancora aperte, vedere [roadmap.md](roadmap.md).
 
 ## Il gioco
 
@@ -79,6 +80,7 @@ Nella struttura del progetto, **CalcioTotale** indica l'applicazione, mentre l'i
 
 - `data/data.json.gz` contiene i dati stagionali in formato JSON UTF-8 compresso con gzip: 245 club, 6.475 giocatori, nomi, abbreviazioni, organizzatori, colori e schemi delle magliette identificative e identificatori neutri delle icone delle competizioni.
 - `assets/competitions/` contiene le illustrazioni generiche e fisse dell’applicazione. I campi `icon`, `organizer_icon`, `trophy_icon` e `winter_champion_icon` del database scelgono identificatori neutri (per esempio `continental_cup_1`); modificare nomi o organizzatori delle competizioni non cambia le immagini né la loro posizione. Gli articoli grammaticali delle competizioni sono dichiarati nel database in `article_it` e `article_es`.
+- Nomi di competizioni, federazioni, organizzatori, sedi e bacini di nomi sono letti dal database corrente; i testi traducibili restano esclusivamente nei tre file di `locales/`.
 - `src/app/` contiene l’interfaccia Qt Widgets e i controller C++; Qt trasforma in memoria le immagini originali di `assets/`, con cataloghi di presentazione in `src/ui/`.
 - `src/engine/domain/` contiene stato e modelli del gioco, simulazione, contratti, gestione della carriera e persistenza in C++.
 - `assets/` contiene elementi grafici del progetto, sfondi, icone dell'interfaccia, bandiere, font, illustrazioni delle competizioni e altre risorse visive.
@@ -105,7 +107,8 @@ assets/                   Identità grafica, sfondi, icone, bandiere, font e ris
 data/                     Pacchetto separato e sostituibile di contenuti calcistici
 licenses/                 Testi delle licenze dei componenti di terze parti
 src/app/                  Interfaccia Qt Widgets e controller C++17
-src/ui/                   Cataloghi grafici e definizioni delle trasformazioni Qt
+src/ui/                   Layout, stili e definizioni delle trasformazioni Qt
+locales/                  Testi del gioco: it.json, en.json, es.json
 src/engine/               Motore C++17, modelli, simulazione, persistenza e interfacce C ABI
 build/desktop/            File generati dalle build e cache locale della libreria nativa
 build/windows/            CMake / Qt e script PowerShell di build
