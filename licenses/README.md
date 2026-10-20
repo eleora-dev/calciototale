@@ -4,7 +4,7 @@ This directory accompanies CalcioTotale source copies and executable packages. T
 
 The Italian, English and Spanish CalcioTotale localisations are project material covered by the root license. The language-selector PNG files are not represented by `MIT-FLAG-ICONS.txt`; see `THIRD_PARTY_NOTICES.md` for the distinction between those project-provided assets and applicable upstream `flag-icons` SVG files.
 
-- `PYTHON-3.12-LICENSE.txt` — PSF and incorporated notices for CPython-derived algorithms adapted into C++; no Python interpreter is shipped.
+- `PYTHON-3.12-LICENSE.txt` — PSF and incorporated notices for CPython-derived algorithms adapted into C++.
 - `MT19937-BSD.txt` — MT19937 initialization/state transitions adapted for the independent C++ career random generator; CPython-compatible sampling adaptations also retain the PSF terms.
 - `UNICODE-LICENSE-V3.txt` — Unicode character data used to generate the fixed Unicode 16.0.0 model normalization catalog for the independent C++ factories.
 - `LGPL-3.0.txt` and `GPL-3.0.txt` — general GNU terms relevant to the dynamically linked Qt Community libraries.
@@ -19,4 +19,4 @@ The Italian, English and Spanish CalcioTotale localisations are project material
 
 `THIRD_PARTY_NOTICES.md` is the maintained inventory and explains where each component is used. `BUILD_COMPONENTS.json` identifies the files shipped in native packages by SHA-256. Qt modules may require additional module-specific notices beyond these general license texts.
 
-Development/reference-only license texts are in `tools/licenses/development/` and are excluded from game packages. The PSF text here applies to adapted native algorithms, not to an embedded interpreter.
+The retired development/reference tools and their separate license-text directory have been removed. The PSF text here applies to adapted native algorithms, not to an embedded interpreter.

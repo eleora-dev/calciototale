@@ -4,7 +4,7 @@
 
 **CalcioTotale** is a single-player football management game that captures the spirit of the genre's classics while shifting the perspective: you no longer play the traditional manager, but the club's chief executive. Define the club's strategy, build a sustainable organisation and face the sporting and financial consequences of every decision.
 
-The application and game engine are built with C++17 and native Qt Widgets, without an embedded Python runtime. Version **1.0.8** brings performance, interface, season-transition and database improvements to Windows and Linux. Demo downloads are available from the public GitHub releases; Steam availability is managed separately. The application is accompanied by a replaceable **2026-27** football content package.
+The application and game engine are built with C++17 and native Qt Widgets. Version **1.0.8** brings performance, interface, season-transition and database improvements to Windows and Linux. Demo downloads are available from the public GitHub releases; Steam availability is managed separately. The application is accompanied by a replaceable **2026-27** football content package.
 
 > **Languages:** the interface is available in Italian, English and Spanish.
 
@@ -43,6 +43,7 @@ The application and game engine are built with C++17 and native Qt Widgets, with
 - **Loan purchase options** — wage controls with percentage adjustments and the ability to restore the initial wage when exercising an option to buy.
 - **Interface and database** — graphical fixes and updates covering the latest managerial changes. Seasonal data remains in `data/data.json.gz`; roster updates apply to new careers.
 
+See [roadmap.md](roadmap.md) for the development plan and outstanding checks.
 
 ## Current game
 
@@ -94,7 +95,7 @@ The `calciototale-src` source repository is private. The full version is distrib
 
 Official executable builds may be downloaded, installed and used only for personal, non-commercial purposes under [LICENSE](LICENSE). Source access, redistribution, modification, publication and commercial use require prior written authorisation. Do not redistribute builds or rely on unofficial mirrors.
 
-The Windows x64 portable-build procedure is documented in [build/windows/README.md](build/windows/README.md). Linux x86_64 portable and Fedora RPM builds are documented in [build/linux/README.md](build/linux/README.md). The `.app` bundle for Apple Silicon, Intel Macs or Universal 2, including signing and notarization, is documented in [build/macos/README.md](build/macos/README.md). Every format creates an autonomous payload composed of the application, its dependencies and the separate content package placed under `data/`; the end user does not install Python packages.
+The Windows x64 portable-build procedure is documented in [build/windows/README.md](build/windows/README.md). Linux x86_64 portable and Fedora RPM builds are documented in [build/linux/README.md](build/linux/README.md). The `.app` bundle for Apple Silicon, Intel Macs or Universal 2, including signing and notarization, is documented in [build/macos/README.md](build/macos/README.md). Every format creates an autonomous payload composed of the application, its dependencies and the separate content package placed under `data/`.
 
 The manual `Build Steam and demo packages` workflow builds and verifies both editions for Windows x64 and Linux x86_64 in the Steam runtime. Full packages remain private workflow artifacts intended for the Steam depots; when publication is requested, only demo packages are uploaded to the public [`calciototale`](https://github.com/eleora-dev/calciototale) release. The macOS and RPM procedures remain available for manual use but are excluded from the current distribution.
 
@@ -127,7 +128,7 @@ Third-party components and materials remain under their own licenses, terms and 
 
 - **miniz** — MIT License; compression and decompression of the database and career saves;
 - **Unicode data** — Unicode License V3; text-processing tables used by the C++ model;
-- **MT19937 / CPython algorithms** — retained BSD/PSF notices for algorithms adapted into C++; no Python interpreter is distributed;
+- **MT19937 / CPython algorithms** — retained BSD/PSF notices for algorithms adapted into C++;
 - **Qt and image codecs** — native shared libraries; module licenses and third-party attributions are included under `licenses/qt/6.11.2/`;
 - **Microsoft C++ runtime** — Windows runtime DLLs retain Microsoft terms;
 - **Google Material Symbols / Material Design icons** — Apache License 2.0 for applicable derived icons;

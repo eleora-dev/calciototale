@@ -15,7 +15,7 @@ This notice reflects the current version 1.0.8 repository and was last reviewed 
 
 Any bundled item that is not owned by Gerardo Perilli / Eleòra is excluded from this proprietary grant and remains subject to its own rights.
 
-The numerical and domain library under `src/engine/` is original CalcioTotale code, except for the bundled miniz sources and the attributed MT19937/CPython-compatible random adaptations documented below. The Qt application links it directly into the native executable. Development reference tools can call its separate C ABI through `ctypes`; no Python runtime is distributed. CMake and the C++ compiler are development and packaging tools, not requirements for players.
+The numerical and domain library under `src/engine/` is original CalcioTotale code, except for the bundled miniz sources and the attributed MT19937/CPython-compatible random adaptations documented below. The Qt application links it directly into the native executable. Development tools and tests exercise its domain interfaces directly. CMake and the C++ compiler are development and packaging tools, not requirements for players.
 
 ---
 
@@ -33,25 +33,25 @@ The numerical and domain library under `src/engine/` is original CalcioTotale co
 
 ## MT19937 and CPython algorithm adaptations
 
-- Material: algorithms adapted into the native C++ implementation; no Python interpreter, standard library, PySide6 or Shiboken is distributed
+- Material: algorithms adapted into the C++ implementation
 - MT19937 initialization/state transitions: Makoto Matsumoto and Takuji Nishimura; BSD terms in `licenses/MT19937-BSD.txt`
 - CPython-derived sampling and compatible numerical adaptations: Python Software Foundation; retained PSF and incorporated notices in `licenses/PYTHON-3.12-LICENSE.txt`
 - Native implementations: `src/engine/domain/core/random.*` and the compensated summation in `src/engine/domain/core/owned_player.hpp`
 - Upstream references: CPython `Modules/_randommodule.c`, `Lib/random.py` and `Modules/mathmodule.c`
 
-These are attributions for adapted C++ code, not runtime dependencies. The career generator owns its C++ state and preserves the previous seed expansion, draw order, sampling and saved-state format. Removing the interpreter does not remove the notices for adapted code.
+The career generator owns its state, seed expansion, draw order, sampling and saved-state format. The adapted algorithms retain the BSD and PSF notices listed above.
 
 ---
 
 ## Unicode character data
 
 - Material: derived Unicode 16.0.0 normalization, case mapping and decimal digit data in `src/engine/domain/core/model_catalog.inc`
-- Generation source: Unicode 16.0.0 character data, expanded into fixed native tables during development; no Unicode/Python generator is run by the game
+- Generation source: Unicode 16.0.0 character data, stored as fixed tables
 - Copyright: © 1991-2026 Unicode, Inc.
 - License: Unicode License V3, reproduced in `licenses/UNICODE-LICENSE-V3.txt`
 - Source and terms: https://www.unicode.org/ and https://www.unicode.org/license.txt
 
-The compiled catalog lets the autonomous C++ model factories preserve the original Unicode rules without an interpreter. The Unicode data retains its own license after Python is removed. Model schemas, game defaults, translations and C++ normalization logic are original CalcioTotale material.
+The compiled catalog supplies Unicode rules to the model factories. The Unicode data retains its own license. Model schemas, game defaults, translations and C++ normalization logic are original CalcioTotale material.
 
 ## Qt native libraries and image codecs
 
@@ -66,7 +66,7 @@ The compiled catalog lets the autonomous C++ model factories preserve the origin
 
 Qt and its codecs retain their upstream terms. The Image Formats module supplies WebP support for the original backgrounds and other WebP images; its libwebp notices are included in the Qt collection. That collection also preserves the upstream attributions for optional components: the exact set shipped depends on platform and Qt configuration. The package manifest identifies the actual library/plugin files. Builds using another Qt version must refresh the corresponding upstream collection.
 
-The native game contains no Qt for Python bindings or PyInstaller bootloader. Qt Community builds retain the applicable replacement/relinking rights, source availability obligations and third-party acknowledgements for the bundled Qt modules. The original CalcioTotale code remains proprietary.
+Qt Community builds retain the applicable replacement/relinking rights, source availability obligations and third-party acknowledgements for the bundled Qt modules. The original CalcioTotale code remains proprietary.
 
 ---
 
@@ -166,6 +166,12 @@ Branding, backgrounds, facility images, the animated wait cursor, feature illust
 
 ---
 
-## Development/reference tools (not distributed with the game)
+## Development tools (not distributed with the game)
 
-Python may orchestrate CMake, packaging and verification. PySide6 and Pillow are used by reference/UI/image verification tools only. PyInstaller belongs to the retired packaging system and is not used by native builds. Their presence in a development environment does not make them game dependencies. Development-only Pillow and historical PyInstaller license texts are kept under `tools/licenses/development/`, outside the packaged `licenses/` directory. The PSF notice under `licenses/` remains because adapted C++ code uses it.
+Native build orchestration, archives, Qt SDK installation, Qt attribution updates, database tools, importing and automated test logic are implemented in C++. Packaging tools invoke CMake, curl and platform deployment utilities. The development-only database tools additionally use Qt Network and libxml2; they are not included in game packages. The PSF notice under `licenses/` remains because adapted C++ algorithms use it.
+
+The development-only `ct_publish` tool uses Qt Gui to draw localized trailer
+frames and invokes separately installed ImageMagick, CMake and GStreamer tools
+for artwork export, ZIP archives and H.264/AAC MP4 encoding. These external
+programs and codecs are not bundled with the game. Existing artwork, fonts and
+music retain the terms documented in this inventory and the media credits.

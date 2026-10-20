@@ -4,7 +4,7 @@
 
 **CalcioTotale** es un juego de gestión futbolística para un solo jugador que recupera el espíritu de los clásicos del género desde otra perspectiva: en lugar de asumir el papel habitual de entrenador y mánager, diriges un club como director general. Define la estrategia de la entidad, construye una estructura sostenible y afronta las consecuencias deportivas y económicas de cada decisión.
 
-La aplicación y el motor están desarrollados en C++17 con Qt Widgets nativo, sin un entorno Python incorporado. La versión **1.0.8** incorpora mejoras de rendimiento, interfaz, cambio de temporada y base de datos en Windows y Linux. Las demos están disponibles en las versiones públicas de GitHub; la disponibilidad en Steam se gestiona por separado. La aplicación se distribuye junto con un paquete de datos futbolísticos sustituible, actualizado para la temporada **2026-27**.
+La aplicación y el motor están desarrollados en C++17 con Qt Widgets nativo. La versión **1.0.8** incorpora mejoras de rendimiento, interfaz, cambio de temporada y base de datos en Windows y Linux. Las demos están disponibles en las versiones públicas de GitHub; la disponibilidad en Steam se gestiona por separado. La aplicación se distribuye junto con un paquete de datos futbolísticos sustituible, actualizado para la temporada **2026-27**.
 
 > **Idiomas:** la interfaz está disponible en italiano, inglés y español.
 
@@ -43,6 +43,7 @@ La aplicación y el motor están desarrollados en C++17 con Qt Widgets nativo, s
 - **Opciones de compra en cesiones** — controles del salario con ajustes porcentuales y la posibilidad de restablecer el salario inicial al ejercer la opción de compra.
 - **Interfaz y base de datos** — correcciones gráficas y actualización con los cambios de entrenador más recientes. Los datos de temporada permanecen en `data/data.json.gz`; las actualizaciones de las plantillas se aplican a las carreras nuevas.
 
+Consulta [roadmap.md](roadmap.md) para ver el plan de desarrollo y las comprobaciones pendientes.
 
 ## El juego
 
@@ -94,7 +95,7 @@ El repositorio del código fuente, `calciototale-src`, es privado. La versión c
 
 Las versiones ejecutables oficiales solo pueden descargarse, instalarse y utilizarse para uso personal y no comercial, de acuerdo con la [licencia](LICENSE). El acceso al código fuente, la redistribución, la modificación, la publicación y el uso comercial requieren autorización previa por escrito. No redistribuyas las versiones ejecutables ni recurras a sitios de descarga no oficiales.
 
-El procedimiento para crear la versión portátil de Windows x64 se documenta en [build/windows/README.md](build/windows/README.md). Las versiones portátil de Linux x86_64 y RPM para Fedora se documentan en [build/linux/README.md](build/linux/README.md). El paquete `.app` para Apple Silicon, Mac con procesador Intel o Universal 2, incluida la firma y la notarización, se documenta en [build/macos/README.md](build/macos/README.md). Todos estos formatos generan un paquete autónomo con la aplicación, sus dependencias y el paquete de contenido independiente situado en `data/`; el usuario final no necesita instalar paquetes de Python.
+El procedimiento para crear la versión portátil de Windows x64 se documenta en [build/windows/README.md](build/windows/README.md). Las versiones portátil de Linux x86_64 y RPM para Fedora se documentan en [build/linux/README.md](build/linux/README.md). El paquete `.app` para Apple Silicon, Mac con procesador Intel o Universal 2, incluida la firma y la notarización, se documenta en [build/macos/README.md](build/macos/README.md). Todos estos formatos generan un paquete autónomo con la aplicación, sus dependencias y el paquete de contenido independiente situado en `data/`.
 
 El flujo de trabajo manual `Build Steam and demo packages` crea y verifica ambas ediciones para Windows x64 y Linux x86_64 en el entorno de Steam. Los paquetes completos permanecen como artefactos privados destinados a los depósitos de Steam. Cuando se solicita su publicación, solo los paquetes de la demo se suben a una versión publicada en el repositorio público [`calciototale`](https://github.com/eleora-dev/calciototale). Los procedimientos de macOS y RPM siguen disponibles para uso manual, pero están excluidos de la distribución actual.
 
@@ -127,7 +128,7 @@ Los componentes y materiales de terceros siguen sujetos a sus respectivas licenc
 
 - **miniz** — licencia MIT; compresión y descompresión de la base de datos y las partidas guardadas;
 - **Datos Unicode** — Unicode License V3; tablas de procesamiento de texto utilizadas por el modelo C++;
-- **Algoritmos MT19937 / CPython** — avisos BSD/PSF para los algoritmos adaptados a C++; no se distribuye ningún intérprete Python;
+- **Algoritmos MT19937 / CPython** — avisos BSD/PSF para los algoritmos adaptados a C++;
 - **Qt y códecs de imagen** — bibliotecas nativas compartidas; licencias de los módulos y avisos incluidos en `licenses/qt/6.11.2/`;
 - **Runtime Microsoft C++** — las DLL de Windows conservan los términos de Microsoft;
 - **Google Material Symbols / Material Design icons** — licencia Apache 2.0 para los iconos derivados a los que corresponda;
