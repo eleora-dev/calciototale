@@ -1,8 +1,8 @@
-# CalcioTotale
+# Calcio Totale
 
 [Versione italiana](README.it.md) · [Versión española](README.es.md)
 
-**CalcioTotale** is a single-player football management game that captures the spirit of the genre's classics while shifting the perspective: you no longer play the traditional manager, but the club's chief executive. Define the club's strategy, build a sustainable organisation and face the sporting and financial consequences of every decision.
+**Calcio Totale** is a single-player football management game that captures the spirit of the genre's classics while shifting the perspective: you no longer play the traditional manager, but the club's chief executive. Define the club's strategy, build a sustainable organisation and face the sporting and financial consequences of every decision.
 
 The application and game engine are built with C++17 and native Qt Widgets. Version **1.0.8** brings performance, interface, season-transition and database improvements to Windows and Linux. Demo downloads are available from the public GitHub releases; Steam availability is managed separately. The application is accompanied by a replaceable **2026-27** football content package.
 
@@ -13,22 +13,33 @@ The application and game engine are built with C++17 and native Qt Widgets. Vers
 ![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![Game](https://img.shields.io/badge/game-football%20club%20executive-f6a91a)
 
+### Native Qt launch from source
+
+The application and game engine use C++17 and Qt Widgets.
+
+```bash
+cmake -S src -B build/desktop -DCMAKE_BUILD_TYPE=Release -DCT_PROJECT_ROOT="$PWD"
+cmake --build build/desktop --target calciototale_owned --parallel 2
+./build/desktop/calciototale_owned
+```
+
+
 ---
 
 <table>
   <tr>
-    <td width="20%"><a href="assets/branding/screenshots/en/01_home_en.png"><img src="assets/branding/screenshots/en/01_home_en.png" alt="CalcioTotale — Home" width="100%"></a></td>
-    <td width="20%"><a href="assets/branding/screenshots/en/02_finances_en.png"><img src="assets/branding/screenshots/en/02_finances_en.png" alt="CalcioTotale — Finances" width="100%"></a></td>
-    <td width="20%"><a href="assets/branding/screenshots/en/03_facilities_en.png"><img src="assets/branding/screenshots/en/03_facilities_en.png" alt="CalcioTotale — Facilities" width="100%"></a></td>
-    <td width="20%"><a href="assets/branding/screenshots/en/04_staff_en.png"><img src="assets/branding/screenshots/en/04_staff_en.png" alt="CalcioTotale — Staff" width="100%"></a></td>
-    <td width="20%"><a href="assets/branding/screenshots/en/05_marketing_en.png"><img src="assets/branding/screenshots/en/05_marketing_en.png" alt="CalcioTotale — Marketing" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/en/01_home_en.png"><img src="assets/branding/screenshots/en/01_home_en.png" alt="Calcio Totale — Home" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/en/02_finances_en.png"><img src="assets/branding/screenshots/en/02_finances_en.png" alt="Calcio Totale — Finances" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/en/03_facilities_en.png"><img src="assets/branding/screenshots/en/03_facilities_en.png" alt="Calcio Totale — Facilities" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/en/04_staff_en.png"><img src="assets/branding/screenshots/en/04_staff_en.png" alt="Calcio Totale — Staff" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/en/05_marketing_en.png"><img src="assets/branding/screenshots/en/05_marketing_en.png" alt="Calcio Totale — Marketing" width="100%"></a></td>
   </tr>
   <tr>
-    <td width="20%"><a href="assets/branding/screenshots/en/06_transfer_en.png"><img src="assets/branding/screenshots/en/06_transfer_en.png" alt="CalcioTotale — Transfers" width="100%"></a></td>
-    <td width="20%"><a href="assets/branding/screenshots/en/07_squad_en.png"><img src="assets/branding/screenshots/en/07_squad_en.png" alt="CalcioTotale — Squad" width="100%"></a></td>
-    <td width="20%"><a href="assets/branding/screenshots/en/08_matchday_en.png"><img src="assets/branding/screenshots/en/08_matchday_en.png" alt="CalcioTotale — Match report" width="100%"></a></td>
-    <td width="20%"><a href="assets/branding/screenshots/en/09_verdict_en.png"><img src="assets/branding/screenshots/en/09_verdict_en.png" alt="CalcioTotale — Trophy celebration" width="100%"></a></td>
-    <td width="20%"><a href="assets/branding/screenshots/en/10_career_en.png"><img src="assets/branding/screenshots/en/10_career_en.png" alt="CalcioTotale — Career offers" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/en/06_transfer_en.png"><img src="assets/branding/screenshots/en/06_transfer_en.png" alt="Calcio Totale — Transfers" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/en/07_squad_en.png"><img src="assets/branding/screenshots/en/07_squad_en.png" alt="Calcio Totale — Squad" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/en/08_matchday_en.png"><img src="assets/branding/screenshots/en/08_matchday_en.png" alt="Calcio Totale — Match report" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/en/09_verdict_en.png"><img src="assets/branding/screenshots/en/09_verdict_en.png" alt="Calcio Totale — Trophy celebration" width="100%"></a></td>
+    <td width="20%"><a href="assets/branding/screenshots/en/10_career_en.png"><img src="assets/branding/screenshots/en/10_career_en.png" alt="Calcio Totale — Career offers" width="100%"></a></td>
   </tr>
 </table>
 
@@ -63,7 +74,7 @@ See [roadmap.md](roadmap.md) for the development plan and outstanding checks.
 
 ## Runtime and privacy
 
-CalcioTotale is an offline desktop game:
+Calcio Totale is an offline desktop game:
 
 - it does not create or require its own account or an Eleòra-operated server;
 - it does not use telemetry, analytics or advertising services;
@@ -72,11 +83,13 @@ CalcioTotale is an offline desktop game:
 
 The links in the About dialog open the user's default browser only when selected; any resulting connection is made by that browser to the linked website, not by the game runtime.
 
+Error reports are created locally under `user/diagnostics/`: build version, recent actions and technical data; on Windows a minidump of game memory may be included. They are never uploaded automatically. After a crash, a separate process displays a dialog with “Send report” and “Close”. Only clicking “Send report” transmits diagnostic data over HTTPS to Eleòra’s Sentry project, without opening an email client or requiring a player account. Reports may contain data fragments and local paths; complete saves are not attached automatically. At most five previous reports are retained, in addition to the active session.
+
 See [privacy.html](privacy.html) for the complete bilingual privacy policy.
 
 ## Technical overview
 
-Within the project structure, **CalcioTotale** means the application, while the entire `data/` directory is a separate, replaceable football content package. The package is placed beside the application so that it can be read locally, but it is not part of the proprietary CalcioTotale material.
+Within the project structure, **Calcio Totale** means the application, while the entire `data/` directory is a separate, replaceable football content package. The package is placed beside the application so that it can be read locally, but it is not part of the proprietary Calcio Totale material.
 
 - `data/data.json.gz` contains the seasonal data as gzip-compressed UTF-8 JSON: 245 clubs, 6,475 players, names, short names, organisers, identifying-shirt colours and patterns, and neutral competition-icon identifiers.
 - `assets/competitions/` contains the application’s fixed, generic competition illustrations. Database fields `icon`, `organizer_icon`, `trophy_icon` and `winter_champion_icon` select neutral asset identifiers (for example, `continental_cup_1`); changing competition names or organisers does not change the images or their location. Competition articles are declared in `article_it` and `article_es` in the database.
@@ -88,6 +101,18 @@ Within the project structure, **CalcioTotale** means the application, while the 
 
 The reference environment is Fedora Linux with KDE Plasma. The source also contains display handling for Windows and macOS, but only official builds explicitly published for a platform should be considered supported.
 
+
+## Source requirements
+
+CMake 3.21+, a C++17 compiler and Qt SDK 6.7+ (Widgets, Svg, Network) with Widgets and SVG plugins are required. Windows builds use Visual Studio 2022 x64 C++ tools; macOS builds use Apple Clang. The 1600 × 900 game surface scales automatically.
+
+Set `CALCIOTOTALE_DEMO=1` for a local demo launch. Packaging, Qt SDK installation and license inventory tools are also implemented in C++.
+
+## Development checks
+
+Configure the tests with `cmake -S src -B build/desktop -DCT_DOMAIN_TESTS=ON -DCT_DEVELOPMENT_TOOLS=ON`, build with `cmake --build build/desktop -j1`, then run `ctest --test-dir build/desktop --output-on-failure -j1`. The test suite uses C++ and CTest for engine, catalogues, fixtures, board, coach market, persistence, compatibility, GUI audits, packaging and release workflows. Use `-L fast` to exclude GUI paths and the full season transition, or `-L full` for the entire suite. Filter a functional area with `-L board`, `-L coaches`, `-L catalogues`, `-L persistence`, `-L gui`, `-L packaging` or `-L release`. Packaging tests exercise the production C++ tools; Linux also requires `cc`, `ldd` and `patchelf`. Installer and license tests additionally use `curl` and CMake against local fixtures. They do not upload or publish anything. Fixtures are versioned under `dev/tests/fixtures/`; `.test-results/` contains only reproducible output and can be deleted. Run `build/desktop/ct_previous_careers run` to check old-save compatibility separately using only the current C++ game.
+
+Native database and importer tools are documented in [dev/README.md](dev/README.md). They additionally require libxml2 and are not shipped with the game.
 
 ## Distribution
 
@@ -122,7 +147,7 @@ user/                     Local saves, summaries and preferences, created when n
 
 ## License and third-party rights
 
-Original CalcioTotale code, documentation and original application assets are proprietary and all rights are reserved. The entire `data/` directory is a separate content package and is excluded from the proprietary license. See [LICENSE](LICENSE).
+Original Calcio Totale code, documentation and original application assets are proprietary and all rights are reserved. The entire `data/` directory is a separate content package and is excluded from the proprietary license. See [LICENSE](LICENSE).
 
 Third-party components and materials remain under their own licenses, terms and rights. The current repository specifically documents:
 
@@ -138,7 +163,7 @@ Third-party components and materials remain under their own licenses, terms and 
 - **Kenney Cursor Pack** — CC0 1.0 for the arrow, hand, help and text cursors;
 - **`data/` package** — its database and competition images are separate from the application; the corresponding rights remain with their respective owners.
 
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the [`licenses/`](licenses/) directory. CalcioTotale is unofficial and is not affiliated with, endorsed by or sponsored by any football federation, league, competition, club, player or data provider.
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the [`licenses/`](licenses/) directory. Calcio Totale is unofficial and is not affiliated with, endorsed by or sponsored by any football federation, league, competition, club, player or data provider.
 
 ## Author
 

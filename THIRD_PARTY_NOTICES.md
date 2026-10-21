@@ -1,12 +1,12 @@
 # Third-party notices
 
-CalcioTotale includes original project material and uses or references third-party software, assets, names, trademarks and data. The proprietary terms in `LICENSE` apply only to material owned by Gerardo Perilli / Eleòra and do not replace any third-party license or right.
+Calcio Totale includes original project material and uses or references third-party software, assets, names, trademarks and data. The proprietary terms in `LICENSE` apply only to material owned by Gerardo Perilli / Eleòra and do not replace any third-party license or right.
 
 This notice reflects the current version 1.0.8 repository and was last reviewed on 17 October 2026. It is a practical inventory, not a substitute for the complete license texts or for legal review of a particular executable build. `BUILD_COMPONENTS.json` records the edition, Qt version and SHA-256 hashes of the files in each generated package.
 
 ---
 
-## Original CalcioTotale material
+## Original Calcio Totale material
 
 - Material: original C++17 application and game-engine source code, Italian, English and Spanish localisations, documentation and original project assets
 - Copyright: Copyright (c) 2026 Gerardo Perilli / Eleòra
@@ -15,7 +15,7 @@ This notice reflects the current version 1.0.8 repository and was last reviewed 
 
 Any bundled item that is not owned by Gerardo Perilli / Eleòra is excluded from this proprietary grant and remains subject to its own rights.
 
-The numerical and domain library under `src/engine/` is original CalcioTotale code, except for the bundled miniz sources and the attributed MT19937/CPython-compatible random adaptations documented below. The Qt application links it directly into the native executable. Development tools and tests exercise its domain interfaces directly. CMake and the C++ compiler are development and packaging tools, not requirements for players.
+The numerical and domain library under `src/engine/` is original Calcio Totale code, except for the bundled miniz sources and the attributed MT19937/CPython-compatible random adaptations documented below. The Qt application links it directly into the native executable. Development tools and tests exercise its domain interfaces directly. CMake and the C++ compiler are development and packaging tools, not requirements for players.
 
 ---
 
@@ -51,7 +51,7 @@ The career generator owns its state, seed expansion, draw order, sampling and sa
 - License: Unicode License V3, reproduced in `licenses/UNICODE-LICENSE-V3.txt`
 - Source and terms: https://www.unicode.org/ and https://www.unicode.org/license.txt
 
-The compiled catalog supplies Unicode rules to the model factories. The Unicode data retains its own license. Model schemas, game defaults, translations and C++ normalization logic are original CalcioTotale material.
+The compiled catalog supplies Unicode rules to the model factories. The Unicode data retains its own license. Model schemas, game defaults, translations and C++ normalization logic are original Calcio Totale material.
 
 ## Qt native libraries and image codecs
 
@@ -66,7 +66,9 @@ The compiled catalog supplies Unicode rules to the model factories. The Unicode 
 
 Qt and its codecs retain their upstream terms. The Image Formats module supplies WebP support for the original backgrounds and other WebP images; its libwebp notices are included in the Qt collection. That collection also preserves the upstream attributions for optional components: the exact set shipped depends on platform and Qt configuration. The package manifest identifies the actual library/plugin files. Builds using another Qt version must refresh the corresponding upstream collection.
 
-Qt Community builds retain the applicable replacement/relinking rights, source availability obligations and third-party acknowledgements for the bundled Qt modules. The original CalcioTotale code remains proprietary.
+Qt Community builds retain the applicable replacement/relinking rights, source availability obligations and third-party acknowledgements for the bundled Qt modules. The original Calcio Totale code remains proprietary.
+
+Linux packages deploying the Qt OpenSSL TLS backend also bundle the unmodified OpenSSL 3 `libssl` and `libcrypto` libraries for HTTPS diagnostic submissions. Copyright (c) 1998-2026 The OpenSSL Project Authors; Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson. OpenSSL uses the Apache License 2.0, included in `licenses/APACHE-2.0.txt`. Upstream: https://openssl-library.org/.
 
 ---
 
@@ -77,7 +79,7 @@ Qt Community builds retain the applicable replacement/relinking rights, source a
 - Copyright and license: Microsoft Corporation; Microsoft Software License Terms, retained in the included installer and `licenses/MICROSOFT-VISUAL-C-RUNTIME.rtf`
 - Official redistribution information: https://learn.microsoft.com/cpp/windows/redistributing-visual-cpp-files
 
-These are Microsoft runtime components, not original CalcioTotale code. Their inclusion provides the C++ runtime required by the application and Qt on Windows. Linux and macOS packages do not require or ship the Windows runtime DLLs.
+These are Microsoft runtime components, not original Calcio Totale code. Their inclusion provides the C++ runtime required by the application and Qt on Windows. Linux and macOS packages do not require or ship the Windows runtime DLLs.
 
 ---
 
@@ -89,7 +91,7 @@ These are Microsoft runtime components, not original CalcioTotale code. Their in
 - Included text: `licenses/APACHE-2.0.txt`
 - Upstream project: https://github.com/google/material-design-icons
 
-CalcioTotale does not relicense these icons.
+Calcio Totale does not relicense these icons.
 
 ---
 
@@ -103,7 +105,7 @@ CalcioTotale does not relicense these icons.
 - Upstream distribution: https://github.com/RedHatOfficial/RedHatFont/tree/6bb1048a6402b0076ea04f42951ec66263cd1437/fonts/Proportional/RedHatDisplay/ttf
 - Local modification: vertical line metrics reduced slightly in the five bundled TTFs to tighten multiline text. Glyph outlines and names are unchanged.
 
-CalcioTotale does not relicense Red Hat Display.
+Calcio Totale does not relicense Red Hat Display.
 
 ---
 
@@ -116,7 +118,7 @@ CalcioTotale does not relicense Red Hat Display.
 - Included text: `licenses/OFL-OXANIUM-1.1.txt`
 - Upstream distribution: https://github.com/sevmeyer/oxanium/tree/master/fonts
 
-CalcioTotale does not relicense Oxanium.
+Calcio Totale does not relicense Oxanium.
 
 ---
 
@@ -129,7 +131,7 @@ CalcioTotale does not relicense Oxanium.
 - Included text: `licenses/MIT-FLAG-ICONS.txt`
 - Upstream project: https://github.com/lipis/flag-icons
 
-CalcioTotale does not relicense the `flag-icons` material.
+Calcio Totale does not relicense the `flag-icons` material.
 
 The language-selector PNG files `assets/icons/menu/language_it.png` and `assets/icons/menu/language_en.png` are project-provided UI assets and are not identified as upstream `flag-icons` material by this notice. They are covered by the proprietary project license only to the extent that they are original material owned by Gerardo Perilli / Eleòra; any third-party element remains subject to its original rights.
 
@@ -150,11 +152,11 @@ These four files may be used, modified and redistributed without attribution und
 
 ## Separate football content package
 
-For the purposes of the project documentation and licensing structure, the entire `data/` directory is a replaceable football content package distributed separately from the proprietary CalcioTotale application. Its database is outside the scope of the CalcioTotale proprietary license. Fixed, generic competition illustrations are application resources under `assets/competitions/`, selected by neutral identifiers in the database.
+For the purposes of the project documentation and licensing structure, the entire `data/` directory is a replaceable football content package distributed separately from the proprietary Calcio Totale application. Its database is outside the scope of the Calcio Totale proprietary license. Fixed, generic competition illustrations are application resources under `assets/competitions/`, selected by neutral identifiers in the database.
 
-Football club, player, federation, league and competition names, other marks and football data contained in that package are not CalcioTotale application material. All corresponding rights remain with their respective owners.
+Football club, player, federation, league and competition names, other marks and football data contained in that package are not Calcio Totale application material. All corresponding rights remain with their respective owners.
 
-CalcioTotale is an unofficial project and is not affiliated with, endorsed by or sponsored by any football federation, league, competition, club, player or data provider.
+Calcio Totale is an unofficial project and is not affiliated with, endorsed by or sponsored by any football federation, league, competition, club, player or data provider.
 
 ---
 
@@ -162,13 +164,13 @@ CalcioTotale is an unofficial project and is not affiliated with, endorsed by or
 
 The stylised map in `assets/competitions/regional_organizer.png` is derived from the public-domain Natural Earth 1:110m country boundaries, simplified for small interface sizes. Source: https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson. Terms: https://www.naturalearthdata.com/about/terms-of-use/. The surrounding artwork is original project material.
 
-Branding, backgrounds, facility images, the animated wait cursor, feature illustrations, competition icons and other media are covered by `LICENSE` only where they are original CalcioTotale material. The four static Kenney cursors are documented separately above. Any other third-party element remains under its original ownership, license, terms or reserved rights even if it is stored in the repository or transformed for use by the application.
+Branding, backgrounds, facility images, the animated wait cursor, feature illustrations, competition icons and other media are covered by `LICENSE` only where they are original Calcio Totale material. The four static Kenney cursors are documented separately above. Any other third-party element remains under its original ownership, license, terms or reserved rights even if it is stored in the repository or transformed for use by the application.
 
 ---
 
 ## Development tools (not distributed with the game)
 
-Native build orchestration, archives, Qt SDK installation, Qt attribution updates, database tools, importing and automated test logic are implemented in C++. Packaging tools invoke CMake, curl and platform deployment utilities. The development-only database tools additionally use Qt Network and libxml2; they are not included in game packages. The PSF notice under `licenses/` remains because adapted C++ algorithms use it.
+Native build orchestration, archives, Qt SDK installation, Qt attribution updates, database tools, importing and automated test logic are implemented in C++. Packaging tools invoke CMake, curl and platform deployment utilities. Qt Network also handles optional, user-requested diagnostic submissions to Sentry. The development-only database tools additionally use libxml2; those tools are not included in game packages. The PSF notice under `licenses/` remains because adapted C++ algorithms use it.
 
 The development-only `ct_publish` tool uses Qt Gui to draw localized trailer
 frames and invokes separately installed ImageMagick, CMake and GStreamer tools
