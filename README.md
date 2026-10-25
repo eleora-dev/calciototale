@@ -10,7 +10,6 @@
 
 macOS requires Apple Silicon (M1 or newer) and macOS 13.3 or newer. The Mac app is Developer ID signed and notarized by Apple.
 
-
 **Calcio Totale** is a single-player football management game that captures the spirit of the genre's classics while shifting the perspective: you no longer play the traditional manager, but the club's chief executive. Define the club's strategy, build a sustainable organisation and face the sporting and financial consequences of every decision.
 
 The application and game engine are built with C++17 and native Qt Widgets. Version **1.0.8** brings performance, interface, season-transition and database improvements to Windows, Linux and macOS. Demo downloads are available from the public GitHub releases; Steam availability is managed separately. The application is accompanied by a replaceable **2026-27** football content package.
@@ -31,7 +30,6 @@ cmake -S src -B build/desktop -DCMAKE_BUILD_TYPE=Release -DCT_PROJECT_ROOT="$PWD
 cmake --build build/desktop --target calciototale_owned --parallel 2
 ./build/desktop/calciototale_owned
 ```
-
 
 ---
 
@@ -62,8 +60,6 @@ cmake --build build/desktop --target calciototale_owned --parallel 2
 - **Consistent wording** — terminology aligned across player profiles, transfers, negotiations and technical screens in Italian, English and Spanish.
 - **Loan purchase options** — wage controls with percentage adjustments and the ability to restore the initial wage when exercising an option to buy.
 - **Interface and database** — graphical fixes and updates covering the latest managerial changes. Seasonal data remains in `data/data.json.gz`; roster updates apply to new careers.
-
-See [roadmap.md](roadmap.md) for the development plan and outstanding checks.
 
 ## Current game
 
@@ -112,7 +108,6 @@ Within the project structure, **Calcio Totale** means the application, while the
 
 The reference environment is Fedora Linux with KDE Plasma. The source also contains display handling for Windows and macOS, but only official builds explicitly published for a platform should be considered supported.
 
-
 ## Source requirements
 
 CMake 3.21+, a C++17 compiler and Qt SDK 6.7+ (Widgets, Svg, Network) with Widgets and SVG plugins are required. Windows builds use Visual Studio 2022 x64 C++ tools; macOS builds use Apple Clang. The 1600 × 900 game surface scales automatically.
@@ -134,7 +129,6 @@ Official executable builds may be downloaded, installed and used only for person
 The Windows x64 portable-build procedure is documented in [build/windows/README.md](build/windows/README.md). Linux x86_64 portable and Fedora RPM builds are documented in [build/linux/README.md](build/linux/README.md). The `.app` bundle for Apple Silicon, Intel Macs or Universal 2, including signing and notarization, is documented in [build/macos/README.md](build/macos/README.md). Every format creates an autonomous payload composed of the application, its dependencies and the separate content package placed under `data/`.
 
 The manual `Build Steam and demo packages` workflow builds and verifies both editions for Windows x64 and Linux x86_64 in the Steam runtime. Full packages remain private workflow artifacts intended for the Steam depots; when publication is requested, only demo packages are uploaded to the public [`calciototale`](https://github.com/eleora-dev/calciototale) release. macOS Apple Silicon demo packages are also published after Developer ID signing, Apple notarization and package checks. RPM packages are not part of this release.
-
 
 ## Project structure
 

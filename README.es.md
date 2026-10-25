@@ -10,7 +10,6 @@
 
 La versión Mac requiere Apple Silicon (M1 o posterior) y macOS 13.3 o posterior. La app Mac está firmada y notarizada por Apple.
 
-
 **Calcio Totale** es un juego de gestión futbolística para un solo jugador que recupera el espíritu de los clásicos del género desde otra perspectiva: en lugar de asumir el papel habitual de entrenador y mánager, diriges un club como director general. Define la estrategia de la entidad, construye una estructura sostenible y afronta las consecuencias deportivas y económicas de cada decisión.
 
 La aplicación y el motor están desarrollados en C++17 con Qt Widgets nativo. La versión **1.0.8** incorpora mejoras de rendimiento, interfaz, cambio de temporada y base de datos en Windows, Linux y macOS. Las demos están disponibles en las versiones públicas de GitHub; la disponibilidad en Steam se gestiona por separado. La aplicación se distribuye junto con un paquete de datos futbolísticos sustituible, actualizado para la temporada **2026-27**.
@@ -31,7 +30,6 @@ cmake -S src -B build/desktop -DCMAKE_BUILD_TYPE=Release -DCT_PROJECT_ROOT="$PWD
 cmake --build build/desktop --target calciototale_owned --parallel 2
 ./build/desktop/calciototale_owned
 ```
-
 
 ---
 
@@ -62,8 +60,6 @@ cmake --build build/desktop --target calciototale_owned --parallel 2
 - **Terminología coherente** — términos unificados en perfiles, fichajes, negociaciones y pantallas técnicas en italiano, inglés y español.
 - **Opciones de compra en cesiones** — controles del salario con ajustes porcentuales y la posibilidad de restablecer el salario inicial al ejercer la opción de compra.
 - **Interfaz y base de datos** — correcciones gráficas y actualización con los cambios de entrenador más recientes. Los datos de temporada permanecen en `data/data.json.gz`; las actualizaciones de las plantillas se aplican a las carreras nuevas.
-
-Consulta [roadmap.md](roadmap.md) para ver el plan de desarrollo y las comprobaciones pendientes.
 
 ## El juego
 
@@ -112,7 +108,6 @@ En la estructura del proyecto, **Calcio Totale** designa la aplicación. La carp
 
 El entorno de referencia es Fedora Linux con KDE Plasma. El código también incluye gestión de pantalla para Windows y macOS, pero solo deben considerarse compatibles las plataformas para las que se publique expresamente una versión oficial.
 
-
 ## Requisitos de la versión fuente
 
 Se necesitan CMake 3.21+, un compilador C++17 y Qt SDK 6.7+ (Widgets, Svg, Network) con Widgets y plugins SVG. Windows requiere las herramientas C++ x64 de Visual Studio 2022; macOS usa Apple Clang. La superficie de juego de 1600 × 900 se escala automáticamente.
@@ -134,7 +129,6 @@ Las versiones ejecutables oficiales solo pueden descargarse, instalarse y utiliz
 El procedimiento para crear la versión portátil de Windows x64 se documenta en [build/windows/README.md](build/windows/README.md). Las versiones portátil de Linux x86_64 y RPM para Fedora se documentan en [build/linux/README.md](build/linux/README.md). El paquete `.app` para Apple Silicon, Mac con procesador Intel o Universal 2, incluida la firma y la notarización, se documenta en [build/macos/README.md](build/macos/README.md). Todos estos formatos generan un paquete autónomo con la aplicación, sus dependencias y el paquete de contenido independiente situado en `data/`.
 
 El flujo de trabajo manual `Build Steam and demo packages` crea y verifica ambas ediciones para Windows x64 y Linux x86_64 en el entorno de Steam. Los paquetes completos permanecen como artefactos privados destinados a los depósitos de Steam. Cuando se solicita su publicación, solo los paquetes de la demo se suben a una versión publicada en el repositorio público [`calciototale`](https://github.com/eleora-dev/calciototale). La demo de macOS Apple Silicon se publica después de la firma Developer ID, la notarización de Apple y la verificación de los paquetes. Los paquetes RPM no forman parte de esta versión.
-
 
 ## Estructura del proyecto
 
