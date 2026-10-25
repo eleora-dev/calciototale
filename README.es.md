@@ -2,9 +2,18 @@
 
 [Versión italiana](README.it.md) · [English version](README.md)
 
+## Descarga la demo
+
+- [Windows x64](https://github.com/eleora-dev/calciototale/releases/download/v1.0.8/CalcioTotale-1.0.8-demo-windows-x64.zip)
+- [Linux x86_64](https://github.com/eleora-dev/calciototale/releases/download/v1.0.8/CalcioTotale-1.0.8-demo-linux-x86_64.tar.gz)
+- [macOS Apple Silicon](https://github.com/eleora-dev/calciototale/releases/download/v1.0.8/CalcioTotale-1.0.8-demo-macOS-arm64.zip)
+
+La versión Mac requiere Apple Silicon (M1 o posterior) y macOS 13.3 o posterior. La app Mac está firmada y notarizada por Apple.
+
+
 **Calcio Totale** es un juego de gestión futbolística para un solo jugador que recupera el espíritu de los clásicos del género desde otra perspectiva: en lugar de asumir el papel habitual de entrenador y mánager, diriges un club como director general. Define la estrategia de la entidad, construye una estructura sostenible y afronta las consecuencias deportivas y económicas de cada decisión.
 
-La aplicación y el motor están desarrollados en C++17 con Qt Widgets nativo. La versión **1.0.8** incorpora mejoras de rendimiento, interfaz, cambio de temporada y base de datos en Windows y Linux. Las demos están disponibles en las versiones públicas de GitHub; la disponibilidad en Steam se gestiona por separado. La aplicación se distribuye junto con un paquete de datos futbolísticos sustituible, actualizado para la temporada **2026-27**.
+La aplicación y el motor están desarrollados en C++17 con Qt Widgets nativo. La versión **1.0.8** incorpora mejoras de rendimiento, interfaz, cambio de temporada y base de datos en Windows, Linux y macOS. Las demos están disponibles en las versiones públicas de GitHub; la disponibilidad en Steam se gestiona por separado. La aplicación se distribuye junto con un paquete de datos futbolísticos sustituible, actualizado para la temporada **2026-27**.
 
 > **Idiomas:** la interfaz está disponible en italiano, inglés y español.
 
@@ -81,9 +90,11 @@ Calcio Totale es un juego de escritorio sin conexión:
 - durante el juego normal no realiza solicitudes de red;
 - guarda las carreras en el dispositivo; en la edición de Steam, el cliente de Steam puede sincronizarlas si Steam Cloud está activado.
 
-Los enlaces de la ventana «Información» abren el navegador predeterminado solo cuando se seleccionan. En ese caso, es el navegador quien se conecta al sitio enlazado, no el juego.
+Los enlaces externos de la ventana «Información» abren el navegador predeterminado solo cuando se seleccionan. En ese caso, es el navegador quien se conecta al sitio enlazado, no el juego.
 
 Los informes de errores se crean localmente en `user/diagnostics/`: versión, últimas acciones y datos técnicos; en Windows pueden incluir un minidump de la memoria del juego. Nunca se envían automáticamente. Tras un cierre inesperado, un proceso separado muestra un diálogo con «Enviar informe» y «Cerrar». Solo al pulsar «Enviar informe» se transmiten los datos de diagnóstico por HTTPS al proyecto Sentry de Eleòra, sin abrir el correo ni requerir una cuenta al jugador. Pueden contener fragmentos de datos y rutas locales; no se adjuntan partidas completas automáticamente. Se conservan como máximo cinco informes anteriores, además de la sesión activa.
+
+Desde **Información → Informar de un error** puedes enviar un informe manual a Sentry. La descripción es obligatoria y el email es opcional. Solo al pulsar Enviar se comparten el texto, el email opcional, la versión del juego, el idioma y el sistema operativo; no se adjuntan partidas guardadas ni registros de diagnóstico. Si falla el envío, el texto permanece en el formulario para volver a intentarlo.
 
 Consulta [privacy.html](privacy.html) para leer la política de privacidad completa, disponible en italiano e inglés.
 
@@ -122,7 +133,7 @@ Las versiones ejecutables oficiales solo pueden descargarse, instalarse y utiliz
 
 El procedimiento para crear la versión portátil de Windows x64 se documenta en [build/windows/README.md](build/windows/README.md). Las versiones portátil de Linux x86_64 y RPM para Fedora se documentan en [build/linux/README.md](build/linux/README.md). El paquete `.app` para Apple Silicon, Mac con procesador Intel o Universal 2, incluida la firma y la notarización, se documenta en [build/macos/README.md](build/macos/README.md). Todos estos formatos generan un paquete autónomo con la aplicación, sus dependencias y el paquete de contenido independiente situado en `data/`.
 
-El flujo de trabajo manual `Build Steam and demo packages` crea y verifica ambas ediciones para Windows x64 y Linux x86_64 en el entorno de Steam. Los paquetes completos permanecen como artefactos privados destinados a los depósitos de Steam. Cuando se solicita su publicación, solo los paquetes de la demo se suben a una versión publicada en el repositorio público [`calciototale`](https://github.com/eleora-dev/calciototale). Los procedimientos de macOS y RPM siguen disponibles para uso manual, pero están excluidos de la distribución actual.
+El flujo de trabajo manual `Build Steam and demo packages` crea y verifica ambas ediciones para Windows x64 y Linux x86_64 en el entorno de Steam. Los paquetes completos permanecen como artefactos privados destinados a los depósitos de Steam. Cuando se solicita su publicación, solo los paquetes de la demo se suben a una versión publicada en el repositorio público [`calciototale`](https://github.com/eleora-dev/calciototale). La demo de macOS Apple Silicon se publica después de la firma Developer ID, la notarización de Apple y la verificación de los paquetes. Los paquetes RPM no forman parte de esta versión.
 
 
 ## Estructura del proyecto

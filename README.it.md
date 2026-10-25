@@ -2,9 +2,18 @@
 
 [English version](README.md) · [Versión española](README.es.md)
 
+## Scarica la demo
+
+- [Windows x64](https://github.com/eleora-dev/calciototale/releases/download/v1.0.8/CalcioTotale-1.0.8-demo-windows-x64.zip)
+- [Linux x86_64](https://github.com/eleora-dev/calciototale/releases/download/v1.0.8/CalcioTotale-1.0.8-demo-linux-x86_64.tar.gz)
+- [macOS Apple Silicon](https://github.com/eleora-dev/calciototale/releases/download/v1.0.8/CalcioTotale-1.0.8-demo-macOS-arm64.zip)
+
+La versione Mac richiede Apple Silicon (M1 o successivo) e macOS 13.3 o successivo. L’app Mac è firmata con Developer ID e notarizzata da Apple.
+
+
 **Calcio Totale** è un gestionale calcistico per giocatore singolo che riprende lo spirito dei classici del genere, ma cambiandone il punto di vista: non interpreti più il tradizionale allenatore-manager, bensì l’amministratore delegato di un club. Definisci la strategia della società, costruisci una struttura sostenibile e affronta le conseguenze sportive ed economiche di ogni decisione.
 
-L'applicazione e il motore sono sviluppati in C++17 con Qt Widgets nativo. La versione **1.0.8** introduce miglioramenti delle prestazioni, dell’interfaccia, della gestione di fine stagione e del database su Windows e Linux. Le demo sono disponibili nelle release pubbliche GitHub; la disponibilità su Steam viene gestita separatamente. L'applicazione è accompagnata da un pacchetto di contenuti calcistici sostituibile aggiornato alla stagione **2026-27**.
+L'applicazione e il motore sono sviluppati in C++17 con Qt Widgets nativo. La versione **1.0.8** introduce miglioramenti delle prestazioni, dell’interfaccia, della gestione di fine stagione e del database su Windows, Linux e macOS. Le demo sono disponibili nelle release pubbliche GitHub; la disponibilità su Steam viene gestita separatamente. L'applicazione è accompagnata da un pacchetto di contenuti calcistici sostituibile aggiornato alla stagione **2026-27**.
 
 > **Lingue:** interfaccia disponibile in italiano, inglese e spagnolo.
 
@@ -81,9 +90,11 @@ Calcio Totale è un gioco desktop offline:
 - durante il normale utilizzo non effettua richieste di rete;
 - i dati delle carriere vengono salvati localmente; nell'edizione Steam possono essere sincronizzati dal client Steam quando Steam Cloud è abilitato.
 
-I collegamenti nella finestra Informazioni aprono il browser predefinito soltanto quando vengono selezionati; l'eventuale connessione viene effettuata dal browser verso il sito collegato, non dal gioco.
+I collegamenti esterni nella finestra Informazioni aprono il browser predefinito soltanto quando vengono selezionati; l'eventuale connessione viene effettuata dal browser verso il sito collegato, non dal gioco.
 
 I rapporti degli errori vengono creati localmente in `user/diagnostics/`: versione della build, ultime operazioni e dati tecnici; su Windows può essere incluso un minidump della memoria del gioco. Non vengono inviati automaticamente. Dopo un crash, un processo separato mostra una finestra con «Invia rapporto» e «Chiudi». Solo premendo «Invia rapporto» i dati diagnostici vengono trasmessi via HTTPS al progetto Sentry di Eleòra, senza aprire la posta o richiedere un account al giocatore. I rapporti possono contenere frammenti di dati e percorsi locali; non allegano automaticamente salvataggi completi. Sono conservati al massimo cinque rapporti precedenti, oltre alla sessione attiva.
+
+Da **Informazioni → Segnala bug** puoi inviare una segnalazione manuale a Sentry. La descrizione è obbligatoria e l’email è facoltativa. Solo premendo Invia vengono condivisi il testo inserito, l’eventuale email, versione del gioco, lingua e sistema operativo; non vengono allegati salvataggi o log diagnostici. Se l’invio fallisce il testo resta nel modulo per riprovare.
 
 Consulta [privacy.html](privacy.html) per l'informativa sulla privacy completa in italiano e inglese.
 
@@ -122,7 +133,7 @@ Le build eseguibili ufficiali possono essere scaricate, installate e utilizzate 
 
 La procedura per la build portabile Windows x64 è documentata in [build/windows/README.md](build/windows/README.md). Le build Linux x86_64 portabile e RPM per Fedora sono documentate in [build/linux/README.md](build/linux/README.md). Il bundle `.app` per Apple Silicon, Mac Intel o Universal 2, con firma e notarizzazione, è documentato in [build/macos/README.md](build/macos/README.md). Tutti i formati producono un pacchetto autonomo composto dall'applicazione, dalle sue dipendenze e dal pacchetto di contenuti separato collocato in `data/`.
 
-Il workflow manuale `Build Steam and demo packages` costruisce e verifica entrambe le edizioni per Windows x64 e Linux x86_64 nel runtime Steam. I pacchetti completi restano artefatti privati destinati ai depot Steam; quando viene richiesta la pubblicazione, soltanto i pacchetti demo vengono caricati nella release pubblica di [`calciototale`](https://github.com/eleora-dev/calciototale). Le build macOS e RPM restano disponibili come procedure manuali, ma sono escluse dalla distribuzione corrente.
+Il workflow manuale `Build Steam and demo packages` costruisce e verifica entrambe le edizioni per Windows x64 e Linux x86_64 nel runtime Steam. I pacchetti completi restano artefatti privati destinati ai depot Steam; quando viene richiesta la pubblicazione, soltanto i pacchetti demo vengono caricati nella release pubblica di [`calciototale`](https://github.com/eleora-dev/calciototale). La demo macOS Apple Silicon viene pubblicata dopo firma Developer ID, notarizzazione Apple e verifica dei pacchetti. I pacchetti RPM restano esclusi da questa release.
 
 
 ## Struttura del progetto
